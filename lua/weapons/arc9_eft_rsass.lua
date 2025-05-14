@@ -933,7 +933,7 @@ SWEP.Attachments = {
         Category = "eft_ar10_hg",
         Installed = "eft_ar10_hg_rsass",
         Bone = "weapon",
-        Pos = Vector(0, 19.543, 0.238),
+        Pos = Vector(0, 19.543, 0.238 + 0.085),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 4, 0),
     },

@@ -81,6 +81,7 @@ ATT.HasHG = true
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_lancer_lch7_12_5_inch_carbon.mdl"
 ATT.LHIK = true 
+ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.ExcludeElements = {"barrel_254mm"}
 
@@ -97,21 +98,21 @@ ATT.Attachments = {
     {
         PrintName = "M-LOK R",
         Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(1.07, 10.8, 0.12),
+        Pos = Vector(1.07, 10.8, 0.12 + 0.085),
         Ang = Angle(180, 90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "M-LOK L",
         Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(-1.07, 10.8, 0.12),
+        Pos = Vector(-1.07, 10.8, 0.12 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "M-LOK B",
         Category = {"eft_mount_mlok41", "eft_foregrip_mlok"},
-        Pos = Vector(0, 5.5, 1.17),
+        Pos = Vector(0, 5.5, 1.17 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -137,21 +138,21 @@ ATT.HasHG = true
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar15_jp_rsass.mdl"
 ATT.LHIK = true
-
+ATT.ModelOffset = Vector(0, 0, -0.085)
 ATT.EFTErgoAdd = 5
 ATT.CustomPros = { Ergonomics = "+5" }
 ATT.HeatCapacityMult = 1.025
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 
-ATT.Category = {"eft_ar10_hg", "eft_ar15_hg"}
-ATT.ExcludeElements = {"barrel_254mm"}
+ATT.Category = {"eft_ar10_hg", "eft_ar15_hguard"}
+ATT.ExcludeElements = {"barrel_254mm", "barrel_260mm", "barrel_370mm", "eft_gas_ar15_jp"}
 
 ATT.Attachments = {
     {
         PrintName = "Backup",
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 2.1, -1.22),
+        Pos = Vector(0, 2.1, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -159,7 +160,7 @@ ATT.Attachments = {
     {
         PrintName = "Top Tactical",
         Category = {"eft_tactical_top", "eft_tactical_top_big"},
-        Pos = Vector(0, 7.5, -1.22),
+        Pos = Vector(0, 7.5, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -167,7 +168,7 @@ ATT.Attachments = {
         PrintName = "RAHG R",
         Category = {"eft_mount_rahg"},
         -- Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(1.07, 7.2, 0.12),
+        Pos = Vector(1.07, 7.2, 0.12 + 0.085),
         Ang = Angle(180, 90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -175,7 +176,7 @@ ATT.Attachments = {
         PrintName = "RAHG L",
         Category = {"eft_mount_rahg"},
         -- Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(-1.07, 7.2, 0.12),
+        Pos = Vector(-1.07, 7.2, 0.12 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -183,7 +184,7 @@ ATT.Attachments = {
         PrintName = "RAHG R2",
         Category = {"eft_mount_rahg"},
         -- Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(0.75, 10.2, 0.85),
+        Pos = Vector(0.75, 10.2, 0.85 + 0.085),
         Ang = Angle(180, 90, 45),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -191,7 +192,7 @@ ATT.Attachments = {
         PrintName = "RAHG L2",
         Category = {"eft_mount_rahg"},
         -- Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(-0.75, 10.2, 0.85),
+        Pos = Vector(-0.75, 10.2, 0.85 + 0.085),
         Ang = Angle(0, -90, -45),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -199,7 +200,7 @@ ATT.Attachments = {
         PrintName = "RAHG B",
         Category = {"eft_mount_rahg4", "eft_foregrip_mlok"},
         -- Category = {"eft_mount_mlok41", "eft_foregrip_mlok"},
-        Pos = Vector(0, 3.5, 1.19),
+        Pos = Vector(0, 3.5, 1.19 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -207,12 +208,13 @@ ATT.Attachments = {
         PrintName = "RAHG B Tac",
         Category = {"eft_mount_rahg"},
         -- Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(0, 11.25, 1.19),
+        Pos = Vector(0, 11.25, 1.19 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
 }
 
+ATT.AdvancedCamoSupport = true
 
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_rsass")
 
@@ -231,6 +233,7 @@ ATT.HasHG = true
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_noveske_sws_n6_quadrail_105_inch.mdl"
 ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
 ATT.EFTErgoAdd = 8
@@ -246,7 +249,7 @@ ATT.Attachments = {
     {
         PrintName = "Backup",
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 1, -1.22),
+        Pos = Vector(0, 1, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -254,14 +257,14 @@ ATT.Attachments = {
     {
         PrintName = "Top Tactical",
         Category = {"eft_tactical_top", "eft_tactical_top_big"},
-        Pos = Vector(0, 6, -1.22),
+        Pos = Vector(0, 6, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "Front sight",
         Category = {"eft_frontsight"},
-        Pos = Vector(0, 10.3, -1.22),
+        Pos = Vector(0, 10.3, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -269,28 +272,28 @@ ATT.Attachments = {
     {
         PrintName = "R Tactical",
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(1.1, 12-3.4, 0.1),
+        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
         Ang = Angle(0, -90, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "L Tactical",
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(-1.1, 12-3.4, 0.1),
+        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "Grip",
         Category = {"eft_foregrip_small", "eft_foregrip_large"},
-        Pos = Vector(0, 4.2, 1.25),
+        Pos = Vector(0, 4.2, 1.25 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, -1),
     }, 
     {
         PrintName = "B Tactical",
         Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
-        Pos = Vector(0, 10, 1.25),
+        Pos = Vector(0, 10, 1.25 + 0.085),
         Ang = Angle(0, -90, 180),
         Icon_Offset = Vector(0, 0, 0.5),
     },
@@ -313,6 +316,7 @@ ATT.HasHG = true
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_noveske_sws_n6_quadrail_split.mdl"
 ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.EFTErgoAdd = 8
 ATT.CustomPros = { Ergonomics = "+8" }
@@ -327,7 +331,7 @@ ATT.Attachments = {
     {
         PrintName = "Backup",
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 1, -1.22),
+        Pos = Vector(0, 1, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -335,14 +339,14 @@ ATT.Attachments = {
     {
         PrintName = "Top Tactical",
         Category = {"eft_tactical_top", "eft_tactical_top_big"},
-        Pos = Vector(0, 7.7, -1.22),
+        Pos = Vector(0, 7.7, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "Front sight",
         Category = {"eft_frontsight"},
-        Pos = Vector(0, 12.7, -1.22),
+        Pos = Vector(0, 12.7, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -350,28 +354,28 @@ ATT.Attachments = {
     {
         PrintName = "R Tactical",
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(1.1, 12-3.4, 0.1),
+        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
         Ang = Angle(0, -90, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "L Tactical",
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(-1.1, 12-3.4, 0.1),
+        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },    
     {
         PrintName = "B Tactical",
         Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
-        Pos = Vector(0, 11.75, 1.25),
+        Pos = Vector(0, 11.75, 1.25 + 0.085),
         Ang = Angle(0, -90, 180),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = "Grip",
         Category = {"eft_foregrip_small", "eft_foregrip_large"},
-        Pos = Vector(0, 4.2, 1.25),
+        Pos = Vector(0, 4.2, 1.25 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, -1),
     }, 
@@ -394,6 +398,7 @@ ATT.HasHG = true
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_urx4_14_5_inch.mdl"
 -- ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
 ATT.EFTErgoAdd = 7
@@ -410,7 +415,7 @@ ATT.Attachments = {
     {
         PrintName = "Backup",
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 2.1, -1.22),
+        Pos = Vector(0, 2.1, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -418,14 +423,14 @@ ATT.Attachments = {
     {
         PrintName = "Top Tactical",
         Category = {"eft_tactical_top", "eft_tactical_top_big"},
-        Pos = Vector(0, 9, -1.22),
+        Pos = Vector(0, 9, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "Front sight",
         Category = {"eft_frontsight"},
-        Pos = Vector(0, 15, -1.22),
+        Pos = Vector(0, 15, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -433,28 +438,28 @@ ATT.Attachments = {
     {
         PrintName = "M-LOK R",
         Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(0.87, 10.7, 0.12),
+        Pos = Vector(0.87, 10.7, 0.12 + 0.085),
         Ang = Angle(180, 90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "M-LOK L",
         Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
-        Pos = Vector(-0.87, 10.7, 0.12),
+        Pos = Vector(-0.87, 10.7, 0.12 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "M-LOK B",
         Category = {"eft_mount_mlok41", "eft_foregrip_mlok"},
-        Pos = Vector(0, 4, 0.95),
+        Pos = Vector(0, 4, 0.95 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
         PrintName = "M-LOK B Tac",
         Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset", "eft_mount_mlok_bipod"},
-        Pos = Vector(0, 13.1, 0.95),
+        Pos = Vector(0, 13.1, 0.95 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -753,7 +758,7 @@ ATT.Attachments = {
     {
         PrintName = "Handguard",
         Category = "eft_ar10_hg",
-        Pos = Vector(-2.295, 0, -0.16),
+        Pos = Vector(-2.295, 0, -0.16 - 0.085),
         Ang = Angle(0, 90, 0),
         Icon_Offset = Vector(0, 4, 0),
     },

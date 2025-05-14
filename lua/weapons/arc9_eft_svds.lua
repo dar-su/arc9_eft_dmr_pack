@@ -44,9 +44,10 @@ SWEP.IronSights = {
 }
 
 SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
-SWEP.CustomizePos = Vector(22, 31, 3.7)
-SWEP.CustomizeSnapshotFOV = 100
-SWEP.CustomizeRotateAnchor = Vector(22, -4.3, -3.7)
+SWEP.CustomizePos = Vector(22, 48, 4)
+SWEP.CustomizeSnapshotFOV = 55
+SWEP.CustomizeRotateAnchor = Vector(22, -4.28, -5.23)
+SWEP.CustomizeSnapshotPos = Vector(0, 30, 0)
 
 ------------------------- |||           Stats            ||| -------------------------
 

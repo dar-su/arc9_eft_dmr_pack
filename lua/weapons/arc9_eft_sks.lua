@@ -61,7 +61,7 @@ SWEP.RPM = 450
 SWEP.EFTErgo = 40
 SWEP.BarrelLength = 42
 SWEP.Ammo = "ar2"
-SWEP.Firemodes = { { Mode = 1 }, { Mode = 1, PrintName = "Manual reload", ShotgunReload = true, ShouldDropMagEmpty = false },  }
+SWEP.Firemodes = { { Mode = 1 }, { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_manualreload"), ShotgunReload = true, ShouldDropMagEmpty = false },  }
 
 SWEP.Slot = 3
 

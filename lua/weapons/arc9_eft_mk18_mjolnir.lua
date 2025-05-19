@@ -282,7 +282,6 @@ local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/ge
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
 SWEP.Animations = {
-    -- ["idle"] = { Source = "idle", Time = 100, }, -- REMOVE TIME !!!!!!!!
     ["idle"] = { Source = "idle" },
 
     ["ready"] = {

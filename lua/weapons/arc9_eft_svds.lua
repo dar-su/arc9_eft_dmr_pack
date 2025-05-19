@@ -352,8 +352,7 @@ local rik_reload = {
 
 SWEP.Animations = {
     ["idle"] = { 
-        Source = "idle", 
-        -- Time = 100,       -- REMOVE TIME !!!!!!!! 
+        Source = "idle",
     },
 
     ["idle_empty"] = { 

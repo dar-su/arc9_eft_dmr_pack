@@ -428,15 +428,17 @@ local rik_reloadempty2 = {
 SWEP.Animations = {
     ["idle"] = { 
         Source = "idle", 
-        -- Time = 100,       -- REMOVE TIME !!!!!!!! 
         RareSource = {"too_idle0", "too_idle1", "too_idle2"},
-        RareSourceChance = 0.0001,
+        RareSourceChance = 0.005,
+    },
+    ["idle_sights"] = {
+        Source = "idle",
     },
 
     ["idle_empty"] = { 
         Source = "idle_empty", 
         RareSource = {"too_idle0_empty", "too_idle1_empty", "too_idle2_empty"},
-        RareSourceChance = 0.0001,
+        RareSourceChance = 0.005,
     },
 
     ["ready"] = {

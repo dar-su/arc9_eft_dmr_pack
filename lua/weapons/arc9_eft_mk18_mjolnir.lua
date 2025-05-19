@@ -5,10 +5,10 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_mk18") or "Mk-18 Mjölnir"
-SWEP.Description = "eft_weapon_mk18_desc"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_mk18")
+SWEP.Description = ARC9:GetPhrase("eft_weapon_mk18_desc")
 
-SWEP.Class = "eft_class_weapon_marks"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_marks")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.Trivia = {
@@ -656,7 +656,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Pistol grip",
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
         Category = {"eft_ar15_pgrip", "eft_ar15_pgrip_m4"},
         Installed = "eft_ar_pgrip_hog",
         Bone = "weapon",
@@ -664,7 +664,7 @@ SWEP.Attachments = {
         Ang = Angle(0, -90, 0),
     },
     {
-        PrintName = "Buffer tube",
+        PrintName = ARC9:GetPhrase("eft_cat_buffertube"),
         Category = "eft_ar15_buffertube",
         Bone = "weapon",
         Pos = Vector(0, 8.09, 0.05),
@@ -677,7 +677,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Upper Receiver",
+        PrintName = ARC9:GetPhrase("eft_cat_receiver"),
         Category = "eft_mk18_upper",
         Bone = "weapon",
         Pos = Vector(0, 15, -0),
@@ -708,7 +708,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Mag", 
+        PrintName = ARC9:GetPhrase("eft_cat_magazine"), 
         Category = "eft_mk18_mag",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
@@ -717,7 +717,7 @@ SWEP.Attachments = {
         Installed = "eft_mk18_mag10"
     },
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
         Category = {"eft_custom_slot", "eft_custom_mk18"},
         Bone = "weapon",
         Pos = Vector(0, 4, -2),
@@ -725,7 +725,7 @@ SWEP.Attachments = {
         -- CosmeticOnly = true,
     },
     {
-        PrintName = "Ammunition",
+        PrintName = ARC9:GetPhrase("eft_cat_ammo"),
         Category = "eft_ammo_338",
         Integral = true,
         Installed = "eft_ammo_338_fmj",

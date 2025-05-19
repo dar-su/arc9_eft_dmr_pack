@@ -207,7 +207,7 @@ ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_medium", "eft_optic_large_nosniper", "eft_optic_small"},
         Pos = Vector(0, 0.95, -1.65),
         Ang = Angle(0, 0, 0),

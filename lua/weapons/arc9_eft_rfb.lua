@@ -6,9 +6,9 @@ SWEP.Spawnable = true
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rfb_alt")
-SWEP.Description = "eft_weapon_rfb_desc"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_rfb_desc")
 
-SWEP.Class = "eft_class_weapon_carb"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_carb")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_carb")
 
 SWEP.Trivia = {
@@ -746,7 +746,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Receiver",
+        PrintName = ARC9:GetPhrase("eft_cat_receiver"),
         Category = "eft_rfb_top",
         Bone = "mod_mount",
         Pos = Vector(0, 0, 0),
@@ -763,7 +763,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Barrel",
+        PrintName = ARC9:GetPhrase("eft_cat_barrel"),
         Category = "eft_rfb_barrel",
         Bone = "mod_barrel",
         Pos = Vector(0, 0, 0),
@@ -777,7 +777,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Handguard",
+        PrintName = ARC9:GetPhrase("eft_cat_handguard"),
         Category = "eft_rfb_hg",
         Bone = "mod_handguard",
         Pos = Vector(0, 0, 0),
@@ -786,7 +786,7 @@ SWEP.Attachments = {
         Installed = "eft_rfb_hg_std",
     },
     {
-        PrintName = "Mag", 
+        PrintName = ARC9:GetPhrase("eft_cat_magazine"), 
         Category = "eft_sa58_mag",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
@@ -797,7 +797,7 @@ SWEP.Attachments = {
         RejectAttachments = { ["eft_sa58_mag_50"] = true }
     },
     {
-        PrintName = "Ammunition",
+        PrintName = ARC9:GetPhrase("eft_cat_ammo"),
         Category = "eft_ammo_762x51",
         Integral = true,
         Installed = "eft_ammo_762x51_bpzfmj",
@@ -807,7 +807,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 1, -3),
     },
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
         Category = {"eft_custom_slot", "eft_custom_rfb"},
         Bone = "weapon",
         Pos = Vector(0, 4, -2),

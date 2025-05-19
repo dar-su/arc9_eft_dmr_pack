@@ -24,21 +24,21 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_svds_barrel"}
 ATT.Attachments = {
     {
-        PrintName = "Gas block",
+        PrintName = ARC9:GetPhrase("eft_cat_gasblock"),
         Category = {"eft_svds_gas"},
         Pos = Vector(-13, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Mount",
+        PrintName = ARC9:GetPhrase("eft_cat_mount"),
         Category = {"eft_svds_barrel_mount"},
         Pos = Vector(-15.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Muzzle",
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
         Category = {"eft_svds_muzzle"},
         Pos = Vector(-20.5, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -89,7 +89,7 @@ ATT.Category = {"eft_svds_barrel_mount"}
 
 ATT.Attachments = {
     {
-        PrintName = "Bottom Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big", "eft_bipod"},
         Pos = Vector(1, 0, 0.95),
         Ang = Angle(0, 0, 180),
@@ -117,14 +117,14 @@ ATT.VisualRecoilMult = 0.93
 ATT.Category = {"eft_svds_muzzle"}
 ATT.Attachments = {
     {
-        PrintName = "Front sight",
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
         Category = {"eft_svds_fs"},
         Pos = Vector(-0.15, 0, -1.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Muzzle",
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
         Category = {"eft_svds_muzzle2"},
         Pos = Vector(-1.3, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -151,7 +151,7 @@ ATT.CustomCons = { Ergonomics = "-1" }
 ATT.Category = {"eft_svds_muzzle2"}
 ATT.Attachments = {
     {
-        PrintName = "Suppressor",
+        PrintName = ARC9:GetPhrase("eft_cat_silencer"),
         Category = {"eft_svds_suppressor"},
         Pos = Vector(-2, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -238,14 +238,14 @@ ATT.CustomCons = { Ergonomics = "-1" }
 ATT.Category = {"eft_svds_ub"}
 ATT.Attachments = {
     {
-        PrintName = "Rear sight",
+        PrintName = ARC9:GetPhrase("eft_cat_rearsight"),
         Category = {"eft_svds_rs"},
         Pos = Vector(-2.23, 0, -0.33),
         Ang = Angle(0, 90, 0),
         Icon_Offset = Vector(0, -0.5, 0),
     },
     {
-        PrintName = "Handguard",
+        PrintName = ARC9:GetPhrase("eft_cat_handguard"),
         Category = {"eft_svds_hg"},
         Pos = Vector(-4, 0, 1),
         Ang = Angle(0, 0, 0),
@@ -284,42 +284,42 @@ ATT.Category = {"eft_svds_ub"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_medium", "eft_optic_large", "eft_optic_small"},
         Pos = Vector(5, 0, -0.51),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Top Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
         Category = {"eft_tactical_top"},
         Pos = Vector(-9, 0, -0.51),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "B2 Keymod",
+        PrintName = ARC9:GetPhrase("eft_cat_keymod_b"),
         Category = {"eft_mount_keymod2","eft_mount_keymod_casv4", "eft_mount_keymod_bipod"},
         Pos = Vector(-12, 0, 1.9),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "L Keymod",
+        PrintName = ARC9:GetPhrase("eft_cat_keymod_l"),
         Category = {"eft_mount_keymod2","eft_mount_keymod_casv4"},
         Pos = Vector(-12, 0.8, 1.15),
         Ang = Angle(180, 180, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "R Keymod",
+        PrintName = ARC9:GetPhrase("eft_cat_keymod_r"),
         Category = {"eft_mount_keymod2","eft_mount_keymod_casv4"},
         Pos = Vector(-12, -0.8, 1.15),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "B Keymod",
+        PrintName = ARC9:GetPhrase("eft_cat_keymod_b"),
         Category = {"eft_mount_keymod6", "eft_grip_keymod"},
         Pos = Vector(-5, 0, 1.9),
         Ang = Angle(0, 0, -90),   
@@ -353,14 +353,14 @@ ATT.RecoilMult = 0.96
 ATT.Category = {"eft_svds_hg"}
 ATT.Attachments = {
     {
-        PrintName = "Mount",
+        PrintName = ARC9:GetPhrase("eft_cat_mount"),
         Category = {"eft_svds_mod_mount"},
         Pos = Vector(1, 0, -1.3),
         Ang = Angle(0, 90, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_small", "eft_backupmount"},
         Pos = Vector(-1, 0, -1.45),
         Ang = Angle(0, 0, 0),
@@ -368,28 +368,28 @@ ATT.Attachments = {
         ExtraSightDistance = 10
     },
     {
-        PrintName = "Top Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
         Category = {"eft_tactical_top"},
         Pos = Vector(-5, 0, -1.45),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "M-LOK B",
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_b"),
         Category = {"eft_mount_mlok41", "eft_foregrip_mlok"},
         Pos = Vector(1, 0, 1.25),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "M-LOK R",
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_r"),
         Category = {"eft_mount_mlok"},
         Pos = Vector(-6.5, 0.95, -0.25),
         Ang = Angle(180, 180, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "M-LOK L",
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_l"),
         Category = {"eft_mount_mlok"},
         Pos = Vector(-6.5, -0.95, -0.25),
         Ang = Angle(0, 0, 0),
@@ -422,7 +422,7 @@ ATT.Category = {"eft_svds_mod_mount"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_medium", "eft_optic_large", "eft_optic_small"},
         Pos = Vector(0, -9, -0.75),
         Ang = Angle(0, -90, 0),
@@ -478,7 +478,7 @@ ATT.Category = {"eft_svds_hg"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_small", "eft_backupmount"},
         Pos = Vector(0.5, 0, -1.63),
         Ang = Angle(0, 0, 0),
@@ -486,35 +486,35 @@ ATT.Attachments = {
         ExtraSightDistance = 8
     },
     {
-        PrintName = "Top Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
         Pos = Vector(-6, 0, -1.63),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "R Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
         Pos = Vector(-6, 1.1, -0.05),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
-        PrintName = "L Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
         Pos = Vector(-6, -1.1, -0.05),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
-        PrintName = "Bottom Tactical",
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big", "eft_bipod"},
         Pos = Vector(-6, 0, 1.2),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Grip",
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
         Category = {"eft_foregrip_small"},
         Pos = Vector(1, 0, 1.2),
         Ang = Angle(0, 0, 0),
@@ -610,7 +610,7 @@ ATT.Category = {"eft_svds_stock"}
 
 ATT.Attachments = {
     {
-        PrintName = "Buffer Tube",
+        PrintName = ARC9:GetPhrase("eft_cat_buffertube"),
         Category = "eft_ar15_buffertube",
         Pos = Vector(1.6, -0.8, 0),
         Ang = Angle(0, 0, 0),
@@ -717,7 +717,7 @@ ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
     {
-        PrintName = "eft_cat_scope",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_medium", "eft_optic_large", "eft_optic_small"},
         Pos = Vector(1, 0.85+0.07, -2.05),
         Ang = Angle(0, 0, 0),
@@ -753,7 +753,7 @@ ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
     {
-        PrintName = "eft_cat_scope",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = {"eft_optic_medium", "eft_optic_large", "eft_optic_small"},
         Pos = Vector(1, 0.85, -1.935),
         Ang = Angle(0, 0, 0),

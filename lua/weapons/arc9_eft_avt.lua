@@ -16,7 +16,7 @@ SWEP.Firemodes = {
     { Mode = 1, PoseParam = 1, RPM = 450 },
 }
 
-SWEP.Description = "eft_weapon_avt40_desc"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_avt40_desc")
 
 SWEP.DefaultElements = {"eft_avt"} -- owo
 

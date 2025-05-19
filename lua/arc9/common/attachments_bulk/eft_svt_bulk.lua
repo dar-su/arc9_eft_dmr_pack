@@ -25,14 +25,14 @@ ATT.Category = {"eft_svt_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
         Category = "eft_muzzle_svt",
         Pos = Vector(-22, 0, 0.0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Rear sight",
+        PrintName = ARC9:GetPhrase("eft_cat_rearsight"),
         Category = "eft_svt_rs",
         Pos = Vector(-1, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -64,7 +64,7 @@ ATT.Category = {"eft_muzzle_svt"}
 
 ATT.Attachments = {
     {
-        PrintName = "Front Sight",
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
         Category = "eft_svt_fs",
         Pos = Vector(-1.75, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -147,7 +147,7 @@ ATT.Category = {"eft_mount_svt"}
 
 ATT.Attachments = {
     {
-        PrintName = "Scope",
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
         Category = "eft_pu",
         Pos = Vector(-3.3, 0, -1.8),
         Ang = Angle(0, 0, 0),

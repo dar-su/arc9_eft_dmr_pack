@@ -225,6 +225,8 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 
 SWEP.SuppressEmptySuffix = true
+SWEP.EFT_HasTacReloads = true 
+
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
     if !IsFirstTimePredicted() then return end
@@ -252,12 +254,14 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         
         if rand == 2 and nomag then rand = 0 swep.EFTInspectnum = 0 end
         
-        if rand == 2 and ARC9EFTBASE and SERVER then
-            net.Start("arc9eftmagcheck")
-            net.WriteBool(true) -- accurate or not based on mag type
-            net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
-            net.WriteUInt(swep:GetCapacity(), 9)
-            net.Send(swep:GetOwner())
+        if rand == 2 then
+            if SERVER then
+                net.Start("arc9eftmagcheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
             rand = rand .. mag
         end
 
@@ -266,6 +270,12 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
     if anim == "reload" or anim == "reload_empty" then
         if nomag then return "reload_single" end
+        
+        if swep.EFT_StartedTacReload then
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+            return "reload_tactical" .. mag
+        end
+
         if empty then return "reload_empty" .. mag end
         return anim .. mag
     end
@@ -274,7 +284,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         local rand = math.Truncate(util.SharedRandom("hi", 1, 4.99))
 
         -- 0 = misfire, 1 = eject, 2 = feed, 3 = bolt, 4 = bolt 
-        if ARC9EFTBASE and SERVER then
+        if SERVER then
             timer.Simple(0.25, function()
                 if IsValid(swep) and IsValid(swep:GetOwner()) then
                     net.Start("arc9eftjam")
@@ -372,6 +382,34 @@ local rst_reloadempty10 = {
     {hide = 0, t = 1.03}
 }
 
+local rst_reloadtac = {
+    { s = randspin, t = 0.17 - 4/27 },
+    { s = "arc9_eft_shared/weap_magrelease_button.ogg", t = 0.08 - 4/27 },
+    { s = "arc9_eft_shared/weap_magout_plastic.ogg", t = 0.28 - 4/27 },
+    { s = randspin, t = 0.37 - 4/27 },
+    { s = pouchout, t = 0.96 - 4/27 },
+    { s = path .. "rifle_plastic_magin_fail1.ogg", t = 1.25-0.1 - 4/27 },
+    { s = "arc9_eft_shared/weap_magin_plastic.ogg", t = 1.5-0.1 - 4/27 },
+    { s = randspin, t = 2.16-0.1 - 4/27 },
+    {hide = 0, t = 0},
+    {hide = 1, t = 0.67},
+    {hide = 0, t = 1.05- 4/27}
+}
+
+local rst_reloadtac10 = {
+    { s = randspin, t = 0.17 - 4/27 },
+    { s = "arc9_eft_shared/weap_magrelease_button.ogg", t = 0.08 - 4/27 },
+    { s = "arc9_eft_shared/weap_magout_plastic.ogg", t = 0.28 - 4/27 },
+    { s = randspin, t = 0.37 - 4/27 },
+    { s = pouchout, t = 0.96-0.05 - 4/27 },
+    { s = path .. "rifle_plastic_magin_fail1.ogg", t = 1.25 - 4/27 },
+    { s = "arc9_eft_shared/weap_magin_plastic.ogg", t = 1.5 - 4/27 },
+    { s = randspin, t = 2.16-0.15 - 4/27 },
+    {hide = 0, t = 0},
+    {hide = 1, t = 0.67},
+    {hide = 0, t = 1.03- 4/27}
+}
+
 local rst_look = {
     { s = randspin, t = 0.19 },
     { s = randspin, t = 1.2 },
@@ -467,6 +505,15 @@ SWEP.Animations = {
         EventTable = rst_reload,
         IKTimeLine = rik_reload
     },
+    ["reload_tactical_0"] = {
+        Source = "reload0t",
+        MinProgress = 0.85,
+        FireASAP = true,
+        MagSwapTime = 1.2,
+        EventTable = rst_reloadtac,
+        DropMagAt = 0.67,
+        IKTimeLine = rik_reload
+    },
     ["reload_empty_0"] = {
         Source = {"reload_empty0_0", "reload_empty0_1"},
         MinProgress = 0.85,
@@ -482,6 +529,15 @@ SWEP.Animations = {
         FireASAP = true,
         MagSwapTime = 1.2,
         EventTable = rst_reload10,
+        IKTimeLine = rik_reload
+    },
+    ["reload_tactical_1"] = {
+        Source = "reload1t",
+        MinProgress = 0.85,
+        FireASAP = true,
+        MagSwapTime = 1.2,
+        EventTable = rst_reloadtac10,
+        DropMagAt = 0.67,
         IKTimeLine = rik_reload
     },
     ["reload_empty_1"] = {

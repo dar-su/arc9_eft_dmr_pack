@@ -202,6 +202,7 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 }
 
 SWEP.SuppressEmptySuffix = true
+SWEP.EFT_HasTacReloads = true
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -230,12 +231,14 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         
         if rand == 2 and nomag then rand = 0 swep.EFTInspectnum = 0 end
         
-        if rand == 2 and ARC9EFTBASE and SERVER then
-            net.Start("arc9eftmagcheck")
-            net.WriteBool(false) -- accurate or not based on mag type
-            net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
-            net.WriteUInt(swep:GetCapacity(), 9)
-            net.Send(swep:GetOwner())
+        if rand == 2 then
+            if SERVER then
+                net.Start("arc9eftmagcheck")
+                net.WriteBool(false) -- accurate or not based on mag type
+                net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
             rand = rand .. mag
         end
         
@@ -245,6 +248,12 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     if anim == "reload" or anim == "reload_empty" then
         if nomag then return "reload_single" end
         if empty then return "reload_empty" .. mag end
+        
+        if swep.EFT_StartedTacReload then
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+            return "reload_tactical" .. mag
+        end
+
         return anim .. mag
     end
 
@@ -257,7 +266,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         
 
         -- 0 = misfire, 1 = eject, 2 = feed, 3 = bolt, 4 = bolt 
-        if ARC9EFTBASE and SERVER then
+        if SERVER then
             timer.Simple(0.25, function()
                 if IsValid(swep) and IsValid(swep:GetOwner()) then
                     net.Start("arc9eftjam")
@@ -352,6 +361,31 @@ SWEP.Animations = {
             { s = path .. "sr2m_hand_02.ogg", t = 4.12 },
         },
     },
+    ["reload_tactical_0"] = {
+        Source = "reload0t",
+        MinProgress = 0.85,
+        FireASAP = true,
+        MagSwapTime = 2.1,
+        EventTable = {
+            { s = path .. "sr2m_hand_out.ogg", t = 0 },
+            -- { s = randspin, t = 0.61 },
+            { s = path .. "avt_magrelease_button_down.ogg", t = 0.31 - 4/26 },
+            { s = path .. "avt_mag_out.ogg", t = 0.59 - 4/26 },
+            { s = randspin, t = 0.74 - 4/26 },
+            { s = randspin, t = 0.98 - 4/26 },
+            { s = pouchout, t = 1.34 - 4/26 },
+            { s = path .. "avt_mag_in_fail.ogg", t = 1.92 - 4/26 },
+            { s = path .. "avt_mag_in.ogg", t = 2.12 - 4/26 },
+            { s = randspin, t = 2.76 - 4/26 },
+            { s = path .. "avt_magrelease_button_up.ogg", t = 2.78 - 4/26 },
+            { s = randspin, t = 3 - 4/26 },
+
+            {hide = 0, t = 0},
+            {hide = 1, t = 0.9- 4/26},
+            {hide = 0, t = 1.5- 4/26}
+        },
+        DropMagAt = 0.9- 4/26,
+    },
     ["reload_empty_0"] = {
         Source = "reload_empty0",
         MinProgress = 0.85,
@@ -399,6 +433,31 @@ SWEP.Animations = {
             { s = randspin, t = 3.48 + 0.18 },
             { s = path .. "avt_magrelease_button_up.ogg", t = 3.5 + 0.18 },
             { s = path .. "sr2m_hand_02.ogg", t = 4.12 + 0.18 },
+        },
+    },
+    ["reload_tactical_1"] = {
+        Source = "reload1t",
+        MinProgress = 0.85,
+        FireASAP = true,
+        MagSwapTime = 2.2,
+        DropMagAt = 0.9- 4/26,
+        EventTable = {
+            { s = path .. "sr2m_hand_out.ogg", t = 0 },
+            -- { s = randspin, t = 0.61 },
+            { s = path .. "avt_magrelease_button_down.ogg", t = 0.31 - 4/26 },
+            { s = path .. "avt_mag_out.ogg", t = 0.59 - 4/26 },
+            { s = randspin, t = 0.74 - 4/26 },
+            { s = randspin, t = 0.98  - 4/26},
+            { s = pouchout, t = 1.45 - 4/26 },
+            { s = path .. "avt_mag_in_fail.ogg", t = 1.92 - 4/26 },
+            { s = path .. "avt_mag_in.ogg", t = 2.12 - 4/26 },
+            { s = randspin, t = 2.76  - 4/26},
+            { s = path .. "avt_magrelease_button_up.ogg", t = 2.78 - 4/26 },
+            { s = randspin, t = 3 - 4/26 },
+
+            {hide = 0, t = 0},
+            {hide = 1, t = 0.9- 4/26},
+            {hide = 0, t = 1.5- 4/26}
         },
     },
     ["reload_empty_1"] = {

@@ -161,6 +161,7 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 }
 
 SWEP.SuppressEmptySuffix = false
+SWEP.EFT_HasTacReloads = true 
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -189,7 +190,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if empty then ending = ending .. "_empty" end
 
 
-        if ending == 2 and ARC9EFTBASE and SERVER then
+        if ending == 2 and SERVER then
             net.Start("arc9eftmagcheck")
             net.WriteBool(false) -- accurate or not based on mag type
             net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
@@ -206,10 +207,15 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
     if anim == "reload_empty" and elements["eft_mk18_bolting"] then return "reload_empty_bolt" end
 
+    if anim == "reload" and swep.EFT_StartedTacReload then
+        if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+        return "reload_tactical"
+    end
+
     if anim == "fix" then
         local rand = math.Truncate(util.SharedRandom("hi", 0, 4.99))
         -- 0 = misfire, 1 = eject, 2 = feed, 3 = bolt, 4 = bolt  
-        if ARC9EFTBASE and SERVER then
+        if SERVER then
             timer.Simple(0.5, function()
                 if IsValid(swep) and IsValid(swep:GetOwner()) then
                     net.Start("arc9eftjam")
@@ -334,6 +340,32 @@ SWEP.Animations = {
             { t = 0.85, lhik = 0 },
             { t = 1, lhik = 1 },
         },
+    },
+
+    ["reload_tactical"] = {
+        Source = "reloadt",
+        MinProgress = 0.85,
+        FireASAP = true,
+        MagSwapTime = 1.5,
+        EventTable = {
+            { s = randspin, t = 0.0 },
+            { s = path .. "mk18_magrelease_button.ogg", t = 0.32 - 4/28 },
+            { s = randspin, t = 0.43 - 4/28 },
+            { s = path .. "mk18_mag_out.ogg", t = 0.43 - 4/28 },
+            { s = pouchout, t = 1.1 - 4/28 },
+            { s = path .. "mk18_mag_in.ogg", t = 1.82 - 4/28 },
+            { s = randspin, t = 2.1 - 4/28 },
+            {hide = 0, t = 0},
+            {hide = 1, t = 0.58 - 4/28},
+            {hide = 0, t = 1.31 - 4/28}
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.85, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
+        DropMagAt = 0.58 - 4/28,
     },
 
     ["reload_empty"] = {

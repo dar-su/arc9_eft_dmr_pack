@@ -168,19 +168,19 @@ SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/svt/"
-local path2 = "weapons/darsu_eft/svt/fire/"
-local pathak = "weapons/darsu_eft/ak/"
-local pathsks = "weapons/darsu_eft/sks/"
+local path = ")weapons/darsu_eft/svt/"
+local path2 = ")weapons/darsu_eft/svt/fire/"
+local pathak = ")weapons/darsu_eft/ak/"
+local pathsks = ")weapons/darsu_eft/sks/"
 
-SWEP.ShootSound = { path2 .. "avt_outdoor_close_loop1.ogg", path2 .. "avt_outdoor_close_loop2.ogg", path2 .. "avt_outdoor_close_loop3.ogg", path2 .. "avt_outdoor_close_loop4.ogg" }
-SWEP.LayerSound = path2 .. "avt_outdoor_close_loopt.ogg"
+SWEP.ShootSound = { path2 .. "avt_outdoor_close_loop1.wav", path2 .. "avt_outdoor_close_loop2.wav", path2 .. "avt_outdoor_close_loop3.wav", path2 .. "avt_outdoor_close_loop4.wav" }
+SWEP.LayerSound = path2 .. "avt_outdoor_close_loopt.wav"
 
-SWEP.ShootSoundIndoor = { path2 .. "avt_indoor_close_loop1.ogg", path2 .. "avt_indoor_close_loop2.ogg", path2 .. "avt_indoor_close_loop3.ogg", path2 .. "avt_indoor_close_loop4.ogg" }
-SWEP.LayerSoundIndoor = path2 .. "avt_indoor_close_loopt.ogg"
+SWEP.ShootSoundIndoor = { path2 .. "avt_indoor_close_loop1.wav", path2 .. "avt_indoor_close_loop2.wav", path2 .. "avt_indoor_close_loop3.wav", path2 .. "avt_indoor_close_loop4.wav" }
+SWEP.LayerSoundIndoor = path2 .. "avt_indoor_close_loopt.wav"
 
-SWEP.DistantShootSound = { path2 .. "avt_outdoor_distant_loop1.ogg", path2 .. "avt_outdoor_distant_loop2.ogg" }
-SWEP.DistantShootSoundIndoor = { path2 .. "avt_indoor_distant_loop1.ogg", path2 .. "avt_indoor_distant_loop2.ogg" }
+SWEP.DistantShootSound = { path2 .. "avt_outdoor_distant_loop1.wav", path2 .. "avt_outdoor_distant_loop2.wav" }
+SWEP.DistantShootSoundIndoor = { path2 .. "avt_indoor_distant_loop1.wav", path2 .. "avt_indoor_distant_loop2.wav" }
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
 
@@ -337,9 +337,9 @@ SWEP.Animations = {
     ["holster"] = { Source = "holster", EventTable = { { s = path .. "mr133_holster.ogg", t = 0 } }},
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "weap_trigger_empty.ogg", t = 0 } }},
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "weap_trigger_empty.ogg", t = 0 } } },
-    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = path .. "weap_trigger_empty.ogg", t = 0 } } },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "weap_trigger_empty.wav", t = 0 } }},
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "weap_trigger_empty.wav", t = 0 } } },
+    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = path .. "weap_trigger_empty.wav", t = 0 } } },
 
     ["reload_0"] = {
         Source = "reload0",

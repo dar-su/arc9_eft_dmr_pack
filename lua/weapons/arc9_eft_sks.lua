@@ -186,18 +186,18 @@ end
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/sks/"
-local pathak = "weapons/darsu_eft/ak/"
+local path = ")weapons/darsu_eft/sks/"
+local pathak = ")weapons/darsu_eft/ak/"
 
 SWEP.ShootSound = path .. "sks_fire_close.ogg"
-SWEP.ShootSoundIndoor = path .. "sks_fire_indoor_close.ogg"
+SWEP.ShootSoundIndoor = path .. "sks_fire_indoor_close.wav"
 SWEP.DistantShootSound = path .. "sks_fire_distant.ogg"
-SWEP.DistantShootSoundIndoor = path .. "sks_fire_indoor_distant.ogg"
+SWEP.DistantShootSoundIndoor = path .. "sks_fire_indoor_distant.wav"
 
 SWEP.ShootSoundSilenced = path .. "sks_fire_silenced_close.ogg"
-SWEP.ShootSoundSilencedIndoor = path .. "sks_fire_indoor_silenced_close.ogg"
+SWEP.ShootSoundSilencedIndoor = path .. "sks_fire_indoor_silenced_close.wav"
 SWEP.DistantShootSoundSilenced = path .. "sks_fire_silenced_distant.ogg"
-SWEP.DistantShootSoundSilencedIndoor = path .. "sks_fire_indoor_silenced_distant.ogg"
+SWEP.DistantShootSoundSilencedIndoor = path .. "sks_fire_indoor_silenced_distant.wav"
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
 
@@ -390,8 +390,8 @@ SWEP.Animations = {
     } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
 
     ["reload"] = {
         Source = "reload0",

@@ -184,17 +184,17 @@ SWEP.ShellSounds = ARC9EFT.Shells556
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/m1a/"
+local path = ")weapons/darsu_eft/m1a/"
 
 SWEP.ShootSound = path .. "m1a_fire_close1.ogg"
-SWEP.ShootSoundIndoor = path .. "m1a_fire_indoor_close.ogg"
+SWEP.ShootSoundIndoor = path .. "m1a_fire_indoor_close.wav"
 SWEP.DistantShootSound = path .. "m1a_fire_distant1.ogg"
-SWEP.DistantShootSoundIndoor = path .. "m1a_fire_indoor_distant.ogg"
+SWEP.DistantShootSoundIndoor = path .. "m1a_fire_indoor_distant.wav"
 
 SWEP.ShootSoundSilenced = path .. "m1a_fire_silenced_close1.ogg"
-SWEP.ShootSoundSilencedIndoor = path .. "m1a_fire_silenced_indoor_close1.ogg"
+SWEP.ShootSoundSilencedIndoor = path .. "m1a_fire_silenced_indoor_close1.wav"
 SWEP.DistantShootSoundSilenced = path .. "m1a_fire_silenced_distant1.ogg"
-SWEP.DistantShootSoundSilencedIndoor = path .. "m1a_fire_silenced_indoor_distant1.ogg"
+SWEP.DistantShootSoundSilencedIndoor = path .. "m1a_fire_silenced_indoor_distant1.wav"
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
 
@@ -403,10 +403,10 @@ SWEP.Animations = {
     } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.ogg", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
 
     ["reload_0"] = { -- ?
         Source = "reload0",

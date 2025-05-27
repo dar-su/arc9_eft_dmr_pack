@@ -179,17 +179,17 @@ SWEP.ShellSounds = ARC9EFT.Shells556
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/rfb/"
+local path = ")weapons/darsu_eft/rfb/"
 
 SWEP.ShootSound = path .. "rfb_fire_close.ogg"
-SWEP.ShootSoundIndoor = path .. "rfb_fire_indoor_close.ogg"
+SWEP.ShootSoundIndoor = path .. "rfb_fire_indoor_close.wav"
 SWEP.DistantShootSound = path .. "rfb_fire_distant.ogg"
-SWEP.DistantShootSoundIndoor = path .. "rfb_fire_indoor_distant.ogg"
+SWEP.DistantShootSoundIndoor = path .. "rfb_fire_indoor_distant.wav"
 
 SWEP.ShootSoundSilenced = path .. "rfb_fire_silenced_close.ogg"
-SWEP.ShootSoundSilencedIndoor = path .. "rfb_fire_indoor_silenced_close.ogg"
+SWEP.ShootSoundSilencedIndoor = path .. "rfb_fire_indoor_silenced_close.wav"
 SWEP.DistantShootSoundSilenced = path .. "rfb_fire_silenced_distant.ogg"
-SWEP.DistantShootSoundSilencedIndoor = path .. "rfb_fire_indoor_silenced_distant.ogg"
+SWEP.DistantShootSoundSilencedIndoor = path .. "rfb_fire_indoor_silenced_distant.wav"
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
 
@@ -454,10 +454,10 @@ SWEP.Animations = {
     ["holster_empty"] = { Source = "holster_empty", EventTable = { { s = "arc9_eft_shared/weap_out.ogg", t = 0.05 } } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "p90_trigger_hammer.ogg", t = 0 } } },
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "p90_trigger_empty.ogg", t = 0 } } },
-    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = path .. "p90_trigger_hammer.ogg", t = 0 } } },
-    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = path .. "p90_trigger_empty.ogg", t = 0 } } },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "p90_trigger_hammer.wav", t = 0 } } },
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = path .. "p90_trigger_empty.wav", t = 0 } } },
+    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = path .. "p90_trigger_hammer.wav", t = 0 } } },
+    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = path .. "p90_trigger_empty.wav", t = 0 } } },
 
     ["reload_0"] = {
         Source = "reload0",

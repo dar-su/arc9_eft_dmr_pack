@@ -403,10 +403,10 @@ SWEP.Animations = {
     } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
-    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = "arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = ")arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_empty"] = { Source = "fire_empty", NoIdle = true, EventTable = { { s = ")arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = ")arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
+    ["fire_dry_empty"] = { Source = "fire_dry_empty", EventTable = { { s = ")arc9_eft_shared/weap_trigger_empty.wav", t = 0 } }, IKTimeLine = alwayslhik },
 
     ["reload_0"] = { -- ?
         Source = "reload0",

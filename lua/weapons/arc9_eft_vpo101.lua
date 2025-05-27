@@ -452,8 +452,8 @@ SWEP.Animations = {
     } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 } } },
-    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 } } },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = ")arc9_eft_shared/weap_trigger_hammer.wav", t = 0 } } },
+    ["fire_dry"] = { Source = "fire_dry", EventTable = { { s = ")arc9_eft_shared/weap_trigger_hammer.wav", t = 0 } } },
     
     ["reload_0"] = {
         Source = "reload0",

@@ -765,3 +765,538 @@ ATT.Attachments = {
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_sagsvd")
+
+
+///////////////////////////////////////      eft_svds_pgrip_adap
+
+
+ATT = {}
+
+ATT.PrintName = "SVDS Lynx Arms AK-series pistol grip adapter"
+ATT.CompactName = "Lynx"
+ATT.Icon = Material("entities/eft_ak_attachments/grip/ak2m4.png", "mips smooth")
+ATT.Description = [[An adapter that allows installation of AK-series pistol grips on SVDS. Manufactured by Lynx Arms. ]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
+-- ATT.HasGrip = true
+-- ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ak_cg101_adapter.mdl"
+-- ATT.ModelOffset = Vector(0, 0.05, -0.06)
+ATT.Category = {"eft_svds_pgrip"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
+        -- Category = "eft_ar15_pgrip_flat",
+        Category = "eft_ak_grip",
+        Pos = Vector(0, 0, 0.15),
+        Ang = Angle(0, 0, -1.0),
+        Icon_Offset = Vector(-0.5, 0, -0.5),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_svds_pgrip_adap")
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////      eft_tkpd_rec_std
+
+ATT = {}
+
+ATT.PrintName = "TKPD railed dust cover"
+ATT.CompactName = "TKPD"
+ATT.Icon = Material("entities/eft_svds_attachments/dc.png", "mips smooth")
+ATT.Description = "A receiver top cover for the TKPD assault carbine. Equipped with a Picatinny rail for installation of optics."
+
+ATT.HasBolt = true 
+
+ATT.EFTErgoAdd = 5
+ATT.CustomPros = { Ergonomics = "+5" }
+ATT.RecoilMult = 0.99
+ATT.VisualRecoilMult = 0.99
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+-- ATT.ExcludeElements = {"eft_ub_tkpd_sag"}
+
+ATT.Category = {"eft_tkpd_rec"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_medium", "eft_optic_large", "eft_optic_small"},
+        ExcludeElements = {"eft_mount_dovetail"},
+        Pos = Vector(0, 4, -1.09),
+        Ang = Angle(0, -90, 0),
+        Bone = "weapon",
+        Icon_Offset = Vector(-1, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_rearsight"),
+        Category = {"eft_ar_rearsight", "eft_rearsight"},
+        ExcludeElements = {"eft_mount_dovetail"},
+        Pos = Vector(0, 1, -1.09),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_tkpd_rec_std")
+
+
+///////////////////////////////////////      eft_tkpd_barrel_std
+
+
+ATT = {}
+
+ATT.PrintName = "TKPD 9.3x64 457mm barrel"
+ATT.CompactName = "TKPD 457mm"
+ATT.Icon = Material("entities/eft_svds_attachments/22.png", "mips smooth")
+ATT.Description = "A 457mm barrel for the TKPD 9.3x64mm assault carbine."
+
+ATT.HasBarrel = true 
+
+ATT.EFTErgoAdd = -3
+ATT.CustomCons = { Ergonomics = "-3" }
+ATT.RecoilMult = 0.99
+ATT.VisualRecoilMult = 0.99
+ATT.HeatCapacityMult = 0.85
+ATT.PhysBulletMuzzleVelocityMult = 0.9382
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_tkpd_barrel"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_gasblock"),
+        Category = {"eft_tkpd_gas"},
+        Pos = Vector(-13, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = {"eft_tkpd_muzzle"},
+        Pos = Vector(-17.5, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_std")
+///////////////////////////////////////      eft_tkpd_barrel_570
+
+
+ATT = {}
+
+ATT.PrintName = "TKPD 9.3x64 570mm barrel"
+ATT.CompactName = "TKPD 570mm"
+ATT.Icon = Material("entities/eft_svds_attachments/22.png", "mips smooth")
+ATT.Description = "A 570mm barrel for the TKPD 9.3x64mm assault carbine."
+
+ATT.HasBarrel = true 
+
+ATT.EFTErgoAdd = -13
+ATT.CustomCons = { Ergonomics = "-13" }
+ATT.RecoilMult = 0.93
+ATT.VisualRecoilMult = 0.93
+ATT.HeatCapacityMult = 0.92
+ATT.PhysBulletMuzzleVelocityMult = 0.98
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_tkpd_barrel"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_gasblock"),
+        Category = {"eft_tkpd_gas"},
+        Pos = Vector(-13, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = {"eft_tkpd_muzzle"},
+        Pos = Vector(-22, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_570")
+///////////////////////////////////////      eft_tkpd_gas_std
+
+ATT = {}
+
+ATT.PrintName = "TKPD gas tube"
+ATT.CompactName = "TKPD gas"
+ATT.Icon = Material("entities/eft_svds_attachments/gas.png", "mips smooth")
+ATT.Description = "A standard gas tube for the TKPD assault carbine."
+
+ATT.HasGas = true 
+
+ATT.RecoilMult = 0.98
+ATT.VisualRecoilMult = 0.98
+ATT.HeatCapacityMult = 0.995
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_tkpd_gas"}
+
+ARC9.LoadAttachment(ATT, "eft_tkpd_gas_std")
+///////////////////////////////////////      eft_muzzle_tkpd_std
+
+ATT = {}
+ATT.PrintName = "TKPD 9.3x64 muzzle brake"
+ATT.CompactName = "TKPD"
+ATT.Icon = Material("entities/eft_svds_attachments/m.png", "mips smooth")
+ATT.Description = "A muzzle brake for the TKPD assault carbine."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.EFTErgoAdd = -3
+ATT.CustomCons = { Ergonomics = "-3" }
+ATT.RecoilMult = 0.91
+ATT.VisualRecoilMult = 0.91
+ATT.SpreadMult = 0.98
+ATT.HeatCapacityMult = 0.99
+
+ATT.Category = {"eft_tkpd_muzzle"}
+ARC9.LoadAttachment(ATT, "eft_muzzle_tkpd_std")
+///////////////////////////////////////      eft_ub_tkpd_std
+
+ATT = {}
+
+ATT.PrintName = "TKPD front trunnion"
+ATT.CompactName = "TKPD"
+ATT.Icon = Material("entities/eft_svds_attachments/ub.png", "mips smooth")
+ATT.Description = "A handguard mounting trunnion for the TKPD assault carbine."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
+ATT.Category = {"eft_tkpd_ub"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_handguard"),
+        Category = {"eft_tkpd_hg"},
+        Pos = Vector(-4, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_ub_tkpd_std")
+///////////////////////////////////////      eft_hg_tkpd_std
+
+ATT = {}
+
+ATT.PrintName = "TKPD handguard"
+ATT.CompactName = "TKPD"
+ATT.Icon = Material("entities/eft_svds_attachments/mod.png", "mips smooth")
+ATT.Description = "A standard handguard for the TKPD assault carbine. Allows installation of tactical equipment and a bipod."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+-- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_svd_mod_lhik.mdl"
+-- ATT.LHIK = true
+-- ATT.ModelAngleOffset = Angle(0, 90, 0)
+-- ATT.ModelOffset = Vector(0, -2, 0)
+
+ATT.EFTErgoAdd = 9
+ATT.CustomPros = { Ergonomics = "+9" }
+ATT.RecoilMult = 0.975
+ATT.VisualRecoilMult = 0.975
+ATT.HeatCapacityMult = 0.913
+
+ATT.Category = {"eft_tkpd_hg"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0.5, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-4.5, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-7, 1.25, -0.0),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-7, -1.25, -0.0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big", "eft_bipod"},
+        Pos = Vector(-8, 0, 1.25),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
+        Category = {"eft_foregrip_small"},
+        Pos = Vector(-1.5, 0, 1.25),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -1),
+    }, 
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(-8.3, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_hg_tkpd_std")
+///////////////////////////////////////      eft_hg_tkpd_fde
+
+ATT = {}
+
+ATT.PrintName = "TKPD handguard (FDE)"
+ATT.CompactName = "TKPD (FDE)"
+ATT.Icon = Material("entities/eft_svds_attachments/mod.png", "mips smooth")
+ATT.Description = "A standard handguard for the TKPD assault carbine. Allows installation of tactical equipment and a bipod. Flat Dark Earth version."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+-- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_svd_mod_lhik.mdl"
+-- ATT.LHIK = true
+-- ATT.ModelAngleOffset = Angle(0, 90, 0)
+-- ATT.ModelOffset = Vector(0, -2, 0)
+
+ATT.EFTErgoAdd = 9
+ATT.CustomPros = { Ergonomics = "+9" }
+ATT.RecoilMult = 0.975
+ATT.VisualRecoilMult = 0.975
+ATT.HeatCapacityMult = 0.913
+
+ATT.Category = {"eft_tkpd_hg"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_small", "eft_backupmount"},
+        Pos = Vector(0.5, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-4.5, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-7, 1.25, -0.0),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(-7, -1.25, -0.0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big", "eft_bipod"},
+        Pos = Vector(-8, 0, 1.25),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
+        Category = {"eft_foregrip_small"},
+        Pos = Vector(-1.5, 0, 1.25),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -1),
+    }, 
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(-8.3, 0, -1.56),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_hg_tkpd_fde")
+///////////////////////////////////////      eft_tkpd_mag_10
+
+ATT = {}
+
+ATT.PrintName = "TKPD 9.3x64 10-round magazine"
+ATT.CompactName = "TKPD 10"
+ATT.Icon = Material("entities/eft_svds_attachments/10.png", "mips smooth")
+ATT.Description = "A 10-round 9.3x64mm magazine for the TKPD assault carbine."
+
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_tkpd_mag"}
+
+ATT.ClipSize = 10
+ATT.ChamberSize = 1
+ATT.SuppressEmptySuffix = false 
+ATT.DropMagazineAmount = 1
+ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_tkpd_10_dropped.mdl"
+
+ARC9.LoadAttachment(ATT, "eft_tkpd_mag_10")
+
+
+
+local dmgrange = (GetConVar("arc9_eft_mindmgrange"):GetInt() or 1000)/1000
+local mult54 = GetConVar("arc9_eft_mult_bigrifle"):GetFloat() or 0.5
+
+
+///////////////////////////////////////      eft_ammo_93x64_fmj
+
+
+ATT = {}
+
+ATT.PrintName = "9.3x64mm FMJ"
+ATT.CompactName = "FMJ"
+ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Description = [[A civilian 9.3x64mm Full Metal Jacket cartridge loaded with a 17.5 gram fully jacketed bullet. The full metal jacket reduces deformation on impact. This cartridge is most commonly used for sport shooting, training, and zeroing, and is sometimes used for hunting when minimal damage to game is desired. ]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasAmmoooooooo = true 
+ATT.ActivateElements = {"93x64"}
+
+ATT.SpreadMult = 0.85
+
+ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_fmj.printname") or "9.3x64mm FMJ"
+
+ATT.DamageMax = 115 * mult54
+ATT.DamageMin = 115 * mult54 * 0.27
+ATT.PhysBulletMuzzleVelocity = 793 /0.0254
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254 * dmgrange
+
+ATT.Penetration =      44 *2.54/100/0.0254
+ATT.PenetrationDelta = 55/100
+ATT.ArmorPiercing =    55/100
+ATT.RicochetChance =   34/100
+
+ATT.Category = {"eft_ammo_93x64"}
+
+
+ARC9.LoadAttachment(ATT, "eft_ammo_93x64_fmj")
+
+///////////////////////////////////////      eft_ammo_93x64_sp
+
+
+ATT = {}
+
+ATT.PrintName = "9.3x64mm SP"
+ATT.CompactName = "SP"
+ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Description = [[A 9.3x64mm Soft Point hunting cartridge loaded with a 17.4 gram semi-jacketed bullet. The bullet delivers increased stopping power at medium ranges and is intended for hunting large game, as it provides strong terminal performance and can cause severe incapacitating wounds on impact. ]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasAmmoooooooo = true 
+ATT.ActivateElements = {"93x64"}
+
+ATT.RecoilMult = 0.8
+ATT.VisualRecoilMult = 0.8
+
+ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_sp.printname") or "9.3x64mm SP"
+
+ATT.DamageMax = 129 * mult54
+ATT.DamageMin = 129 * mult54 * 0.414
+ATT.PhysBulletMuzzleVelocity = 697 /0.0254
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254 * dmgrange
+
+ATT.Penetration =      37 *2.54/100/0.0254
+ATT.PenetrationDelta = 55/100
+ATT.ArmorPiercing =    55/100
+ATT.RicochetChance =   34/100
+
+ATT.Category = {"eft_ammo_93x64"}
+
+
+ARC9.LoadAttachment(ATT, "eft_ammo_93x64_sp")
+
+///////////////////////////////////////      eft_ammo_93x64_7n33
+
+
+ATT = {}
+
+ATT.PrintName = "9.3x64mm 7N33"
+ATT.CompactName = "7N33"
+ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Description = [[A military 9.3x64mm 7N33 cartridge loaded with a 17.4 gram armor-piercing bullet with a steel core. The 7N33 delivers high penetration thanks to its steel core and substantial muzzle energy. Used by Russian special operations forces.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasAmmoooooooo = true 
+ATT.ActivateElements = {"93x64"}
+
+ATT.RecoilMult = 1.2
+ATT.VisualRecoilMult = 1.2
+ATT.SpreadMult = 1.05
+
+ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_7n33.printname") or "9.3x64mm 7N33"
+
+ATT.DamageMax = 108 * mult54
+ATT.DamageMin = 108 * mult54 * 0.38
+ATT.PhysBulletMuzzleVelocity = 697 /0.0254
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254 * dmgrange
+
+ATT.Penetration =      56 *2.54/100/0.0254
+ATT.PenetrationDelta = 55/100
+ATT.ArmorPiercing =    55/100
+ATT.RicochetChance =   34/100
+
+ATT.Category = {"eft_ammo_93x64"}
+
+
+ARC9.LoadAttachment(ATT, "eft_ammo_93x64_7n33")

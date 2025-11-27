@@ -5,24 +5,24 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_svds")
-SWEP.Description = ARC9:GetPhrase("eft_weapon_svds_desc")
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_tkpd") or "TKPD"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_tkpd_desc") or "The TKPD (Tyazhelyy Karabin Podderzhki Dragunova - \"Dragunov Heavy Support Carbine\") is a modernized SVDK chambered in 9.3x64mm, commissioned by PMC BEAR. The weapon is noted for high accuracy and effectively suppresses targets at medium ranges. Manufactured by SniperArms Dynamics. "
 
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_marks")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.Trivia = {
     ["eft_trivia_manuf1"] = "eft_trivia_manuf_kalash",
-    ["eft_trivia_cal2"] = "eft_trivia_calibr_762x54",
+    ["eft_trivia_cal2"] = "9.3x64mm",
     ["eft_trivia_act3"] = "eft_trivia_act_gas",
-    ["eft_trivia_country4"] = "eft_trivia_country_ussr",
-    ["eft_trivia_year5"] = "1991"
+    ["eft_trivia_country4"] = "eft_trivia_country_rus",
+    ["eft_trivia_year5"] = "Fictional"
 }
 
 SWEP.StandardPresets = false 
 
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
-SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_svds.mdl"
+SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_tkpd.mdl"
 SWEP.DefaultBodygroups = "000000000000000000"
 
 ------------------------- |||           Offsets            ||| -------------------------
@@ -66,8 +66,8 @@ SWEP.Slot = 3
 
 SWEP.Recoil = 1.3 -- general multiplier of main recoil
 
-SWEP.RecoilUp   = 4.0   -- up recoil
-SWEP.RecoilSide = 1.6 -- sideways recoil
+SWEP.RecoilUp   = 8.0   -- up recoil
+SWEP.RecoilSide = 0.8 -- sideways recoil
 SWEP.RecoilRandomUp   = 0.5 -- random up/down
 SWEP.RecoilRandomSide = 1.25   -- random left/right
 
@@ -77,9 +77,9 @@ SWEP.RecoilAutoControl = 3.5 -- autocompenstaion, could be cool if set to high b
 SWEP.VisualRecoil = 0.7 -- general multiplier for it
 
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.2   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.3   --   when fullautoing
+SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.1   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.05   --   when fullautoing
 SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 1 -- How far back visrec moves the gun
@@ -164,22 +164,22 @@ SWEP.HeatDissipation = 1.7
 
 SWEP.CamQCA_Mult = 0.8
 SWEP.MuzzleParticle = "muzzleflash_svd"
-SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x54r.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/93x64.mdl"
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = ")weapons/darsu_eft/svds/"
 
-SWEP.ShootSound = path .. "svd_fire_close.ogg"
+SWEP.ShootSound = {path .. "tkpd_outdoor_close_01.wav", path .. "tkpd_outdoor_close_02.wav", path .. "tkpd_outdoor_close_03.wav"}
 SWEP.ShootSoundSilenced = path .. "svd_fire_close_silenced.ogg"
 
-SWEP.ShootSoundIndoor = path .. "svd_fire_indoor_close.wav"
+SWEP.ShootSoundIndoor = {path .. "tkpd_indoor_close_01.wav", path .. "tkpd_indoor_close_02.wav"}
 SWEP.ShootSoundSilencedIndoor = path .. "svd_fire_indoor_silenced_close.wav"
 
-SWEP.DistantShootSound = path .. "svd_fire_distant.ogg"
+SWEP.DistantShootSound = {path .. "tkpd_outdoor_distant_01.wav", path .. "tkpd_outdoor_distant_02.wav"}
 SWEP.DistantShootSoundSilenced = path .. "svd_fire_distant_silenced.ogg"
-SWEP.DistantShootSoundIndoor = path .. "svd_fire_indoor_distant.wav"
+SWEP.DistantShootSoundIndoor = {path .. "tkpd_indoor_distant_01.wav", path .. "tkpd_indoor_distant_02.wav"}
 SWEP.DistantShootSoundSilencedIndoor = path .. "svd_fire_indoor_silenced_distant.wav"
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
@@ -211,7 +211,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     local mag = ""
     local nomag = false 
 
-    if elements["eft_svds_mag_10"]     or elements["eft_svds_hasmag1"] then mag = "_0"
+    if elements["eft_tkpd_mag_10"]     or elements["eft_svds_hasmag1"] then mag = "_0"
     elseif elements["eft_svds_mag_20"] or elements["eft_svds_hasmag2"] then mag = "_1"
     else nomag = true end
     
@@ -256,7 +256,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     end
 
     if anim == "fix" then
-        local rand = math.Truncate(util.SharedRandom("hi", 0, 4.99))
+        local rand = math.Truncate(util.SharedRandom("hi", 1, 4.99))
         -- 0 = misfire, 1 = eject, 2 = feed, 3 = bolt, 4 = bolt 
         if SERVER then
             timer.Simple(0.33, function()
@@ -285,15 +285,6 @@ local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_sha
 local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
-local rst_magcheck = {
-    { s = randspin, t = 0.2 },
-    { s = path .. "svd_mag_button.ogg", t = 0.57 },
-    { s = path .. "svd_mag_out.ogg", t = 0.72 },
-    { s = randspin, t = 1.1 },
-    { s = path .. "svd_mag_in_faster_for_check.ogg", t = 2.88 },
-    { s = randspin, t = 3.47 },
-}
-
 local rst_look = {
     { s = randspin, t = 0.22 },
     { s = randspin, t = 1.36 },
@@ -306,7 +297,7 @@ local rst_emptyreload = {
     { s = path .. "svd_mag_out_quick.ogg", t = 0.57 },
     { s = randspin, t = 0.59 },
     { s = pouchout, t = 1.02 },
-    { s = path .. "svd_mag_in.ogg", t = 1.8-0.27 },
+    { s = path .. "svd_mag_in.ogg", t = 1.8-0.3 },
     { s = randspin, t = 2.45 },
     { s = path .. "svd_slider_check_out.ogg", t = 2.94 },
     { s = path .. "svd_slider_out.ogg", t = 3.11 },
@@ -323,7 +314,7 @@ local rst_emptyreload20 = {
     { s = path .. "svd_mag_out_quick.ogg", t = 0.57 },
     { s = randspin, t = 0.59 },
     { s = pouchout, t = 1.4 },
-    { s = path .. "svd_mag_in.ogg", t = 2.05-0.27 },
+    { s = path .. "svd_mag_in.ogg", t = 2.05-0.3 },
     { s = randspin, t = 2.68 },
     { s = path .. "svd_slider_check_out.ogg", t = 3.24 },
     { s = path .. "svd_slider_out.ogg", t = 3.39 },
@@ -340,7 +331,7 @@ local rst_tac = {
     { s = path .. "svd_mag_out_quick.ogg", t = 0.57 - 4/28 },
     { s = randspin, t = 0.59 - 4/28 },
     { s = pouchout, t = 1.02 - 4/28 },
-    { s = path .. "svd_mag_in.ogg", t = 1.8-0.27 - 4/28 },
+    { s = path .. "svd_mag_in.ogg", t = 1.8-0.3 - 4/28 },
     { s = randspin, t = 2.45 - 4/28 },
 
     {hide = 0, t = 0},
@@ -354,7 +345,7 @@ local rst_tac20 = {
     { s = path .. "svd_mag_out_quick.ogg", t = 0.57 - 4/28 },
     { s = randspin, t = 0.59 - 4/28 },
     { s = pouchout, t = 1.4 - 4/28 },
-    { s = path .. "svd_mag_in.ogg", t = 2.05-0.27 - 4/28 },
+    { s = path .. "svd_mag_in.ogg", t = 2.05-0.3 - 4/28 },
     { s = randspin, t = 2.68 - 4/28 },
 
     {hide = 0, t = 0},
@@ -432,7 +423,7 @@ SWEP.Animations = {
             { s = randspin, t = 1.13 },
             { s = pouchin, t = 1.4 },
             { s = pouchout, t = 1.72 },
-            { s = path .. "svd_mag_in.ogg", t = 2.4-0.27 },
+            { s = path .. "svd_mag_in.ogg", t = 2.4-0.3 },
             { s = randspin, t = 2.94 },
         },
         IKTimeLine = rik_reload
@@ -447,7 +438,7 @@ SWEP.Animations = {
         IKTimeLine = rik_reload
     },
     ["reload_empty_0"] = {
-        Source = {"reload_empty0_0", "reload_empty0_1"},
+        Source = {"reload_empty0_0"},
         MinProgress = 0.9,
         FireASAP = true,
         MagSwapTime = 1.02,
@@ -457,20 +448,6 @@ SWEP.Animations = {
             { t = 0.08, lhik = 0 },
             { t = 0.61, lhik = 0 },
             { t = 0.7, lhik = 1 },
-            { t = 1, lhik = 1 },
-        }
-    },
-    ["1_reload_empty_0"] = {-- seperate cuz differeitn lhik
-        Source = "reload_empty0_2",
-        MinProgress = 0.9,
-        FireASAP = true,
-        MagSwapTime = 1.02,
-        EventTable = rst_emptyreload,
-        IKTimeLine = {
-            { t = 0, lhik = 1 },
-            { t = 0.08, lhik = 0 },
-            { t = 0.87, lhik = 0 },
-            { t = 0.97, lhik = 1 },
             { t = 1, lhik = 1 },
         }
     },
@@ -502,7 +479,7 @@ SWEP.Animations = {
         IKTimeLine = rik_reload
     },
     ["reload_empty_1"] = {
-        Source = {"reload_empty1_0", "reload_empty1_1"},
+        Source = {"reload_empty1_0"},
         MinProgress = 0.9,
         FireASAP = true,
         MagSwapTime = 1.02,
@@ -580,28 +557,56 @@ SWEP.Animations = {
         Source = "check_0",
         MinProgress = 0.9,
         FireASAP = true,
-        EventTable = rst_magcheck,
+        EventTable = {
+            { s = randspin, t = 0.2 },
+            { s = path .. "svd_mag_button.ogg", t = 0.57 },
+            { s = path .. "svd_mag_out.ogg", t = 0.72 },
+            { s = randspin, t = 1.1 },
+            { s = path .. "svd_mag_in_faster_for_check.ogg", t = 2.72 },
+            { s = randspin, t = 3.47 },
+        },
         IKTimeLine = rik_mag
     },
     ["inspect2_1"] = {
         Source = "check_1",
         MinProgress = 0.9,
         FireASAP = true,
-        EventTable = rst_magcheck,
+        EventTable = {
+            { s = randspin, t = 0.2 },
+            { s = path .. "svd_mag_button.ogg", t = 0.57 },
+            { s = path .. "svd_mag_out.ogg", t = 0.72 },
+            { s = randspin, t = 1.1 },
+            { s = path .. "svd_mag_in_faster_for_check.ogg", t = 2.72 },
+            { s = randspin, t = 3.47 },
+        },
         IKTimeLine = rik_mag
     },
     ["inspect_empty2_0"] = {
         Source = "check_0_empty",
         MinProgress = 0.9,
         FireASAP = true,
-        EventTable = rst_magcheck,
+        EventTable = {
+            { s = randspin, t = 0.2 },
+            { s = path .. "svd_mag_button.ogg", t = 0.57 },
+            { s = path .. "svd_mag_out.ogg", t = 0.72 },
+            { s = randspin, t = 1.0 },
+            { s = path .. "svd_mag_in_faster_for_check.ogg", t = 1.7 },
+            { s = randspin, t = 2.0 },
+        },
         IKTimeLine = rik_mag
     },
     ["inspect_empty2_1"] = {
         Source = "check_1_empty",
         MinProgress = 0.9,
         FireASAP = true,
-        EventTable = rst_magcheck,
+        EventTable = {
+            { s = randspin, t = 0.2 },
+            { s = path .. "svd_mag_button.ogg", t = 0.57 },
+            { s = path .. "svd_mag_out.ogg", t = 0.72 },
+            { s = randspin, t = 1.1 },
+            { s = path .. "svd_mag_in_faster_for_check.ogg", t = 2.88 },
+            { s = randspin, t = 3.47 },
+        },
         IKTimeLine = rik_mag
     },
 
@@ -642,25 +647,25 @@ SWEP.Animations = {
     ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
 
 
-    ["jam0"] = {
-        -- Source = {"misfire0", "misfire1"}, -- jam misfire
-        Source = "jam_misfire", -- jam misfire
-        EventTable = {
-            { s = randspin, t = 0.08 },
-            { s = randspin, t = 0.6 },
+    -- ["jam0"] = {
+    --     -- Source = {"misfire0", "misfire1"}, -- jam misfire
+    --     Source = "jam_misfire", -- jam misfire
+    --     EventTable = {
+    --         { s = randspin, t = 0.08 },
+    --         { s = randspin, t = 0.6 },
             
-            { s = randspin, t = 1.27 },
-            { s = path .. "svd_slider_in.ogg", t = 1.99 },
-            { s = path .. "generic_jam_shell_ remove_heavy1.ogg", t = 2.06 },
-            { s = path .. "svd_slider_out.ogg", t = 2.32 },
-            { s = randspin, t = 2.49 },
-        },        
-        IKTimeLine = {
-            { t = 0, lhik = 1 },
-            { t = 1, lhik = 1 },
-        },
-        EjectAt = 2.06,
-    },
+    --         { s = randspin, t = 1.27 },
+    --         { s = path .. "svd_slider_in.ogg", t = 1.99 },
+    --         { s = path .. "generic_jam_shell_ remove_heavy1.ogg", t = 2.06 },
+    --         { s = path .. "svd_slider_out.ogg", t = 2.32 },
+    --         { s = randspin, t = 2.49 },
+    --     },        
+    --     IKTimeLine = {
+    --         { t = 0, lhik = 1 },
+    --         { t = 1, lhik = 1 },
+    --     },
+    --     EjectAt = 2.06,
+    -- },
     ["jam1"] = {
         Source = "jam_shell", -- jam shell
         EventTable = {
@@ -799,78 +804,87 @@ SWEP.Animations = {
 SWEP.EFTRequiredAtts = { "HasGrip", "HasHG", "HasBolt", "HasGas", "HasBarrel", "HasAmmoooooooo" }
 
 SWEP.AttachmentElements = {
-    ["eft_svds_barrel_std"] = { Bodygroups = { {1, 1} } },
-    ["eft_svds_gas_std"] = { Bodygroups = { {2, 1} } },
-    ["eft_svds_barrel_mount_drg"] = { Bodygroups = { {3, 1} } },
-    ["eft_muzzle_svds_std"] = { Bodygroups = { {4, 1} } },
-    ["eft_muzzle_svds_adap"] = { Bodygroups = { {5, 1} } },
-    ["eft_muzzle_svds_suppressor"] = { Bodygroups = { {6, 1} } },
-    ["eft_svds_fs_std"] = { Bodygroups = { {7, 1} } },
-    ["eft_svds_rs_std"] = { Bodygroups = { {11, 1} } },
-    ["eft_rs_svds_tt01"] = { Bodygroups = { {11, 2} } },
+    ["eft_svds_pgrip_std"] = { Bodygroups = { {6, 1} } },
+    ["eft_svds_pgrip_adap"] = { Bodygroups = { {6, 2} } },
+    ["eft_svds_stock_adap"] = { Bodygroups = { {7, 2} } },
+    ["eft_svds_stock_std"] = { Bodygroups = { {7, 1} } },
 
-    ["eft_ub_svds_std"] = { Bodygroups = { {8, 1} } },
-    ["eft_ub_svds_sag"] = { Bodygroups = { {8, 2} } },
-
-    ["eft_hg_svds_mod"] = { Bodygroups = { {9, 3} } },
-    ["eft_hg_svds_std"] = { Bodygroups = { {9, 1} } },
-    ["eft_hg_svds_xrs"] = { Bodygroups = { {9, 2} } },
-    ["eft_hg_svds_mod2"] = { Bodygroups = { {10, 1} } },
-
-    ["eft_svds_pgrip_std"] = { Bodygroups = { {12, 1} } },
-    ["eft_svds_pgrip_adap"] = { Bodygroups = { {12, 2} } },
-    ["eft_svds_rec_std"] = { Bodygroups = { {14, 1} } },
-    ["eft_svds_rec_cut"] = { Bodygroups = { {14, 2} } },
-    ["eft_svds_stock_adap"] = { Bodygroups = { {13, 2} } },
-    ["eft_svds_stock_std"] = { Bodygroups = { {13, 1} } },
-    ["eft_svds_mag_10"] = { Bodygroups = { {15, 1} } },
-    ["eft_svds_mag_20"] = { Bodygroups = { {15, 2} } },
+    ["eft_tkpd_rec_std"] = { Bodygroups = { {8, 1} } },
+    ["eft_tkpd_barrel_std"] = { Bodygroups = { {1, 1} } },
+    ["eft_tkpd_barrel_570"] = { Bodygroups = { {1, 2} } },
+    ["eft_tkpd_gas_std"] = { Bodygroups = { {2, 1} } },
+    ["eft_muzzle_tkpd_std"] = { Bodygroups = { {3, 1} } },
+    ["eft_ub_tkpd_std"] = { Bodygroups = { {4, 1} } },
+    ["eft_hg_tkpd_std"] = { Bodygroups = { {5, 1} } },
+    ["eft_hg_tkpd_fde"] = { Bodygroups = { {5, 2} } },
+    ["eft_tkpd_mag_10"] = { Bodygroups = { {9, 1} } },
+    
+    ["eft_ammo_93x64_fmj"] = { Bodygroups = { {10, 0} } },
+    ["eft_ammo_93x64_7n33"] = { Bodygroups = { {10, 1} } },
+    ["eft_ammo_93x64_sp"] = { Bodygroups = { {10, 2} } },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local eles = data.elements
+    local mdl = data.model
+
+    if eles["eft_muzzle_tkpd_std"] and eles["eft_tkpd_barrel_std"] then mdl:SetBodygroup(3, 2) end
+end 
 
 SWEP.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_barrel"),
-        Category = "eft_svds_barrel",
+        Category = "eft_tkpd_barrel",
         Bone = "mod_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
-        Installed = "eft_svds_barrel_std",
+        Installed = "eft_tkpd_barrel_570",
         SubAttachments = {
             {
-                Installed = "eft_svds_gas_std"
+                Installed = "eft_tkpd_gas_std"
             },
-            {},
             {
-                Installed = "eft_muzzle_svds_std",
-                SubAttachments = {
-                    {
-                        Installed = "eft_svds_fs_std"
-                    }
-                }
+                Installed = "eft_muzzle_tkpd_std",
             }
         }
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_dovetail"),
-        Category = {"eft_mount_dovetail", "eft_mount_dovetail_svd"},
+        Category = {"eft_mount_dovetail"},
         Bone = "mod_mount_000",
         Pos = Vector(0.05, 1.05, 0.49),
         Ang = Angle(0, -90, 0),
-        ExcludeElements = {"railedcover", "nodovetail"},
+        -- ExcludeElements = {"railedcover", "nodovetail"},
+        RejectAttachments = {
+            ["eft_scope_dovetail_tulpan"] = true,
+            ["eft_mount_dovetail_sagsvd"] = true,
+            ["eft_mount_dovetail_sagbit"] = true,
+            ["eft_mount_dovetail_sag"] = true,
+            ["eft_mount_dovetail_npz"] = true,
+            ["eft_mount_dovetail_b13v"] = true,
+            ["eft_mount_dovetail_b13"] = true,
+            ["eft_mount_dovetail_aksion_kobra"] = true,
+            ["eft_mount_dovetail_pilad"] = true,
+            ["eft_scope_dovetail_ekp1s03"] = true,
+            ["eft_mount_dovetail_rsr"] = true,
+        },
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_mount"),
-        Category = "eft_svds_ub",
+        Category = "eft_tkpd_ub",
         Bone = "mod_reciever",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
-        Installed = "eft_ub_svds_std",
+        Installed = "eft_ub_tkpd_std",
         SubAttachments = {
             {
-                Installed = "eft_svds_rs_std"
-            },
-            {
-                Installed = "eft_hg_svds_std"
+                Installed = "eft_hg_tkpd_std",
+                SubAttachments = {
+                    {},{},{},{},{},{},
+                    {
+                        Installed = "eft_frontsight_kac"
+                    }
+                }
             },
         }
     },
@@ -880,15 +894,26 @@ SWEP.Attachments = {
         Bone = "mod_pistol_grip",
         Pos = Vector(0, 0.1, -0.13),
         Ang = Angle(0, 0, 0),
-        Installed = "eft_svds_pgrip_std",
+        Installed = "eft_svds_pgrip_adap",
+        SubAttachments = {
+            {
+                Installed = "eft_grip_ak_rk3"
+            },
+        }
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_receiver"),
-        Category = "eft_svds_rec",
+        Category = "eft_tkpd_rec",
         Bone = "mod_reciever",
         Pos = Vector(0, -10, -0.5),
         Ang = Angle(0, 0, 0),
-        Installed = "eft_svds_rec_std",
+        Installed = "eft_tkpd_rec_std",
+        SubAttachments = {
+            {},
+            {
+                Installed = "eft_rearsight_kac"
+            },
+        }
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_stock"),
@@ -896,22 +921,32 @@ SWEP.Attachments = {
         Bone = "mod_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
-        Installed = "eft_svds_stock_std",
+        Installed = "eft_svds_stock_adap",
+        SubAttachments = {
+            {
+                Installed = "eft_ar_buffertube_std",
+                SubAttachments = {
+                    {
+                        Installed = "eft_ar_stock_glcore"
+                    },
+                }
+            },
+        }
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_magazine"), 
-        Category = "eft_svds_mag",
+        Category = "eft_tkpd_mag",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Installed = "eft_svds_mag_10"
+        Installed = "eft_tkpd_mag_10"
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_ammo"),
-        Category = "eft_ammo_762x54r",
-        Integral = "eft_ammo_762x54r_ps_gzh",
-        Installed = "eft_ammo_762x54r_ps_gzh",
+        Category = "eft_ammo_93x64",
+        Integral = "eft_ammo_93x64_fmj",
+        Installed = "eft_ammo_93x64_fmj",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),

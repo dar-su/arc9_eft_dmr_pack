@@ -816,7 +816,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD railed dust cover"
 ATT.CompactName = "TKPD"
-ATT.Icon = Material("entities/eft_svds_attachments/dc.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/r.png", "mips smooth")
 ATT.Description = "A receiver top cover for the TKPD assault carbine. Equipped with a Picatinny rail for installation of optics."
 
 ATT.HasBolt = true 
@@ -863,7 +863,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD 9.3x64 457mm barrel"
 ATT.CompactName = "TKPD 457mm"
-ATT.Icon = Material("entities/eft_svds_attachments/22.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/b2.png", "mips smooth")
 ATT.Description = "A 457mm barrel for the TKPD 9.3x64mm assault carbine."
 
 ATT.HasBarrel = true 
@@ -904,7 +904,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD 9.3x64 570mm barrel"
 ATT.CompactName = "TKPD 570mm"
-ATT.Icon = Material("entities/eft_svds_attachments/22.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/b.png", "mips smooth")
 ATT.Description = "A 570mm barrel for the TKPD 9.3x64mm assault carbine."
 
 ATT.HasBarrel = true 
@@ -944,7 +944,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD gas tube"
 ATT.CompactName = "TKPD gas"
-ATT.Icon = Material("entities/eft_svds_attachments/gas.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/g.png", "mips smooth")
 ATT.Description = "A standard gas tube for the TKPD assault carbine."
 
 ATT.HasGas = true 
@@ -964,7 +964,7 @@ ARC9.LoadAttachment(ATT, "eft_tkpd_gas_std")
 ATT = {}
 ATT.PrintName = "TKPD 9.3x64 muzzle brake"
 ATT.CompactName = "TKPD"
-ATT.Icon = Material("entities/eft_svds_attachments/m.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/m.png", "mips smooth")
 ATT.Description = "A muzzle brake for the TKPD assault carbine."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -984,7 +984,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD front trunnion"
 ATT.CompactName = "TKPD"
-ATT.Icon = Material("entities/eft_svds_attachments/ub.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/t.png", "mips smooth")
 ATT.Description = "A handguard mounting trunnion for the TKPD assault carbine."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1010,7 +1010,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD handguard"
 ATT.CompactName = "TKPD"
-ATT.Icon = Material("entities/eft_svds_attachments/mod.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/hg.png", "mips smooth")
 ATT.Description = "A standard handguard for the TKPD assault carbine. Allows installation of tactical equipment and a bipod."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1089,7 +1089,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD handguard (FDE)"
 ATT.CompactName = "TKPD (FDE)"
-ATT.Icon = Material("entities/eft_svds_attachments/mod.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/hgf.png", "mips smooth")
 ATT.Description = "A standard handguard for the TKPD assault carbine. Allows installation of tactical equipment and a bipod. Flat Dark Earth version."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1168,7 +1168,7 @@ ATT = {}
 
 ATT.PrintName = "TKPD 9.3x64 10-round magazine"
 ATT.CompactName = "TKPD 10"
-ATT.Icon = Material("entities/eft_svds_attachments/10.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/10.png", "mips smooth")
 ATT.Description = "A 10-round 9.3x64mm magazine for the TKPD assault carbine."
 
 ATT.EFTErgoAdd = -1
@@ -1200,7 +1200,7 @@ ATT = {}
 
 ATT.PrintName = "9.3x64mm FMJ"
 ATT.CompactName = "FMJ"
-ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/fmj.png", "mips smooth")
 ATT.Description = [[A civilian 9.3x64mm Full Metal Jacket cartridge loaded with a 17.5 gram fully jacketed bullet. The full metal jacket reduces deformation on impact. This cartridge is most commonly used for sport shooting, training, and zeroing, and is sometimes used for hunting when minimal damage to game is desired. ]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1235,7 +1235,7 @@ ATT = {}
 
 ATT.PrintName = "9.3x64mm SP"
 ATT.CompactName = "SP"
-ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/sp.png", "mips smooth")
 ATT.Description = [[A 9.3x64mm Soft Point hunting cartridge loaded with a 17.4 gram semi-jacketed bullet. The bullet delivers increased stopping power at medium ranges and is intended for hunting large game, as it provides strong terminal performance and can cause severe incapacitating wounds on impact. ]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1271,7 +1271,7 @@ ATT = {}
 
 ATT.PrintName = "9.3x64mm 7N33"
 ATT.CompactName = "7N33"
-ATT.Icon = Material("entities/eft_attachments/ammo/762x54r/bs.png", "mips smooth")
+ATT.Icon = Material("entities/eft_tkpd_attachments/7.png", "mips smooth")
 ATT.Description = [[A military 9.3x64mm 7N33 cartridge loaded with a 17.4 gram armor-piercing bullet with a steel core. The 7N33 delivers high penetration thanks to its steel core and substantial muzzle energy. Used by Russian special operations forces.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

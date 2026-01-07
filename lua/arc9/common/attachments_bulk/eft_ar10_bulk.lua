@@ -146,7 +146,7 @@ ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 
 ATT.Category = {"eft_ar10_hg", "eft_ar15_hguard"}
-ATT.ExcludeElements = {"barrel_254mm", "barrel_260mm", "barrel_370mm", "eft_gas_ar15_jp"}
+ATT.ExcludeElements = {"barrel_10i", "barrel_145i"}
 
 ATT.Attachments = {
     {
@@ -673,7 +673,7 @@ ATT.Attachments = {
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
-        Category = "eft_ar10_muzzle",
+        Category = {"eft_ar10_muzzle", "eft_sr25_muzzle"},
         Pos = Vector(-16.21, 0, 0.15),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
@@ -717,7 +717,7 @@ ATT.Attachments = {
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
-        Category = "eft_ar10_muzzle",
+        Category = {"eft_ar10_muzzle", "eft_sr25_muzzle"},
         Pos = Vector(-20.26, 0, 0.15),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
@@ -901,3 +901,350 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "eft_rsass_black")
+
+
+///////////////////////////////////////      eft_ar_stock_sass
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 KAC SASS stock (Taupe)"
+ATT.CompactName = "SASS"
+ATT.Icon = Material("entities/eft_ar10_attachments/sassstock.png", "mips smooth")
+ATT.Description = "???"
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_kac_m110_sass.mdl"
+
+ATT.HasStock = true
+
+ATT.EFTErgoAdd = 3
+ATT.CustomPros = { Ergonomics = "+3" }
+ATT.RecoilMult = 0.77
+ATT.VisualRecoilMult = 0.77
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock_a2"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ARC9.LoadAttachment(ATT, "eft_ar_stock_sass")
+
+
+///////////////////////////////////////      eft_sr25_taupe
+
+
+ATT = {}
+
+ATT.PrintName = "SR-25 Taupe"
+ATT.CompactName = "Taupe"
+ATT.Icon = Material("entities/eft_ar10_attachments/6932abeb5403890d0c09c926.png", "mips smooth")
+ATT.Description = [[Coated in cerakote Taupe color.
+
+Presented in EFT as separate weapon.]]
+
+-- ATT.DropMagazineSkin = 1
+
+ATT.SortOrder = -11
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Max = 1
+
+ATT.Category = {"eft_custom_sr25"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_custom"),
+        Pos = Vector(0, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = {"eft_custom_slot", "eft_custom_sr25"},
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_sr25_taupe")
+
+///////////////////////////////////////      eft_ar10_hg_urx2
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC URX 2 12.5 inch handguard"
+ATT.CompactName = "URX2 12.5\""
+ATT.Icon = Material("entities/eft_ar10_attachments/6932aec6cccd2b808a043856.png", "mips smooth")
+ATT.Description = "A 12.5 inch handguard for AR-10 system rifles. Manufactured by Knight's Armament Company."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_sr25_urx_2_125_inch.mdl"
+ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
+
+ATT.HeatCapacityMult = 1.06
+ATT.EFTErgoAdd = 7
+ATT.CustomPros = { Ergonomics = "+7" }
+ATT.RecoilMult = 0.985
+ATT.VisualRecoilMult = 0.985
+
+ATT.Category = {"eft_ar10_hg"}
+ATT.ExcludeElements = {"barrel_254mm"}
+
+ATT.DrawFunc = function(swep, model) model:SetBodygroup(1, (swep:GetValue("FoldSights") or swep:HasElement("eft_frontsight")) and 1 or 0) end
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_backup"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0, 1, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0, 7.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(0, 12.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },    
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
+        Pos = Vector(0, 11.75, 1.25 + 0.085),
+        Ang = Angle(0, -90, 180),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
+        Category = {"eft_foregrip_small", "eft_foregrip_large"},
+        Pos = Vector(0, 4.2, 1.25 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, -1),
+    }, 
+}
+
+ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx2")
+
+///////////////////////////////////////      eft_ar10_hg_urx2_fde
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC URX 2 12.5 inch handguard (Taupe)"
+ATT.CompactName = "URX2 12.5\""
+ATT.Icon = Material("entities/eft_ar10_attachments/6936bd64b2b5b688e50cde36.png", "mips smooth")
+ATT.Description = "A 12.5 inch handguard for AR-10 system rifles. Manufactured by Knight's Armament Company. Coated in cerakote Taupe color."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_sr25_urx_2_125_inch.mdl"
+ATT.ModelSkin = 1
+ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
+
+ATT.HeatCapacityMult = 1.06
+ATT.EFTErgoAdd = 7
+ATT.CustomPros = { Ergonomics = "+7" }
+ATT.RecoilMult = 0.985
+ATT.VisualRecoilMult = 0.985
+
+ATT.Category = {"eft_ar10_hg"}
+ATT.ExcludeElements = {"barrel_254mm"}
+
+ATT.DrawFunc = function(swep, model) model:SetBodygroup(1, (swep:GetValue("FoldSights") or swep:HasElement("eft_frontsight")) and 1 or 0) end
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_backup"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0, 1, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0, 7.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(0, 12.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },    
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
+        Pos = Vector(0, 11.75, 1.25 + 0.085),
+        Ang = Angle(0, -90, 180),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
+        Category = {"eft_foregrip_small", "eft_foregrip_large"},
+        Pos = Vector(0, 4.2, 1.25 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, -1),
+    }, 
+}
+
+ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx2_fde")
+
+
+///////////////////////////////////////      eft_ar10_gas_m110
+
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC M110 Double High Picatinny Gas Block"
+ATT.CompactName = "DHP"
+ATT.Icon = Material("entities/eft_ar10_attachments/6936bde84737190b66053bb1_blk.png", "mips smooth")
+ATT.Description = "A gas block for AR-10 series rifles which adds a Picatinny rail for installation of various tactical devices. Manufactured by Knight's Armament Company."
+ATT.HasGas = true
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac_m110.mdl"
+
+ATT.HeatCapacityMult = 0.995
+ATT.EFTErgoAdd = -2
+ATT.CustomCons = { Ergonomics = "-2" }
+ATT.RecoilMult = 0.975
+ATT.VisualRecoilMult = 0.975
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_ar10_gas"}
+
+ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110")
+
+///////////////////////////////////////      eft_ar10_gas_m110_fde
+
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC M110 Double High Picatinny Gas Block (Taupe)"
+ATT.CompactName = "DHP"
+ATT.Icon = Material("entities/eft_ar10_attachments/6936bde84737190b66053bb1.png", "mips smooth")
+ATT.Description = "A gas block for AR-10 series rifles which adds a Picatinny rail for installation of various tactical devices. Manufactured by Knight's Armament Company. Coated in cerakote Taupe color."
+ATT.HasGas = true
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac_m110.mdl"
+ATT.ModelSkin = 1
+
+ATT.HeatCapacityMult = 0.995
+ATT.EFTErgoAdd = -2
+ATT.CustomCons = { Ergonomics = "-2" }
+ATT.RecoilMult = 0.975
+ATT.VisualRecoilMult = 0.975
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_ar10_gas"}
+
+ATT.ActivateElements = {"eft_ar10_gas_m110"}
+
+ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110_fde")
+
+
+///////////////////////////////////////      eft_silencer_ar10_m110
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC SR-25/Mk.11 7.62x51 sound suppressor"
+ATT.CompactName = "Mk.11"
+ATT.Icon = Material("entities/eft_ar10_attachments/6932af22cccd2b808a04385e.png", "mips smooth")
+ATT.Description = "A rifle caliber sound suppressor designed for SR-25 pattern rifles, manufactured by Knight's Armament Company. Can only be installed on the compatible gas block system."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_base_kac_sr25_mk11_suppressor_762x51.mdl"
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 5
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.NoFlash = true
+ATT.BarrelLengthAdd = 5
+ATT.Silencer = true
+
+ATT.EFTErgoAdd = -21
+ATT.CustomCons = { Ergonomics = "-21" }
+ATT.RecoilMult = 0.82
+ATT.VisualRecoilMult = 0.82
+ATT.PhysBulletMuzzleVelocityMult = 1.008
+ATT.HeatCapacityMult = 0.86
+
+ATT.Category = {"eft_sr25_muzzle"}
+
+ATT.RequireElements = {"eft_ar10_gas_m110"}
+
+ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110")
+
+
+///////////////////////////////////////      eft_silencer_ar10_m110_fde
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC SR-25/Mk.11 7.62x51 sound suppressor (Taupe)"
+ATT.CompactName = "Mk.11"
+ATT.Icon = Material("entities/eft_ar10_attachments/6936be064737190b66053bb4.png", "mips smooth")
+ATT.Description = "A rifle caliber sound suppressor designed for SR-25 pattern rifles, manufactured by Knight's Armament Company. Can only be installed on the compatible gas block system. Coated in cerakote Taupe color."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_base_kac_sr25_mk11_suppressor_762x51.mdl"
+ATT.ModelSkin = 1
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 5
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.NoFlash = true
+ATT.BarrelLengthAdd = 5
+ATT.Silencer = true
+
+ATT.EFTErgoAdd = -21
+ATT.CustomCons = { Ergonomics = "-21" }
+ATT.RecoilMult = 0.82
+ATT.VisualRecoilMult = 0.82
+ATT.PhysBulletMuzzleVelocityMult = 1.008
+ATT.HeatCapacityMult = 0.86
+
+ATT.Category = {"eft_sr25_muzzle"}
+
+ATT.RequireElements = {"eft_ar10_gas_m110"}
+
+
+ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110_fde")

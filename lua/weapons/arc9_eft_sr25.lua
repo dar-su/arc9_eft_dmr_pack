@@ -953,7 +953,21 @@ SWEP.AttachmentElements = {
     ["eft_sr25_barrel_508"] = { Bodygroups = { {3, 2} } },
     ["eft_ar10_charge_ambi"] = { Bodygroups = { {2, 2} } },
     ["eft_ar10_charge_kac"] = { Bodygroups = { {2, 1} } },
+    ["eft_sr25_taupe"] = { Skin = 1 },
+
+    ["sr25_endplate"] = { AttPosMods = {
+        [2] = { Pos = Vector(0, 8.05, 0.05) },
+    }},
 }
+
+SWEP.Hook_ModifyElements = function(self, eles)
+    if eles["eft_ar_buffertube_a2"] or eles["eft_ar_buffertube_m7a1"] or eles["eft_ar_buffertube_m7a1f"] or eles["eft_ar_buffertube_ubrgen2"] or eles["eft_ar_buffertube_ubrgen2f"] or eles["eft_ar_buffertube_viperpdw"] or eles["eft_ar_buffertube_arfx"] or eles["eft_ar_buffertube_f93pro"] then eles["sr25_endplate"] = true end
+    return eles 
+end
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    if data.elements["sr25_endplate"] then data.model:SetBodygroup(5, 1) end
+end
 
 SWEP.Attachments = {
     {
@@ -967,14 +981,7 @@ SWEP.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_buffertube"),
         Category = {"eft_ar15_buffertube"},
-        RejectAttachments = { -- wawa
-            ["eft_ar_buffertube_a2"] = true,
-            ["eft_ar_buffertube_m7a1"] = true,
-            ["eft_ar_buffertube_m7a1f"] = true,
-            ["eft_ar_buffertube_ubrgen2"] = true,
-            ["eft_ar_buffertube_ubrgen2f"] = true,
-            ["eft_ar_buffertube_viperpdw"] = true,
-         },
+        RejectAttachments = false,
         Bone = "weapon",
         Pos = Vector(0, 7.89, 0.05),
         Ang = Angle(0, -90, 0),

@@ -128,6 +128,8 @@ ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_10.mdl"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_10_tr.mdl"
 ATT.TranslucentPass = true
+ATT.TranslucentPassExtraMat = Material( "models/weapons/arc9/darsu_eft/g28/mag_417_hk_417_std_762x51_10_LOD0_trans_solid" )
+ATT.TranslucentPassBlend = 0.9
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
 
@@ -225,6 +227,8 @@ ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_20.mdl"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_20_tr.mdl"
 ATT.TranslucentPass = true
+ATT.TranslucentPassExtraMat = Material( "models/weapons/arc9/darsu_eft/g28/mag_417_hk_417_std_762x51_20_LOD0_trans_solid" )
+ATT.TranslucentPassBlend = 0.9
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
 
@@ -418,7 +422,7 @@ ATT.VisualRecoilMult = 0.97
 ATT.HeatCapacityMult = 0.985
 ATT.Category = {"eft_g28_hg"}
 
--- ATT.ExcludeElements = {"barrel_11i", "barrel_145i", "barrel_165i"}
+-- ATT.ExcludeElements = {"barrel_10i", "barrel_145i", "barrel_16i"}
 
 -- ATT.ExcludeElements = {"barrel_260mm","barrel_370mm","barrel_406mm", "eft_gas_ar15_rg", "eft_gas_ar15_jp", "eft_gas_ar15_m4fs"}
 
@@ -491,7 +495,7 @@ ATT.CustomPros = { Ergonomics = "+4" }
 -- ATT.HeatCapacityMult = 0.985
 ATT.Category = {"eft_g28_hg"}
 
--- ATT.ExcludeElements = {"barrel_11i", "barrel_145i", "barrel_165i"}
+-- ATT.ExcludeElements = {"barrel_10i", "barrel_145i", "barrel_16i"}
 
 -- ATT.ExcludeElements = {"barrel_260mm","barrel_370mm","barrel_406mm", "eft_gas_ar15_rg", "eft_gas_ar15_jp", "eft_gas_ar15_m4fs"}
 
@@ -878,7 +882,7 @@ ATT.RTScopeDrawFunc = function(swep, rtsize, sight)
     surface.SetMaterial(mat)
     surface.SetDrawColor(255, 255, 255)
     -- surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
-    local counterrotation = swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2)
+    local counterrotation = ARC9.NewRTScopesEnabled and 0 or (swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2))
     surface.DrawTexturedRectRotated(rtsize / 2, rtsize / 2, size, size, -counterrotation)
 end
 

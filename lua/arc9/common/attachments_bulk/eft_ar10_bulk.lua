@@ -409,7 +409,7 @@ ATT.VisualRecoilMult = 0.99
 ATT.SpreadMult = 0.99
 
 ATT.Category = {"eft_ar10_hg"}
-ATT.ExcludeElements = {"barrel_254mm"}
+ATT.ExcludeElements = {"barrel_254mm", "eft_ar10_gas_m110", "eft_ar10_gas_m110_fde"}
 
 ATT.Attachments = {
     {
@@ -673,7 +673,8 @@ ATT.Attachments = {
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
-        Category = {"eft_ar10_muzzle", "eft_sr25_muzzle"},
+        Category = {"eft_ar10_muzzle"},
+        ExcludeElements = {"eft_silencer_ar10_m110"},
         Pos = Vector(-16.21, 0, 0.15),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
@@ -717,8 +718,9 @@ ATT.Attachments = {
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
-        Category = {"eft_ar10_muzzle", "eft_sr25_muzzle"},
+        Category = {"eft_ar10_muzzle"},
         Pos = Vector(-20.26, 0, 0.15),
+        ExcludeElements = {"eft_silencer_ar10_m110"},
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -1006,7 +1008,7 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
         Category = {"eft_frontsight"},
-        Pos = Vector(0, 12.7, -1.22 + 0.085),
+        Pos = Vector(0, 11.7, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -1014,21 +1016,21 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
+        Pos = Vector(1.12, 12, 0.1 + 0.085),
         Ang = Angle(0, -90, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
+        Pos = Vector(-1.12, 12, 0.1 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },    
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
-        Pos = Vector(0, 11.75, 1.25 + 0.085),
+        Pos = Vector(0, 10.75, 1.25 + 0.085),
         Ang = Angle(0, -90, 180),
         Icon_Offset = Vector(0, 0, 0.5),
     },
@@ -1090,7 +1092,7 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
         Category = {"eft_frontsight"},
-        Pos = Vector(0, 12.7, -1.22 + 0.085),
+        Pos = Vector(0, 11.7, -1.22 + 0.085),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -1098,21 +1100,21 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(1.1, 12-3.4, 0.1 + 0.085),
+        Pos = Vector(1.12, 12, 0.1 + 0.085),
         Ang = Angle(0, -90, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(-1.1, 12-3.4, 0.1 + 0.085),
+        Pos = Vector(-1.12, 12, 0.1 + 0.085),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },    
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
         Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
-        Pos = Vector(0, 11.75, 1.25 + 0.085),
+        Pos = Vector(0, 10.75, 1.25 + 0.085),
         Ang = Angle(0, -90, 180),
         Icon_Offset = Vector(0, 0, 0.5),
     },
@@ -1124,6 +1126,8 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, -1),
     }, 
 }
+
+ATT.ActivateElements = {"eft_ar10_hg_urx2"}
 
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx2_fde")
 
@@ -1139,6 +1143,7 @@ ATT.Icon = Material("entities/eft_ar10_attachments/6936bde84737190b66053bb1_blk.
 ATT.Description = "A gas block for AR-10 series rifles which adds a Picatinny rail for installation of various tactical devices. Manufactured by Knight's Armament Company."
 ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac_m110.mdl"
+ATT.ModelOffset = Vector(0.25, 0, -0.25)
 
 ATT.HeatCapacityMult = 0.995
 ATT.EFTErgoAdd = -2
@@ -1150,6 +1155,17 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_gas"}
+ATT.ExcludeElements = {"eft_ar10_hg_rml15", "barrel_406mm", "eft_ar10_hg_urx"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = "eft_m110_muzzle",
+        Pos = Vector(-1.1, 0, 0.03),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
 
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110")
 
@@ -1164,6 +1180,7 @@ ATT.Icon = Material("entities/eft_ar10_attachments/6936bde84737190b66053bb1.png"
 ATT.Description = "A gas block for AR-10 series rifles which adds a Picatinny rail for installation of various tactical devices. Manufactured by Knight's Armament Company. Coated in cerakote Taupe color."
 ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac_m110.mdl"
+ATT.ModelOffset = Vector(0.25, 0, -0.25)
 ATT.ModelSkin = 1
 
 ATT.HeatCapacityMult = 0.995
@@ -1176,8 +1193,18 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_gas"}
+ATT.ExcludeElements = {"barrel_406mm"}
+ATT.ExcludeElements = {"eft_ar10_hg_rml15", "barrel_406mm", "eft_ar10_hg_urx"}
 
-ATT.ActivateElements = {"eft_ar10_gas_m110"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = "eft_m110_muzzle",
+        Pos = Vector(-1.1, 0, 0.03),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
 
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110_fde")
 
@@ -1208,9 +1235,7 @@ ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
 ATT.HeatCapacityMult = 0.86
 
-ATT.Category = {"eft_sr25_muzzle"}
-
-ATT.RequireElements = {"eft_ar10_gas_m110"}
+ATT.Category = {"eft_m110_muzzle"}
 
 ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110")
 
@@ -1242,9 +1267,40 @@ ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
 ATT.HeatCapacityMult = 0.86
 
-ATT.Category = {"eft_sr25_muzzle"}
+ATT.Category = {"eft_m110_muzzle"}
 
-ATT.RequireElements = {"eft_ar10_gas_m110"}
-
+ATT.ActivateElements = {"eft_silencer_ar10_m110"}
 
 ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110_fde")
+
+
+
+
+
+///////////////////////////////////////      eft_muzzle_ar10_potomac
+
+ATT = {}
+ATT.PrintName = "AR-10 Potomac Armory M110 7.62x51 flash hider"
+ATT.CompactName = "M110 FH"
+ATT.Icon = Material("entities/eft_ar10_attachments/6932af0bbe542622170428bd.png", "mips smooth")
+ATT.Description = "A 7.62x51 NATO flash hider for the M110 semi-automatic sniper system. Manufactured by Potomac Armory."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_potomac_armory_m110_flash_hider.mdl"
+ATT.ModelOffset = Vector(0, 0, 0.352)
+
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 4
+ATT.BarrelLengthAdd = 0.5
+
+ATT.EFTErgoAdd = -0.5
+ATT.CustomCons = { Ergonomics = "-0.5" }
+ATT.RecoilMult = 0.92
+ATT.VisualRecoilMult = 0.92
+ATT.HeatCapacityMult = 0.99
+ATT.SpreadMult = 0.97
+
+ATT.Category = {"eft_ar10_muzzle"}
+
+ARC9.LoadAttachment(ATT, "eft_muzzle_ar10_potomac")

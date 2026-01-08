@@ -20,7 +20,9 @@ SWEP.Trivia = {
 }
 
 SWEP.StandardPresets = {
-    "[Ba-cho]XQAAAQBqAwAAAAAAAAA9iIIiM7tuo1AtT00OeFDsU2rlYJ15CM1DLlgHUIIdw3uRL6Xe7fl4fShtmlFhOymfhgIb0Coaf3uPL43chJaNDyKt9EDUX1P8dZ4KEErLUmoF4964qIpZwbCrZWtPT9mz673bmEzpoxYGWhV3s44IfF9hfkr3K4sAmy5OyWLP8O5z0VH4Ai6P6PStMEuiCYOnQfYpQm8ds5obETPjX3Eq7/MK3svH92dZ54gP5a7mKbEsJEAOuqH+6UdVqxIz+oJRgOqRIapH+9bui1pc5nM22ZhATMqvBNlVshWvIBMhoP0w7SmtsjvG8zrvEPA3M2apb7x4mdbY/pXS8zHMqVl3TzCAvGrM6BGM6pmJSDiVpFs6fckwpsEcubT8B98KPfxxuQWW25ZTp1nwjAfIPCGm4oF/tYKupiTKjQk9veO51XCVIxbadijITft6F8W+vuuQAA=="
+    "[Ba-cho]XQAAAQBqAwAAAAAAAAA9iIIiM7tuo1AtT00OeFDsU2rlYJ15CM1DLlgHUIIdw3uRL6Xe7fl4fShtmlFhOymfhgIb0Coaf3uPL43chJaNDyKt9EDUX1P8dZ4KEErLUmoF4964qIpZwbCrZWtPT9mz673bmEzpoxYGWhV3s44IfF9hfkr3K4sAmy5OyWLP8O5z0VH4Ai6P6PStMEuiCYOnQfYpQm8ds5obETPjX3Eq7/MK3svH92dZ54gP5a7mKbEsJEAOuqH+6UdVqxIz+oJRgOqRIapH+9bui1pc5nM22ZhATMqvBNlVshWvIBMhoP0w7SmtsjvG8zrvEPA3M2apb7x4mdbY/pXS8zHMqVl3TzCAvGrM6BGM6pmJSDiVpFs6fckwpsEcubT8B98KPfxxuQWW25ZTp1nwjAfIPCGm4oF/tYKupiTKjQk9veO51XCVIxbadijITft6F8W+vuuQAA==",
+    "[M110 FH]XQAAAQDtAwAAAAAAAAA9iIIiM7tuo1AtT00OeFDsU2rlYJ15CM1C4md+X5XeE7okicXf5QeorjNXqmVkO2VKDVJXQuRpQpnAcKRLjJ9mzahOQJKMIqhS2nFGb6eUSjOosSoUjoaZuo+rwkzdJ1mclzHsQ8DLmvY6gJJrSF8fJRi0RoYXvBJJX7uKrYb57MMgZD5Pvm1M82RhajCXmlXzjMtAbow+KVa+6Dv0x1rqQp5qrr/Fe4E9YrrtP1nceLQ9/Tb7OLu2Fl94J4bZ/Unl5mr3nzv3WyO6dUyrGH3ackmoCJJumyTgQboCXv3zy+XRwcYCDiTa2vgBfDRlIDtbes/qG8uGpEakxIP1JCMY5d/1AHq+wVDLI3Dc/LMsAA==",
+    "[TAC30]XQAAAQCuBAAAAAAAAAA9iIIiM7tuo1AtT00OeFDsU2rlYJ15CM1DLlgDl2B1sM0QKCTqtynTGedqBGW+9Qcki+2ITusLWVQfDYfbjyx7FIPWWVlRGnxNqXVjBVIOB3EM5RJcHtimCol1P/QJGKtAXf+p5slIXmvHEGiJ/RiVVVf9d8qMA3REvWzeaN0uF0yII7650eMXRUi6tCDX5CjJp5z/wZaLvtnPeFYpupdCq3CvAGrg4WYvfcb/wIV4ItWzCqzHRJNvYY1VFDN/d5RxjAYRRYAw5cAvMLLoJAvfqCy/qxZPlitlJaY14e86grB7t86FjH5iuUsSIkEekHHkmARxW9515l4B/kpeWtxcooQ44B5Fk/MApu5PHPbxEEParwYyW7Z2Hf3Ip3HF5deq3VobLB9mK+Ztg92ZDcgGegDVBguvOt6LDBm00PvHkiEGWBvQtlMiXm/y8LuP51Mz+wA="
 }
 
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
@@ -42,6 +44,19 @@ SWEP.IronSights = {
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
 }
+
+-- local sposoffset, sangoffset = Vector(-0.007, 0, 0.1), Angle(0, -0.578, 0)
+local sposoffset, sangoffset = Vector(0, 0, 0.05), Angle(0, -0.45, 0)
+function SWEP:GetSightPositions()
+    local s = self:GetSight()
+    local e = self:GetElements()
+
+    if !self:GetValue("FoldSights") and e["eft_ar10_hg_urx2"] and !e["eft_frontsight"] then
+        return s.Pos + sposoffset, s.Ang + sangoffset
+    end
+
+    return s.Pos, s.Ang
+end
 
 SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
 SWEP.CustomizePos = Vector(18.5, 43, 4)
@@ -475,7 +490,7 @@ SWEP.Animations = {
     ["idle"] = { 
         Source = "idle", 
         RareSource = {"too_idle0", "too_idle1", "too_idle2"},
-        RareSourceChance = 0.005,
+        RareSourceChance = 0.002,
     },
     ["idle_sights"] = {
         Source = "idle",
@@ -484,7 +499,7 @@ SWEP.Animations = {
     ["idle_empty"] = { 
         Source = "idle_empty", 
         RareSource = {"too_idle0_empty", "too_idle1_empty", "too_idle2_empty"},
-        RareSourceChance = 0.005,
+        RareSourceChance = 0.002,
     },
 
     ["ready"] = {

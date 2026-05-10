@@ -346,8 +346,8 @@ local neverlhik = {
 
 SWEP.EnterBipodSound = false 
 SWEP.ExitBipodSound = false
-SWEP.BipodPos = Vector(-1.7, -3.5, 1)
-SWEP.BipodAng = Angle(0, 0, 0)
+-- SWEP.BipodPos = Vector(-1.7, -3.5, 1)
+-- SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.Animations = {
     ["idle"] = { 

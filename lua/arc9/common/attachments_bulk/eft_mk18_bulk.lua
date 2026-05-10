@@ -42,6 +42,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5fc23678ab884124df0cd590
 ARC9.LoadAttachment(ATT, "eft_mk18_barrel_24")
 
 ///////////////////////////////////////      eft_mk18_gas_std
@@ -61,6 +62,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_mk18_gas"}
 
+-- EFT ID: 5fc2360f900b1d5091531e19
 ARC9.LoadAttachment(ATT, "eft_mk18_gas_std")
 
 
@@ -137,6 +139,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5fc235db2770a0045c59c683
 ARC9.LoadAttachment(ATT, "eft_mk18_hg_std")
 
 
@@ -164,6 +167,7 @@ ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_mk18.mdl"
 
 
+-- EFT ID: 5fc23426900b1d5091531e15
 ARC9.LoadAttachment(ATT, "eft_mk18_mag10")
 
 
@@ -220,6 +224,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5fc278107283c4046c581489
 ARC9.LoadAttachment(ATT, "eft_mk18_upper_std")
 
 
@@ -253,6 +258,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_mk18_black")
 
 ///////////////////////////////////////      eft_mk18_bolting
@@ -282,4 +288,5 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_mk18_bolting")

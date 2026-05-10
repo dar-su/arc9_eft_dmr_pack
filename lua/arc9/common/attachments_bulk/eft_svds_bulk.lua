@@ -46,6 +46,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5c471cb32e221602b177afaa
 ARC9.LoadAttachment(ATT, "eft_svds_barrel_std")
 
 
@@ -68,6 +69,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_gas"}
 
+-- EFT ID: 5c471c842e221615214259b5
 ARC9.LoadAttachment(ATT, "eft_svds_gas_std")
 
 ///////////////////////////////////////      eft_svds_barrel_mount_drg
@@ -96,6 +98,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+-- EFT ID: 5e569a132642e66b0b68015c
 ARC9.LoadAttachment(ATT, "eft_svds_barrel_mount_drg")
 
 ///////////////////////////////////////      eft_muzzle_svds_std
@@ -132,6 +135,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5c471bfc2e221602b21d4e17
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_std")
 
 ///////////////////////////////////////      eft_muzzle_svds_adap
@@ -159,6 +163,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5e01e9e273d8eb11426f5bc3
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_adap")
 
 ///////////////////////////////////////      eft_muzzle_svds_suppressor
@@ -189,6 +194,7 @@ ATT.NoFlash = true
 
 ATT.Category = {"eft_svds_suppressor"}
 
+-- EFT ID: 5e01ea19e9dc277128008c0b
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_suppressor")
 
 ///////////////////////////////////////      eft_svds_fs_std
@@ -204,6 +210,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_fs"}
 
+-- EFT ID: 5c471ba12e221602b3137d76
 ARC9.LoadAttachment(ATT, "eft_svds_fs_std")
 
 ///////////////////////////////////////      eft_svds_rs_std
@@ -219,6 +226,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_rs"}
 
+-- EFT ID: 5c471b7e2e2216152006e46c
 ARC9.LoadAttachment(ATT, "eft_svds_rs_std")
 
 ///////////////////////////////////////      eft_ub_svds_std
@@ -253,6 +261,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5c471c2d2e22164bef5d077f
 ARC9.LoadAttachment(ATT, "eft_ub_svds_std")
 
 ///////////////////////////////////////      eft_ub_svds_sag
@@ -326,6 +335,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5dfcd0e547101c39625f66f9
 ARC9.LoadAttachment(ATT, "eft_ub_svds_sag")
 
 ///////////////////////////////////////      eft_hg_svds_mod
@@ -397,6 +407,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5e56991336989c75ab4f03f6
 ARC9.LoadAttachment(ATT, "eft_hg_svds_mod")
 
 ///////////////////////////////////////      eft_hg_svds_mod2
@@ -431,6 +442,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5e569a0156edd02abe09f27d
 ARC9.LoadAttachment(ATT, "eft_hg_svds_mod2")
 
 ///////////////////////////////////////      eft_hg_svds_std
@@ -450,6 +462,7 @@ ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.Category = {"eft_svds_hg"}
 
+-- EFT ID: 5c471c6c2e221602b66cd9ae
 ARC9.LoadAttachment(ATT, "eft_hg_svds_std")
 
 ///////////////////////////////////////      eft_hg_svds_xrs
@@ -522,6 +535,7 @@ ATT.Attachments = {
     }, 
 }
 
+-- EFT ID: 5e5699df2161e06ac158df6f
 ARC9.LoadAttachment(ATT, "eft_hg_svds_xrs")
 
 ///////////////////////////////////////      eft_svds_pgrip_std
@@ -543,6 +557,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_pgrip"}
 
+-- EFT ID: 5c471be12e221602b66cd9ac
 ARC9.LoadAttachment(ATT, "eft_svds_pgrip_std")
 
 ///////////////////////////////////////      eft_svds_rec_std
@@ -566,6 +581,7 @@ ATT.ExcludeElements = {"eft_ub_svds_sag"}
 
 ATT.Category = {"eft_svds_rec"}
 
+-- EFT ID: 5c471bd12e221602b4129c3a
 ARC9.LoadAttachment(ATT, "eft_svds_rec_std")
 
 ///////////////////////////////////////      eft_svds_rec_cut
@@ -587,6 +603,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_rec"}
 
+-- EFT ID: 5dfce88fe9dc277128008b2e
 ARC9.LoadAttachment(ATT, "eft_svds_rec_cut")
 
 ///////////////////////////////////////      eft_svds_stock_adap
@@ -618,6 +635,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6197b229af1f5202c57a9bea
 ARC9.LoadAttachment(ATT, "eft_svds_stock_adap")
 
 ///////////////////////////////////////      eft_svds_stock_std
@@ -639,6 +657,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_stock"}
 
+-- EFT ID: 5c471b5d2e221602b21d4e14
 ARC9.LoadAttachment(ATT, "eft_svds_stock_std")
 
 ///////////////////////////////////////      eft_svds_mag_10
@@ -665,6 +684,7 @@ ATT.SuppressEmptySuffix = false
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svd_10_dropped.mdl"
 
+-- EFT ID: 5c471c442e221602b542a6f8
 ARC9.LoadAttachment(ATT, "eft_svds_mag_10")
 
 ///////////////////////////////////////      eft_svds_mag_20
@@ -691,6 +711,7 @@ ATT.SuppressEmptySuffix = false
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svd_20_dropped.mdl"
 
+-- EFT ID: 5c88f24b2e22160bc12c69a6
 ARC9.LoadAttachment(ATT, "eft_svds_mag_20")
 
 
@@ -728,6 +749,7 @@ ATT.Attachments = {
 
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 
+-- EFT ID: 5e569a2e56edd02abe09f280
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_caaxdrgl")
 
 ///////////////////////////////////////      eft_mount_dovetail_sagsvd
@@ -764,6 +786,7 @@ ATT.Attachments = {
 
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 
+-- EFT ID: 5dff8db859400025ea5150d4
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_sagsvd")
 
 
@@ -798,6 +821,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6516b129609aaf354b34b3a8
 ARC9.LoadAttachment(ATT, "eft_svds_pgrip_adap")
 
 
@@ -853,6 +877,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68aee8f8130c00663d08aeb3
 ARC9.LoadAttachment(ATT, "eft_tkpd_rec_std")
 
 
@@ -869,7 +894,6 @@ ATT.Description = "A 457mm barrel for the TKPD 9.3x64mm assault carbine."
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -3
-ATT.CustomCons = { Ergonomics = "-3" }
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
 ATT.HeatCapacityMult = 0.85
@@ -896,6 +920,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68aee9b89df2c1144f0aaa46
 ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_std")
 ///////////////////////////////////////      eft_tkpd_barrel_570
 
@@ -937,6 +962,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68be93d19bae3db9c5005b19
 ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_570")
 ///////////////////////////////////////      eft_tkpd_gas_std
 
@@ -958,6 +984,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_tkpd_gas"}
 
+-- EFT ID: 68aee9e31ef0d507780a61cd
 ARC9.LoadAttachment(ATT, "eft_tkpd_gas_std")
 ///////////////////////////////////////      eft_muzzle_tkpd_std
 
@@ -970,13 +997,13 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -3
-ATT.CustomCons = { Ergonomics = "-3" }
 ATT.RecoilMult = 0.91
 ATT.VisualRecoilMult = 0.91
 ATT.SpreadMult = 0.98
 ATT.HeatCapacityMult = 0.99
 
 ATT.Category = {"eft_tkpd_muzzle"}
+-- EFT ID: 68aeeb3e9df2c1144f0aaa4b
 ARC9.LoadAttachment(ATT, "eft_muzzle_tkpd_std")
 ///////////////////////////////////////      eft_ub_tkpd_std
 
@@ -1003,6 +1030,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68aee9731ef0d507780a61c9
 ARC9.LoadAttachment(ATT, "eft_ub_tkpd_std")
 ///////////////////////////////////////      eft_hg_tkpd_std
 
@@ -1082,6 +1110,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68aee9fe130c00663d08aeb6
 ARC9.LoadAttachment(ATT, "eft_hg_tkpd_std")
 ///////////////////////////////////////      eft_hg_tkpd_fde
 
@@ -1161,6 +1190,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 68d5676f43adc7372a0c8ae0
 ARC9.LoadAttachment(ATT, "eft_hg_tkpd_fde")
 ///////////////////////////////////////      eft_tkpd_mag_10
 
@@ -1185,6 +1215,7 @@ ATT.SuppressEmptySuffix = false
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_tkpd_10_dropped.mdl"
 
+-- EFT ID: 68aef9bf4efeccb5220d25c6
 ARC9.LoadAttachment(ATT, "eft_tkpd_mag_10")
 
 
@@ -1226,6 +1257,7 @@ ATT.RicochetChance =   34/100
 ATT.Category = {"eft_ammo_93x64"}
 
 
+-- EFT ID: 68bac6ca653ee6b1e406d978
 ARC9.LoadAttachment(ATT, "eft_ammo_93x64_fmj")
 
 ///////////////////////////////////////      eft_ammo_93x64_sp
@@ -1262,6 +1294,7 @@ ATT.RicochetChance =   34/100
 ATT.Category = {"eft_ammo_93x64"}
 
 
+-- EFT ID: 68aeed8a8906b00bc800fdd6
 ARC9.LoadAttachment(ATT, "eft_ammo_93x64_sp")
 
 ///////////////////////////////////////      eft_ammo_93x64_7n33
@@ -1299,4 +1332,5 @@ ATT.RicochetChance =   34/100
 ATT.Category = {"eft_ammo_93x64"}
 
 
+-- EFT ID: 68bad8376cb22acf1107a586
 ARC9.LoadAttachment(ATT, "eft_ammo_93x64_7n33")

@@ -10,7 +10,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/10.png", "mips smooth")
 ATT.Description = [[A 10-round magazine for VPO-101 carbines and compatible 7.62x51 systems, manufactured by Molot Arms.]]
 
 ATT.EFTErgoAdd = -3
-ATT.CustomCons = { Ergonomics = "-3" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -26,6 +25,7 @@ ATT.DropMagazineAmount = 1
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_vpo101_10.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_vpo101_10.mdl"
 
+-- EFT ID: 5c503ad32e2216398b5aada2
 ARC9.LoadAttachment(ATT, "eft_vpo101_mag_10")
 
 ///////////////////////////////////////      eft_vpo101_mag_5
@@ -54,6 +54,7 @@ ATT.DropMagazineAmount = 1
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_vpo101_5.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_vpo101_5.mdl"
 
+-- EFT ID: 5c503ac82e221602b21d6e9a
 ARC9.LoadAttachment(ATT, "eft_vpo101_mag_5")
 
 
@@ -79,6 +80,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_stock"}
 
+-- EFT ID: 5c503af12e221602b177ca02
 ARC9.LoadAttachment(ATT, "eft_vpo101_stock_std")
 
 ///////////////////////////////////////      eft_vpo101_stock_svd
@@ -103,6 +105,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_stock"}
 
+-- EFT ID: 5f63405df5750b524b45f114
 ARC9.LoadAttachment(ATT, "eft_vpo101_stock_svd")
 
 ///////////////////////////////////////      eft_vpo101_dc_std
@@ -122,6 +125,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_dc"}
 
+-- EFT ID: 5c503d0a2e221602b542b7ef
 ARC9.LoadAttachment(ATT, "eft_vpo101_dc_std")
 
 ///////////////////////////////////////      eft_vpo101_gas_std
@@ -140,6 +144,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_gas"}
 
+-- EFT ID: 5c5039be2e221602b177c9ff
 ARC9.LoadAttachment(ATT, "eft_vpo101_gas_std")
 
 ///////////////////////////////////////      eft_vpo101_rs_std
@@ -156,6 +161,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_rs"}
 
+-- EFT ID: 5c503b1c2e221602b21d6e9d
 ARC9.LoadAttachment(ATT, "eft_vpo101_rs_std")
 
 ///////////////////////////////////////      eft_vpo101_sup_std
@@ -184,6 +190,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vpo101_muzzle"}
 
+-- EFT ID: 5f63407e1b231926f2329f15
 ARC9.LoadAttachment(ATT, "eft_vpo101_sup_std")
 
 ///////////////////////////////////////      eft_mount_dovetail_vpo102
@@ -221,4 +228,5 @@ ATT.ModelOffset = Vector(0, -1.1, 0)
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.SortOrder = -10
 
+-- EFT ID: 609a4b4fe2ff132951242d04
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_vpo102")

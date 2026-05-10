@@ -36,6 +36,7 @@ ATT.Attachments = {
 
 ATT.MuzzleEffectQCA = 5
 
+-- EFT ID: 5addbac75acfc400194dbc56
 ARC9.LoadAttachment(ATT, "eft_m1a_barrel_22")
 
 ///////////////////////////////////////      eft_m1a_barrel_16
@@ -71,6 +72,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5aaf9d53e5b5b00015042a52
 ARC9.LoadAttachment(ATT, "eft_m1a_barrel_16")
 
 
@@ -108,6 +110,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5aaf8e43e5b5b00015693246
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_std")
 
 
@@ -156,6 +159,7 @@ ATT.Attachments = {
 }
 
 
+-- EFT ID: 5addbf175acfc408fb13965b
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_arch")
 
 ///////////////////////////////////////      eft_m1a_stock_sass
@@ -263,6 +267,7 @@ ATT.Attachments = {
 }
 
 
+-- EFT ID: 5ab372a310e891001717f0d8
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sass")
 
 ///////////////////////////////////////      eft_m1a_stock_sage
@@ -337,6 +342,7 @@ ATT.Attachments = {
 
 
 
+-- EFT ID: 5addc7005acfc4001669f275
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sage")
 
 
@@ -370,6 +376,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5ab24ef9e5b5b00fe93c9209
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_std")
 
 ///////////////////////////////////////      eft_m1a_upper_m8
@@ -409,6 +416,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbfbb5acfc400194dbcf7
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_m8")
 
 ///////////////////////////////////////      eft_m1a_upper_amega
@@ -449,6 +457,7 @@ ATT.Attachments = {
 }
 
 
+-- EFT ID: 5addbfd15acfc40015621bde
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_amega")
 
 ///////////////////////////////////////      eft_m1a_upper_vltor
@@ -507,6 +516,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addc00b5acfc4001669f144
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_vltor")
 
 ///////////////////////////////////////      eft_m1a_side_arms
@@ -539,6 +549,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbfe15acfc4001a5fc58b
 ARC9.LoadAttachment(ATT, "eft_m1a_side_arms")
 
 ///////////////////////////////////////      eft_m1a_side_deluxe
@@ -571,6 +582,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbfef5acfc400185c2857
 ARC9.LoadAttachment(ATT, "eft_m1a_side_deluxe")
 
 ///////////////////////////////////////      eft_m1a_side_dcsb
@@ -601,6 +613,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbffe5acfc4001714dfac
 ARC9.LoadAttachment(ATT, "eft_m1a_side_dcsb")
 
 ///////////////////////////////////////      eft_m1a_rearsight
@@ -617,6 +630,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_rs"}
 
+-- EFT ID: 5abcbb20d8ce87001773e258
 ARC9.LoadAttachment(ATT, "eft_m1a_rearsight")
 
 ///////////////////////////////////////      eft_m1a_fs_062
@@ -635,6 +649,7 @@ ATT.Category = {"eft_m1a_fs"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_front_m1a_blade.mdl"
 
+-- EFT ID: 5addba3e5acfc4001669f0ab
 ARC9.LoadAttachment(ATT, "eft_m1a_fs_062")
 
 ///////////////////////////////////////      eft_m1a_fs_xs
@@ -653,6 +668,7 @@ ATT.Category = {"eft_m1a_fs"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_front_m1a_xs.mdl"
 
+-- EFT ID: 5aafa49ae5b5b00015042a58
 ARC9.LoadAttachment(ATT, "eft_m1a_fs_xs")
 
 ///////////////////////////////////////      eft_m1a_stock_sage_stock
@@ -684,6 +700,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addc7ac5acfc400194dbd90
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sage_stock")
 
 ///////////////////////////////////////      eft_m1a_pgrip_sage
@@ -705,6 +722,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_sage_grip"}
 
+-- EFT ID: 5addc7db5acfc4001669f279
 ARC9.LoadAttachment(ATT, "eft_m1a_pgrip_sage")
 
 
@@ -736,6 +754,7 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 10
 ATT.ChamberSize = 1
 
+-- EFT ID: 64b9e2037fdfb81df81e3c25
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_10")
 
 ///////////////////////////////////////      eft_m1a_mag_20
@@ -748,7 +767,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_20round_magazine.pn
 ATT.Description = "A 20-round double-stack 7.62x51 NATO magazine for the M1A rifle, produced by Springfield Armory."
 
 ATT.EFTErgoAdd = -3
-ATT.CustomCons = { Ergonomics = "-3" }
 ATT.MalfunctionMeanShotsToFailMult = 0.97
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_20.mdl"
@@ -766,6 +784,7 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 20
 ATT.ChamberSize = 1
 
+-- EFT ID: 5aaf8a0be5b5b00015693243
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_20")
 
 ///////////////////////////////////////      eft_m1a_mag_30
@@ -796,6 +815,7 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 30
 ATT.ChamberSize = 1
 
+-- EFT ID: 5addcce35acfc4001a5fc635
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_30")
 
 ///////////////////////////////////////      eft_m1a_mag_50
@@ -893,6 +913,7 @@ ATT.ReloadHideBoneTables = {
 }
 
 
+-- EFT ID: 5addccf45acfc400185c2989
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_50")
 
 
@@ -932,6 +953,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbb6e5acfc408fb1393fd
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_fsup")
 
 ///////////////////////////////////////      eft_m1a_muzzle_brakecomp
@@ -969,6 +991,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5aafa1c2e5b5b00015042a56
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_brakecomp")
 
 ///////////////////////////////////////      eft_m1a_muzzle_vortex
@@ -998,6 +1021,7 @@ ATT.BarrelLengthAdd = 0.5
 ATT.Category = {"eft_muzzle_m1a_22", "eft_muzzle_m1a_brake"}
 
 
+-- EFT ID: 5addbba15acfc400185c2854
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_vortex")
 
 ///////////////////////////////////////      eft_m1a_muzzle_yan
@@ -1035,6 +1059,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbbb25acfc40015621bd9
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_yan")
 
 ///////////////////////////////////////      eft_m1a_muzzle_jp
@@ -1073,6 +1098,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbb825acfc408fb139400
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_jp")
 
 ///////////////////////////////////////      eft_m1a_muzzle_good
@@ -1111,6 +1137,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5addbb945acfc4001a5fc44e
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_good")
 
 ///////////////////////////////////////      eft_m1a_muzzle_gas
@@ -1155,4 +1182,5 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5ab3afb2d8ce87001660304d
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_gas")

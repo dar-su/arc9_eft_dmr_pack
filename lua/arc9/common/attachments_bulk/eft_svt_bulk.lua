@@ -39,6 +39,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6410758c857473525b08bb77
 ARC9.LoadAttachment(ATT, "eft_svt_barrel_625")
 
 ///////////////////////////////////////      eft_svt_muzzle
@@ -71,6 +72,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 64119d1f2c6d6f921a0929f8
 ARC9.LoadAttachment(ATT, "eft_svt_muzzle")
 
 
@@ -88,6 +90,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_fs"}
 
+-- EFT ID: 64119d672c6d6f921a0929fb
 ARC9.LoadAttachment(ATT, "eft_svt_frontsight")
 
 ///////////////////////////////////////      eft_svt_rearsight
@@ -104,6 +107,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_rs"}
 
+-- EFT ID: 64119d90dcf48d656f0aa275
 ARC9.LoadAttachment(ATT, "eft_svt_rearsight")
 
 ///////////////////////////////////////      eft_svt_dust
@@ -125,6 +129,7 @@ ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.Category = {"eft_svt_dc"}
 
+-- EFT ID: 64119cdbdcf48d656f0aa272
 ARC9.LoadAttachment(ATT, "eft_svt_dust")
 
 
@@ -153,6 +158,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+-- EFT ID: 641dc35e19604f20c800be18
 ARC9.LoadAttachment(ATT, "eft_svt_tokarev")
 
 ///////////////////////////////////////      eft_svt_stock_avt
@@ -176,6 +182,7 @@ ATT.VisualRecoilMult = 0.82
 
 ATT.Category = {"eft_svt_stock"}
 
+-- EFT ID: 6410745d5dd49d77bd078485
 ARC9.LoadAttachment(ATT, "eft_svt_stock_avt")
 
 
@@ -207,6 +214,7 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 10
 ATT.ChamberSize = 1
 
+-- EFT ID: 6422e1ea3c0f06190302161a
 ARC9.LoadAttachment(ATT, "eft_svt_mag_10")
 
 ///////////////////////////////////////      eft_svt_mag_15
@@ -236,4 +244,5 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 15
 ATT.ChamberSize = 1
 
+-- EFT ID: 641074a07fd350b98c0b3f96
 ARC9.LoadAttachment(ATT, "eft_svt_mag_15")

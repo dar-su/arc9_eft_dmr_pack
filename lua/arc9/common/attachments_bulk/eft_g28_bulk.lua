@@ -43,6 +43,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 61702be9faa1272e431522c3
 ARC9.LoadAttachment(ATT, "eft_g28_barrel_std")
 
 ///////////////////////////////////////      eft_g28_upper_std
@@ -98,6 +99,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 61713a8fd92c473c770214a4
 ARC9.LoadAttachment(ATT, "eft_g28_upper_std")
 
 
@@ -165,6 +167,7 @@ ATT.ReloadHideBoneTables = {
     },
 }
 
+-- EFT ID: 617130016c780c1e710c9a24
 ARC9.LoadAttachment(ATT, "eft_g28_mag_10")
 
 ///////////////////////////////////////      eft_g28_mag_10old
@@ -198,6 +201,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_10.mdl"
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
 
+-- EFT ID: 617130016c780c1e710c9a24
 ARC9.LoadAttachment(ATT, "eft_g28_mag_10old")
 
 ///////////////////////////////////////      eft_g28_mag_20
@@ -284,6 +288,7 @@ ATT.ReloadHideBoneTables = {
     },
 }
 
+-- EFT ID: 617131a4568c120fdd29482d
 ARC9.LoadAttachment(ATT, "eft_g28_mag_20")
 
 ///////////////////////////////////////      eft_g28_mag_20old
@@ -317,6 +322,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_20.mdl"
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
 
+-- EFT ID: 617131a4568c120fdd29482d
 ARC9.LoadAttachment(ATT, "eft_g28_mag_20old")
 
 
@@ -343,6 +349,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_g28_gas"}
 
+-- EFT ID: 61702f1b67085e45ef140b26
 ARC9.LoadAttachment(ATT, "eft_g28_gas_std")
 
 ///////////////////////////////////////      eft_g28_charge_std
@@ -364,6 +371,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_g28_charge"}
 
+-- EFT ID: 61702d8a67085e45ef140b24
 ARC9.LoadAttachment(ATT, "eft_g28_charge_std")
 
 ///////////////////////////////////////      eft_g28_buffer_std
@@ -399,6 +407,7 @@ ATT.Attachments = {
 }
 
 
+-- EFT ID: 617153016c780c1e710c9a2f
 ARC9.LoadAttachment(ATT, "eft_g28_buffer_std")
 
 ///////////////////////////////////////      eft_g28_hg_ext
@@ -472,6 +481,7 @@ ATT.Attachments = {
     }, 
 }
 
+-- EFT ID: 61703001d92c473c77021497
 ARC9.LoadAttachment(ATT, "eft_g28_hg_ext")
 
 ///////////////////////////////////////      eft_g28_hg_std
@@ -538,6 +548,7 @@ ATT.Attachments = {
     -- }, 
 }
 
+-- EFT ID: 61712eae6c780c1e710c9a1d
 ARC9.LoadAttachment(ATT, "eft_g28_hg_std")
 
 ///////////////////////////////////////      eft_g28_stock_e2
@@ -563,6 +574,7 @@ ATT.Category = "eft_g28_stock"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 
+-- EFT ID: 617154aa1cb55961fa0fdb3b
 ARC9.LoadAttachment(ATT, "eft_g28_stock_e2")
 
 ///////////////////////////////////////      eft_g28_stock_adj
@@ -597,6 +609,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 617155ee50224f204c1da3cd
 ARC9.LoadAttachment(ATT, "eft_g28_stock_adj")
 
 ///////////////////////////////////////      eft_g28_stock_cheek
@@ -616,6 +629,7 @@ ATT.SortOrder = 0
 ATT.Category = "eft_g28_cheek"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+-- EFT ID: 61715e7e67085e45ef140b33
 ARC9.LoadAttachment(ATT, "eft_g28_stock_cheek")
 
 ///////////////////////////////////////      eft_g28_muzzle_std
@@ -653,6 +667,7 @@ ATT.Attachments = {
 
 ATT.Category = {"eft_g28_muzzle"}
 
+-- EFT ID: 61713308d92c473c770214a0
 ARC9.LoadAttachment(ATT, "eft_g28_muzzle_std")
 
 ///////////////////////////////////////      eft_g28_silencer_std
@@ -684,6 +699,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.01
 
 ATT.Category = {"eft_g28_silencer"}
 
+-- EFT ID: 6171367e1cb55961fa0fdb36
 ARC9.LoadAttachment(ATT, "eft_g28_silencer_std")
 
 
@@ -716,6 +732,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_g28_blk")
 
 
@@ -765,6 +782,7 @@ ATT.Attachments = {
 
 
 
+-- EFT ID: 61713cc4d8e3106d9806c109
 ARC9.LoadAttachment(ATT, "eft_mount_34mm_rn")
 
 ///////////////////////////////////////      eft_mount_30mm_rn
@@ -809,6 +827,7 @@ ATT.Attachments = {
 
 
 
+-- EFT ID: 6171407e50224f204c1da3c5
 ARC9.LoadAttachment(ATT, "eft_mount_30mm_rn")
 
 ///////////////////////////////////////      eft_scope_34mm_sb_pmii3
@@ -907,4 +926,5 @@ ATT.RTScopeBlackBoxShadow = true
 ATT.ScopeScreenRatio = 725/1080
 
 
+-- EFT ID: 61714eec290d254f5e6b2ffc
 ARC9.LoadAttachment(ATT, "eft_scope_34mm_sb_pmii3")

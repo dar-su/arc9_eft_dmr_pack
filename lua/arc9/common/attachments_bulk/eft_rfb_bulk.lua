@@ -42,6 +42,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5f2aa46b878ef416f538b567
 ARC9.LoadAttachment(ATT, "eft_rfb_barrel_18")
 
 ///////////////////////////////////////      eft_rfb_hg_std
@@ -74,6 +75,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5f2aa47a200e2c0ee46efa71
 ARC9.LoadAttachment(ATT, "eft_rfb_hg_std")
 
 ///////////////////////////////////////      eft_rfb_mount_bottom
@@ -99,6 +101,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5f2aa493cd375f14e15eea72
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_bottom")
 
 ///////////////////////////////////////      eft_rfb_mount_upper
@@ -140,6 +143,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5f2aa49f9b44de6b1b4e68d4
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_upper")
 
 ///////////////////////////////////////      eft_rfb_mount_quad
@@ -190,6 +194,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 676177591f08ed5e8800b7a9
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_quad")
 
 ///////////////////////////////////////      eft_rfb_muzzle_thr
@@ -210,6 +215,7 @@ ATT.EFTErgoAdd = 1
 ATT.CustomPros = { Ergonomics = "+1" }
 ATT.Category = {"eft_rfb_muzzle"}
 
+-- EFT ID: 5f2aa4464b50c14bcf07acdb
 ARC9.LoadAttachment(ATT, "eft_rfb_muzzle_thr")
 
 ///////////////////////////////////////      eft_rfb_muzzle_spacer
@@ -235,6 +241,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 5f2aa43ba9b91d26f20ae6d2
 ARC9.LoadAttachment(ATT, "eft_rfb_muzzle_spacer")
 
 ///////////////////////////////////////      eft_muzzle_rfb_fh
@@ -257,4 +264,5 @@ ATT.VisualRecoilMult = 0.95
 
 ATT.Category = {"eft_rfb_muzzle2"}
 
+-- EFT ID: 5f2aa4559b44de6b1b4e68d1
 ARC9.LoadAttachment(ATT, "eft_muzzle_rfb_fh")

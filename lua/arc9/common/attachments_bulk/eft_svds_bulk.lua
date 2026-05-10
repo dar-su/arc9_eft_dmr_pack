@@ -13,7 +13,6 @@ ATT.Description = [[A 22 inch barrel for SVDS sniper rifles chambered in 7.62x54
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -10
-ATT.CustomCons = { Ergonomics = "-10" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.PhysBulletMuzzleVelocityMult = 0.94
@@ -82,7 +81,6 @@ ATT.Icon = Material("entities/eft_svds_attachments/drg.png", "mips smooth")
 ATT.Description = [[A Picatinny rail for the SVD sniper rifle for mounting on the barrel. Allows installation of additional tactical devices.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -113,7 +111,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 
@@ -150,7 +147,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.Category = {"eft_svds_muzzle2"}
 ATT.Attachments = {
@@ -183,7 +179,6 @@ ATT.VisualRecoilMult = 0.9
 ATT.RecoilMult = 0.9
 ATT.HeatCapacityMult = 0.85
 ATT.EFTErgoAdd = -22
-ATT.CustomCons = { Ergonomics = "-22" }
 
 ATT.Silencer = true
 ATT.BarrelLengthAdd = 5
@@ -241,7 +236,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.Category = {"eft_svds_ub"}
 ATT.Attachments = {
@@ -282,7 +276,6 @@ ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(-0.05, 0, -1)
 
 ATT.EFTErgoAdd = 11
-ATT.CustomPros = { Ergonomics = "+11" }
 ATT.VisualRecoilMult = 0.97
 ATT.RecoilMult = 0.97
 
@@ -356,7 +349,6 @@ ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(0, -2, 0)
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.VisualRecoilMult = 0.96
 ATT.RecoilMult = 0.96
 
@@ -422,7 +414,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.VisualRecoilMult = 0.98
 ATT.RecoilMult = 0.98
 
@@ -458,7 +449,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasHG = true
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.Category = {"eft_svds_hg"}
 
@@ -483,7 +473,6 @@ ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(0, -2, 0)
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.VisualRecoilMult = 0.99
 ATT.RecoilMult = 0.99
 
@@ -550,7 +539,6 @@ ATT.Description = [[An Izhmash pistol grip for SVDS and compatible weapon system
 ATT.HasGrip = true 
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -572,7 +560,6 @@ ATT.Description = [[A standard-issue dust cover for SVDS sniper rifles, manufact
 ATT.HasBolt = true 
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -596,7 +583,6 @@ ATT.Description = [[A custom cut-off dust cover for SVDS sniper rifles, required
 ATT.HasBolt = true 
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -616,7 +602,6 @@ ATT.Icon = Material("entities/eft_svds_attachments/adap.png", "mips smooth")
 ATT.Description = [[An adapter for installation of telescopic stock buffer tubes on the SVD sniper rifles and Rys carbines with folding stocks. Manufactured by Lynx Arms.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
 
@@ -648,7 +633,6 @@ ATT.Icon = Material("entities/eft_svds_attachments/st.png", "mips smooth")
 ATT.Description = [[A polymer stock for SVDS sniper rifles, manufactured by Izhmash.]]
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 ATT.RecoilMult = 0.69
 ATT.VisualRecoilMult = 0.69
 
@@ -670,7 +654,6 @@ ATT.Icon = Material("entities/eft_svds_attachments/10.png", "mips smooth")
 ATT.Description = [[A 10-round 7.62x54R steel Izhmash magazine for SVD-based rifles.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.MalfunctionMeanShotsToFailMult = 0.98
 
 ATT.SortOrder = 0
@@ -697,7 +680,6 @@ ATT.Icon = Material("entities/eft_svds_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round 7.62x54R steel Izhmash magazine for SVD-based rifles.]]
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.MalfunctionMeanShotsToFailMult = 0.91
 
 ATT.SortOrder = 0
@@ -733,7 +715,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.ModelOffset = Vector(-0.07, -2, 0)
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
@@ -770,7 +751,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
@@ -803,7 +783,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 -- ATT.HasGrip = true
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ak_cg101_adapter.mdl"
@@ -846,7 +825,6 @@ ATT.Description = "A receiver top cover for the TKPD assault carbine. Equipped w
 ATT.HasBolt = true 
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
 
@@ -935,7 +913,6 @@ ATT.Description = "A 570mm barrel for the TKPD 9.3x64mm assault carbine."
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -13
-ATT.CustomCons = { Ergonomics = "-13" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.92
@@ -1017,7 +994,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.Category = {"eft_tkpd_ub"}
 ATT.Attachments = {
@@ -1050,7 +1026,6 @@ ATT.HasHG = true
 -- ATT.ModelOffset = Vector(0, -2, 0)
 
 ATT.EFTErgoAdd = 9
-ATT.CustomPros = { Ergonomics = "+9" }
 ATT.RecoilMult = 0.975
 ATT.VisualRecoilMult = 0.975
 ATT.HeatCapacityMult = 0.913
@@ -1130,7 +1105,6 @@ ATT.HasHG = true
 -- ATT.ModelOffset = Vector(0, -2, 0)
 
 ATT.EFTErgoAdd = 9
-ATT.CustomPros = { Ergonomics = "+9" }
 ATT.RecoilMult = 0.975
 ATT.VisualRecoilMult = 0.975
 ATT.HeatCapacityMult = 0.913
@@ -1202,7 +1176,6 @@ ATT.Icon = Material("entities/eft_tkpd_attachments/10.png", "mips smooth")
 ATT.Description = "A 10-round 9.3x64mm magazine for the TKPD assault carbine."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

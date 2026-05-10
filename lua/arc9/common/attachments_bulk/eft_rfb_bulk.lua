@@ -13,7 +13,6 @@ ATT.Description = [[A barrel for RFB 7.62x51 ammo, 18 inch long. ]]
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -11
-ATT.CustomCons = { Ergonomics = "-11" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 -- ATT.PhysBulletMuzzleVelocityMult = 0.94
@@ -55,7 +54,6 @@ ATT.Icon = Material("entities/eft_rfb_attachments/hg.png", "mips smooth")
 ATT.Description = [[A standard-issue handguard for the RFB rifle, manufactured by Kel-Tec. ]]
 
 ATT.EFTErgoAdd = 16
-ATT.CustomPros = { Ergonomics = "+16" }
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 
@@ -156,7 +154,6 @@ ATT.Icon = Material("entities/eft_rfb_attachments/q.png", "mips smooth")
 ATT.Description = [[A 3 inch quad rail mount for the RFB rifle, allowing the installation of additional tactical equipment. Manufactured by Kel-Tec. ]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -212,7 +209,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 -- ATT.VisualRecoilMult = 0.94
 ATT.HeatCapacityMult = 1.01
 ATT.EFTErgoAdd = 1
-ATT.CustomPros = { Ergonomics = "+1" }
 ATT.Category = {"eft_rfb_muzzle"}
 
 -- EFT ID: 5f2aa4464b50c14bcf07acdb

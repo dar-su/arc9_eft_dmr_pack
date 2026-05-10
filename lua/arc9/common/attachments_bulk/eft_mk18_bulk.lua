@@ -14,7 +14,6 @@ ATT.Description = [[A 24 inch (610mm) barrel for Mk-18 .338 LM sniper rifle, man
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -12
-ATT.CustomCons = { Ergonomics = "-12" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.PhysBulletMuzzleVelocityMult = 0.979
@@ -80,7 +79,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasHG = true
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.HeatCapacityMult = 0.88
 ATT.SpreadMult = 0.99
 ATT.Category = {"eft_mk18_hg"}
@@ -154,7 +152,6 @@ ATT.Icon = Material("entities/eft_mk18_attachments/mag.png", "mips smooth")
 ATT.Description = [[A 10-round Mk-18 magazine for .338 LM ammunition, manufactured by SWORD International.]]
 
 ATT.EFTErgoAdd = -6
-ATT.CustomCons = { Ergonomics = "-6" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -183,7 +180,6 @@ ATT.Description = [[A regular upper receiver for Mk-18 Mod 1 Mjölnir by SWORD I
 ATT.HasReceiver = true 
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
 

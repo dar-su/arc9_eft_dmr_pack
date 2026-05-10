@@ -16,7 +16,6 @@ ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac.mdl"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.HeatCapacityMult = 0.995
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
@@ -43,7 +42,6 @@ ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_jp_jpgs6.mdl"
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.HeatCapacityMult = 0.99
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
@@ -89,7 +87,6 @@ ATT.ExcludeElements = {"barrel_254mm"}
 
 
 ATT.EFTErgoAdd = 10
-ATT.CustomPros = { Ergonomics = "+10" }
 ATT.HeatCapacityMult = 1.018
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
@@ -143,7 +140,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar15_jp_rsass.mdl"
 ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 ATT.HeatCapacityMult = 1.025
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
@@ -241,7 +237,6 @@ ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
 ATT.EFTErgoAdd = 8
-ATT.CustomPros = { Ergonomics = "+8" }
 ATT.HeatCapacityMult = 1.045
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
@@ -324,7 +319,6 @@ ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.EFTErgoAdd = 8
-ATT.CustomPros = { Ergonomics = "+8" }
 ATT.HeatCapacityMult = 1.06
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
@@ -408,7 +402,6 @@ ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.HeatCapacityMult = 1.035
 ATT.RecoilMult = 0.99
 ATT.VisualRecoilMult = 0.99
@@ -554,7 +547,6 @@ ATT.Description = [[An ambidextrous charging handle for the SR-25 marksman rifle
 ATT.HasCharge = true 
 
 ATT.EFTErgoAdd = 1
-ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -598,7 +590,6 @@ ATT.Description = [[A 10-round double-stack steel magazine for 7.62x51 NATO cart
 
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 ATT.MalfunctionMeanShotsToFailMult = 0.95
 
 ATT.SortOrder = 0
@@ -628,7 +619,6 @@ ATT.Icon = Material("entities/eft_ar10_attachments/mag20.png", "mips smooth")
 ATT.Description = [[A 20-round double-stack steel magazine for 7.62x51 NATO cartridges. Manufactured by Knight's Armament Company.]]
 
 ATT.EFTErgoAdd = -4
-ATT.CustomCons = { Ergonomics = "-4" }
 ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 0
@@ -663,7 +653,6 @@ ATT.Description = [[A 16 inch (406mm) barrel for AR-10 based weapons for 7.62x51
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -12
-ATT.CustomCons = { Ergonomics = "-12" }
 ATT.RecoilMult = 0.95
 ATT.VisualRecoilMult = 0.95
 ATT.PhysBulletMuzzleVelocityMult = 0.952
@@ -710,7 +699,6 @@ ATT.Description = [[A 20 inch (508mm) barrel for AR-10 based weapons for 7.62x51
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -21
-ATT.CustomCons = { Ergonomics = "-21" }
 ATT.RecoilMult = 0.91
 ATT.VisualRecoilMult = 0.91
 ATT.PhysBulletMuzzleVelocityMult = 0.89
@@ -755,7 +743,6 @@ ATT.Description = [[An upper receiver for the SR-25 rifle, manufactured by Knigh
 ATT.HasReceiver = true 
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 -- ATT.RecoilMult = 0.98
 -- ATT.VisualRecoilMult = 0.98
 
@@ -814,7 +801,6 @@ ATT.Description = [[An 18 inch (457mm) barrel for AR-10 based weapons for 7.62x5
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -13
-ATT.CustomCons = { Ergonomics = "-13" }
 ATT.RecoilMult = 0.95
 ATT.VisualRecoilMult = 0.95
 ATT.PhysBulletMuzzleVelocityMult = 0.952
@@ -859,7 +845,6 @@ ATT.Description = [[An 22 inch (558mm) barrel for AR-10 based weapons for 7.62x5
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -22
-ATT.CustomCons = { Ergonomics = "-22" }
 ATT.RecoilMult = 0.91
 ATT.VisualRecoilMult = 0.91
 ATT.PhysBulletMuzzleVelocityMult = 0.952
@@ -939,7 +924,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_kac_m110_sass.mdl"
 ATT.HasStock = true
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 ATT.RecoilMult = 0.77
 ATT.VisualRecoilMult = 0.77
 
@@ -1001,7 +985,6 @@ ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.HeatCapacityMult = 1.06
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.RecoilMult = 0.985
 ATT.VisualRecoilMult = 0.985
 
@@ -1086,7 +1069,6 @@ ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.HeatCapacityMult = 1.06
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.RecoilMult = 0.985
 ATT.VisualRecoilMult = 0.985
 
@@ -1170,7 +1152,6 @@ ATT.ModelOffset = Vector(0.25, 0, -0.25)
 
 ATT.HeatCapacityMult = 0.995
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.RecoilMult = 0.975
 ATT.VisualRecoilMult = 0.975
 
@@ -1209,7 +1190,6 @@ ATT.ModelSkin = 1
 
 ATT.HeatCapacityMult = 0.995
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.RecoilMult = 0.975
 ATT.VisualRecoilMult = 0.975
 
@@ -1254,7 +1234,6 @@ ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
 
 ATT.EFTErgoAdd = -21
-ATT.CustomCons = { Ergonomics = "-21" }
 ATT.RecoilMult = 0.82
 ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
@@ -1287,7 +1266,6 @@ ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
 
 ATT.EFTErgoAdd = -21
-ATT.CustomCons = { Ergonomics = "-21" }
 ATT.RecoilMult = 0.82
 ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
@@ -1322,7 +1300,6 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.EFTErgoAdd = -0.5
-ATT.CustomCons = { Ergonomics = "-0.5" }
 ATT.RecoilMult = 0.92
 ATT.VisualRecoilMult = 0.92
 ATT.HeatCapacityMult = 0.99

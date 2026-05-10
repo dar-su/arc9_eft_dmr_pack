@@ -11,7 +11,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_22_inch_barrel.png"
 ATT.Description = "A 22 inch match barrel for M1A based weapons chambered in 7.62x51 NATO ammo."
 
 ATT.EFTErgoAdd = -17
-ATT.CustomCons = { Ergonomics = "-17" }
 ATT.RecoilMult = 0.91
 ATT.VisualRecoilMult = 0.91
 ATT.HeatCapacityMult = 0.87
@@ -49,7 +48,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_16_inch_barrel.png"
 ATT.Description = "A 16 inch (410mm) barrel for M1A based weapons chambered in 7.62x51 NATO ammo."
 
 ATT.EFTErgoAdd = -12
-ATT.CustomCons = { Ergonomics = "-12" }
 ATT.RecoilMult = 0.95
 ATT.VisualRecoilMult = 0.95
 ATT.HeatCapacityMult = 0.93
@@ -86,7 +84,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_stock.png", "mips
 ATT.Description = "The SOCOM 16 polymer stock for M1A rifles, manufactured by Springfield Armory."
 
 ATT.EFTErgoAdd = 20
-ATT.CustomPros = { Ergonomics = "+20" }
 ATT.RecoilMult = 0.75
 ATT.VisualRecoilMult = 0.75
 ATT.HeatCapacityMult = 0.97
@@ -124,7 +121,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_promag_archangel_chassis.p
 ATT.Description = "The Archangel polymer chassis for M1A rifles, manufactured by ProMag."
 
 ATT.EFTErgoAdd = 32
-ATT.CustomPros = { Ergonomics = "+32" }
 ATT.RecoilMult = 0.73
 ATT.VisualRecoilMult = 0.73
 ATT.HeatCapacityMult = 0.95
@@ -172,7 +168,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_troy_sass_chassis_stock.pn
 ATT.Description = "The TROY Semi-Automatic Sniper System chassis is designed to match the ergonomics of M16/M4 weapon systems. This modular quad-rail system allows unlimited mounting options and keeps all optics and sights mounted and undisturbed while field stripping."
 
 ATT.EFTErgoAdd = 28
-ATT.CustomPros = { Ergonomics = "+28" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.89
@@ -280,7 +275,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs
 ATT.Description = "The M14ALCS chassis for M14 rifles from the Enhanced Battle Rifle (EBR) kit. Manufactured by SAGE International."
 
 ATT.EFTErgoAdd = 18
-ATT.CustomPros = { Ergonomics = "+18" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 ATT.HeatCapacityMult = 0.91
@@ -356,7 +350,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_upper_part.png", 
 ATT.Description = "The upper part of the SOCOM 16 stock for M1A rifles. It has a Weaver rail for attaching various scopes and reflex sights."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.HasBand = true
 
@@ -389,7 +382,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_ultimak_m8_forward_optic_m
 ATT.Description = "The M8 optic mount manufactured by UltiMAK. Lightweight, fully machined 1913 Picatinny-style rail accepts intermediate eye relief scopes, red dot, holographic, and reflex optics. Installs in place of the factory handguard."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.HasBand = true
 
@@ -429,7 +421,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_amega_mini_scout_mount_sys
 ATT.Description = "The Mini Scout Mount base for M14 rifles, manufactured by Amega Mounts. Features a top Picatinny rail for mounting various scopes and reflex sights."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.HasBand = true
 
@@ -529,7 +520,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_arms_#18_scope_mount.png",
 ATT.Description = "The A.R.M.S. Inc. scope mount for M14 rifles. Made of 8620 case hardened steel. Equipped with a Weaver rail for installation of various scopes."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -562,7 +552,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_leapers_utg_4point_locking
 ATT.Description = "The 4-Point Locking Deluxe mount for M14 rifles, manufactured by Leapers Inc. It has Weaver/Picatinny type rails for mounting various scopes and reflex sights."
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -595,7 +584,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_dcsb_mo
 ATT.Description = "The M14 DCSB (Detachable Cantilevered Sight Base) mount for M14 rifles, manufactured by SAGE International. It has a Weaver-type rail for mounting various different sights. Can only be installed on the EBR chassis."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -681,7 +669,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs
 ATT.Description = "The M14ALCS (MOD-0) stock for M14 rifles from the Enhanced Battle Rifle (EBR) kit, manufactured by SAGE International."
 
 ATT.EFTErgoAdd = 17
-ATT.CustomPros = { Ergonomics = "+17" }
 ATT.RecoilMult = 0.79
 ATT.VisualRecoilMult = 0.79
 
@@ -713,7 +700,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs
 ATT.Description = "The M14ALCS (MOD-0) pistol grip for M14 rifles from the Enhanced Battle Rifle (EBR) kit, manufactured by SAGE International."
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.HasGrip = true
 
@@ -736,7 +722,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_10round_magazine.pn
 ATT.Description = "A 10-round double-stack 7.62x51 NATO magazine for the M1A rifle, produced by Springfield Armory."
 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_10.mdl"
@@ -797,7 +782,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_762x51_30round_magazine.pn
 ATT.Description = "A 30-round double-stack 7.62x51 NATO magazine for the M1 rifle. Manufactured by Triple K."
 
 ATT.EFTErgoAdd = -6
-ATT.CustomCons = { Ergonomics = "-6" }
 ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_30.mdl"
@@ -828,7 +812,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_762x51_x_products_x14_50ro
 ATT.Description = "A 50 round 7.62x51 drum NATO magazine for the M14 rifle. Manufactured by X Products."
 
 ATT.EFTErgoAdd = -17
-ATT.CustomCons = { Ergonomics = "-17" }
 ATT.MalfunctionMeanShotsToFailMult = 0.85
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_50.mdl"
@@ -927,7 +910,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_national_match_762x51_flas
 ATT.Description = "A muzzle brake-compensator for M1A rifles, manufactured by Springfield Armory."
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.RecoilMult = 0.95
 ATT.VisualRecoilMult = 0.95
 ATT.SpreadMult = 0.98
@@ -966,7 +948,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_762x51_muzzle_bra
 ATT.Description = "A muzzle brake-compensator for M1A rifles, manufactured by Springfield Armory."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.HeatCapacityMult = 0.99
@@ -1004,7 +985,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_smith_enterprise_vortex_76
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by Smith Enterprise."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.SpreadMult = 0.98
@@ -1034,7 +1014,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_yankee_hill_phantom_762x51
 ATT.Description = "A muzzle brake-compensator manufactured by Yankee Hill to fit M14 rifles."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 ATT.HeatCapacityMult = 0.99
@@ -1072,7 +1051,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_jp_enterprises_762x51_tact
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by JP Enterprises."
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.RecoilMult = 0.89
 ATT.VisualRecoilMult = 0.89
 ATT.HeatCapacityMult = 0.987
@@ -1111,7 +1089,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m14_smith_enterprise_good_iron
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by Smith Enterprise."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.SpreadMult = 0.99
@@ -1150,7 +1127,6 @@ ATT.Icon = Material("entities/eft_m1a_attachments/m1a_smith_enterprise_socom_16_
 ATT.Description = "A muzzle brake/gas block for M1A rifles, manufactured by Smith Enterprise."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 ATT.HeatCapacityMult = 0.99

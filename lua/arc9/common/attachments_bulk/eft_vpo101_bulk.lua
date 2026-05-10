@@ -38,7 +38,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/5.png", "mips smooth")
 ATT.Description = [[A 5-round magazine for VPO-101 carbines and compatible 7.62x51 systems, manufactured by Molot Arms.]]
 
 ATT.EFTErgoAdd = 1
-ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -68,7 +67,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/stock.png", "mips smooth")
 ATT.Description = [[A standard-issue stock for VPO-101 Vepr-Hunter carbines.]]
 
 ATT.EFTErgoAdd = 18
-ATT.CustomPros = { Ergonomics = "+18" }
 ATT.RecoilMult = 0.78
 ATT.VisualRecoilMult = 0.78
 
@@ -93,7 +91,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/svd.png", "mips smooth")
 ATT.Description = [[An SVD-style wooden stock designed for VPO-101 Vepr-Hunter carbines.]]
 
 ATT.EFTErgoAdd = 21
-ATT.CustomPros = { Ergonomics = "+21" }
 ATT.RecoilMult = 0.75
 ATT.VisualRecoilMult = 0.75
 
@@ -118,7 +115,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/dc.png", "mips smooth")
 ATT.Description = [[A standard-issue metal dust cover for VPO-101 Vepr-Hunter carbines, manufactured by Molot Arms.]]
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -175,7 +171,6 @@ ATT.Icon = Material("entities/eft_vpo101_attachments/sup.png", "mips smooth")
 ATT.Description = [[The Rotor 43 muzzle brake, designed for installation on VPO 7.62x51 family rifles. Although positioned as a muzzle brake, it also works as a sound suppressor.]]
 
 ATT.EFTErgoAdd = -28
-ATT.CustomCons = { Ergonomics = "-28" }
 ATT.RecoilMult = 0.9
 ATT.VisualRecoilMult = 0.9
 -- ATT.PhysBulletMuzzleVelocityMult = 0.94
@@ -209,7 +204,6 @@ ATT.Category = {"eft_mount_dovetail_vpo"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {

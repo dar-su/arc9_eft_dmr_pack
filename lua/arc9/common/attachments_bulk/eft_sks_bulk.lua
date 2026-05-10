@@ -13,7 +13,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the SKS carbine. Manufactu
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -8
-ATT.CustomCons = { Ergonomics = "-8" }
 ATT.RecoilMult = 0.92
 ATT.VisualRecoilMult = 0.92
 ATT.SpreadOverride = 1.72 * ARC9.MOAToAcc
@@ -61,7 +60,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the OP-SKS carbine. Manufa
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -8
-ATT.CustomCons = { Ergonomics = "-8" }
 ATT.RecoilMult = 0.92
 ATT.VisualRecoilMult = 0.92
 ATT.SpreadOverride = 1.72 * ARC9.MOAToAcc
@@ -109,7 +107,6 @@ ATT.Description = [[A standard upper band for SKS manufactured by TOZ, allows in
 ATT.HasBand = true 
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -146,7 +143,6 @@ ATT.Description = [[A standard upper band for the OP-SKS carbine manufactured by
 ATT.HasBand = true 
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -325,7 +321,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -21
-ATT.CustomCons = { Ergonomics = "-21" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 -- ATT.SpreadMult = 1.03
@@ -353,7 +348,6 @@ ATT.Description = [[A standard-issue dust cover for the SKS carbine, manufacture
 ATT.HasReciever = true
 
 ATT.EFTErgoAdd = 2
-ATT.CustomCons = { Ergonomics = "+2" }
 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -375,7 +369,6 @@ ATT.Description = [[A standard-issue dust cover for the OP-SKS carbine, manufact
 ATT.HasReciever = true
 
 ATT.EFTErgoAdd = 2
-ATT.CustomCons = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -397,7 +390,6 @@ ATT.Description = [[A Picatinny rail mount for the SKS carbine, installed on the
 ATT.HasReciever = true
 
 ATT.EFTErgoAdd = 7
-ATT.CustomCons = { Ergonomics = "+7" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -435,7 +427,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 ATT.RecoilMult = 0.89
 ATT.VisualRecoilMult = 0.89
 
@@ -463,7 +454,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_stock"}
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 ATT.RecoilMult = 0.89
 ATT.VisualRecoilMult = 0.89
 
@@ -491,7 +481,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_stock"}
 
 ATT.EFTErgoAdd = 18
-ATT.CustomPros = { Ergonomics = "+18" }
 ATT.RecoilMult = 0.8
 ATT.VisualRecoilMult = 0.8
 
@@ -515,7 +504,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_stock"}
 
 ATT.EFTErgoAdd = 17
-ATT.CustomPros = { Ergonomics = "+17" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 
@@ -566,7 +554,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_stock"}
 
 ATT.EFTErgoAdd = 12
-ATT.CustomPros = { Ergonomics = "+12" }
 ATT.RecoilMult = 0.73
 ATT.VisualRecoilMult = 0.73
 
@@ -633,7 +620,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_fab_stock"}
 
 ATT.EFTErgoAdd = 15
-ATT.CustomPros = { Ergonomics = "+15" }
 ATT.RecoilMult = 0.8
 ATT.VisualRecoilMult = 0.8
 
@@ -657,7 +643,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_vz58_grip"}
 
 ATT.EFTErgoAdd = 12
-ATT.CustomPros = { Ergonomics = "+12" }
 
 -- EFT ID: 5d023784d7ad1a049d4aa7f2
 ARC9.LoadAttachment(ATT, "eft_sks_pgrip_fab")
@@ -679,7 +664,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_pg"}
 
 ATT.EFTErgoAdd = 10
-ATT.CustomPros = { Ergonomics = "+10" }
 
 -- EFT ID: 5afd7e445acfc4001637e35a
 ARC9.LoadAttachment(ATT, "eft_sks_pgrip_tapco")
@@ -756,7 +740,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_hg"}
 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 
 -- EFT ID: 634f03d40384a3ba4f06f874
 ARC9.LoadAttachment(ATT, "eft_sks_hg_std")
@@ -776,7 +759,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_hg"}
 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 
 -- EFT ID: 634f03d40384a3ba4f06f874
 ARC9.LoadAttachment(ATT, "eft_sks_hg_op")
@@ -796,7 +778,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_hg"}
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 -- EFT ID: 653ecc425a1690d9d90491e4
 ARC9.LoadAttachment(ATT, "eft_sks_hg_mc")
@@ -816,7 +797,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_hg"}
 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 
 ATT.Attachments = {
     {
@@ -848,7 +828,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_hg"}
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.Attachments = {
     {
@@ -880,7 +859,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_dovetail"}
 
 ATT.EFTErgoAdd = -1
-ATT.CustomPros = { Ergonomics = "-1" }
 
 ATT.Attachments = {
     {
@@ -912,7 +890,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_sks_dovetail"}
 
 ATT.EFTErgoAdd = -1
-ATT.CustomPros = { Ergonomics = "-1" }
 
 ATT.ExcludeElements = {"railedcover", "nodovetail"}
 
@@ -942,7 +919,6 @@ ATT.Icon = Material("entities/eft_sks_attachments/10.png", "mips smooth")
 ATT.Description = [[A standard 7.62x39 10-round magazine designed for the SKS carbine. The magazine is installed into the rifle internally and cannot be ejected on the spot, so it's not recommended to take multiple of them into a raid.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.MalfunctionMeanShotsToFailMult = 0.98
 
 ATT.ExcludeElements = {"eft_sks_stock_opfor"}
@@ -973,7 +949,6 @@ ATT.Icon = Material("entities/eft_sks_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round polymer detachable SKS magazine for 7.62x39 cartridges.]]
 
 ATT.EFTErgoAdd = -5
-ATT.CustomCons = { Ergonomics = "-5" }
 ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_20.mdl"
@@ -1006,7 +981,6 @@ ATT.Icon = Material("entities/eft_sks_attachments/35.png", "mips smooth")
 ATT.Description = [[A 35-round polymer detachable SKS magazine for 7.62x39 cartridges.]]
 
 ATT.EFTErgoAdd = -7
-ATT.CustomCons = { Ergonomics = "-7" }
 ATT.MalfunctionMeanShotsToFailMult = 0.89
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_35.mdl"
@@ -1039,7 +1013,6 @@ ATT.Icon = Material("entities/eft_sks_attachments/75.png", "mips smooth")
 ATT.Description = [[The KCI 75-round blued steel magazine is designed for use with the SKS carbines that accept external magazines. Two exterior latches open the rear of the drum, allowing the user to reload without fighting spring tension and store the drum long-term with zero tension on the spring.]]
 
 ATT.EFTErgoAdd = -17
-ATT.CustomCons = { Ergonomics = "-17" }
 ATT.MalfunctionMeanShotsToFailMult = 0.7
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_drum.mdl"

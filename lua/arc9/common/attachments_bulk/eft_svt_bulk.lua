@@ -13,7 +13,6 @@ ATT.Description = [[A regular 625mm barrel for the SVT rifle.]]
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -7
-ATT.CustomCons = { Ergonomics = "-7" }
 ATT.RecoilMult = 0.9
 ATT.VisualRecoilMult = 0.9
 ATT.SpreadOverride = 1.31 * ARC9.MOAToAcc
@@ -54,7 +53,6 @@ ATT.Description = [[A standard-issue muzzle brake for the SVT rifle.]]
 ATT.HasGas = true 
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 
@@ -125,7 +123,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.Category = {"eft_svt_dc"}
 
@@ -143,7 +140,6 @@ ATT.Icon = Material("entities/eft_svt_attachments/t.png", "mips smooth")
 ATT.Description = [[Designed specially for the SVT rifle, the Tokarev mount allows installation of the PU 3.5 scope on the rifle.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -176,7 +172,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasGrip = true
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 ATT.RecoilMult = 0.82
 ATT.VisualRecoilMult = 0.82
 
@@ -197,7 +192,6 @@ ATT.Icon = Material("entities/eft_svt_attachments/10.png", "mips smooth")
 ATT.Description = [[A standard 7.62x54R 10-round magazine designed for the SVT rifle.]]
 
 ATT.EFTErgoAdd = -5
-ATT.CustomCons = { Ergonomics = "-5" }
 ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svt_10.mdl"
@@ -227,7 +221,6 @@ ATT.Icon = Material("entities/eft_svt_attachments/15.png", "mips smooth")
 ATT.Description = [[A standard 7.62x54R 15-round magazine designed for the AVT rifle.]]
 
 ATT.EFTErgoAdd = -8
-ATT.CustomCons = { Ergonomics = "-8" }
 ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svt_15.mdl"

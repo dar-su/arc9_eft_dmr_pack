@@ -13,7 +13,6 @@ ATT.Description = [[A 16.5 inch (421mm) barrel for HK417-based weapons for 7.62x
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -13
-ATT.CustomCons = { Ergonomics = "-13" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 -- ATT.PhysBulletMuzzleVelocityMult = 0.952
@@ -58,7 +57,6 @@ ATT.Description = [[An upper receiver for the G28 marksman rifle manufactured by
 ATT.HasReceiver = true 
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 -- ATT.RecoilMult = 0.98
 -- ATT.VisualRecoilMult = 0.98
 
@@ -114,7 +112,6 @@ ATT.Icon = Material("entities/eft_g28_attachments/10.png", "mips smooth")
 ATT.Description = [[A 10-round double-stack HK417/G28 magazine for 7.62x51 ammunition. The floor plate can easily be removed for disassembly and cleaning.]]
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.SortOrder = 0
@@ -183,7 +180,6 @@ ATT.Description = [[A 10-round double-stack HK417/G28 magazine for 7.62x51 ammun
 original nontransparent version like in tarkov]]
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.SortOrder = 2
@@ -215,7 +211,6 @@ ATT.Icon = Material("entities/eft_g28_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round double-stack HK417/G28 magazine for 7.62x51 ammunition. The floor plate can easily be removed for disassembly and cleaning.]]
 
 ATT.EFTErgoAdd = -4
-ATT.CustomCons = { Ergonomics = "-4" }
 ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 2
@@ -304,7 +299,6 @@ ATT.Description = [[A 20-round double-stack HK417/G28 magazine for 7.62x51 ammun
 original nontransparent version like in tarkov]]
 
 ATT.EFTErgoAdd = -4
-ATT.CustomCons = { Ergonomics = "-4" }
 ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 2
@@ -339,7 +333,6 @@ ATT.Description = [[A standard gas block for HK417 assault rifles and compatible
 ATT.HasGas = true
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.HeatCapacityMult = 0.995
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
@@ -364,7 +357,6 @@ ATT.Description = [[An extended charging handle for HK417 and compatible systems
 ATT.HasCharge = true 
 
 ATT.EFTErgoAdd = 1
-ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -425,7 +417,6 @@ ATT.HasHG = true
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_416_hk_quad_rail_extended.mdl"
 -- ATT.LHIK = true 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 ATT.RecoilMult = 0.97
 ATT.VisualRecoilMult = 0.97
 ATT.HeatCapacityMult = 0.985
@@ -499,7 +490,6 @@ ATT.HasHG = true
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_416_hk_quad_rail_extended.mdl"
 -- ATT.LHIK = true 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 -- ATT.RecoilMult = 0.97
 -- ATT.VisualRecoilMult = 0.97
 -- ATT.HeatCapacityMult = 0.985
@@ -567,7 +557,6 @@ ATT.RecoilMult = 0.77
 ATT.VisualRecoilMult = 0.77
 
 ATT.EFTErgoAdd = 4
-ATT.CustomPros = { Ergonomics = "+4" }
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_stock"
@@ -593,7 +582,6 @@ ATT.RecoilMult = 0.77
 ATT.VisualRecoilMult = 0.77
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_stock"
@@ -623,7 +611,6 @@ ATT.Description = [[The HK adjustable stock cheek piece provides optimum versati
 ATT.Icon = Material("entities/eft_g28_attachments/ch.png", "mips smooth")
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_cheek"
@@ -649,7 +636,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.BarrelLengthAdd = 0.5
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.SpreadMult = 0.97
@@ -690,7 +676,6 @@ ATT.MuzzleEffectQCA = 5
 -- ATT.MuzzleDevice = true
 -- ATT.MuzzleDevice_Priority = 6
 ATT.EFTErgoAdd = -18
-ATT.CustomCons = { Ergonomics = "-18" }
 ATT.RecoilMult = 0.9
 ATT.VisualRecoilMult = 0.9
 ATT.SpreadMult = 0.98
@@ -847,7 +832,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = "eft_optic_34mm"
 
 ATT.EFTErgoAdd = -6
-ATT.CustomCons = { Ergonomics = "-6" }
 
 ATT.FoldSights = true
 

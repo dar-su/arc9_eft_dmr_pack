@@ -12,9 +12,6 @@ ATT.Description = [[A regular 625mm barrel for the SVT rifle.]]
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -7
-ATT.RecoilMult = 0.9
-ATT.VisualRecoilMult = 0.9
 ATT.SpreadOverride = 1.31 * ARC9.MOAToAcc
 
 ATT.SortOrder = 0
@@ -38,6 +35,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -32,
+    recoilModifier = -15.6,
+    weight = 1.33,
+}))
+
+
 -- EFT ID: 6410758c857473525b08bb77
 ARC9.LoadAttachment(ATT, "eft_svt_barrel_625")
 
@@ -52,9 +56,6 @@ ATT.Description = [[A standard-issue muzzle brake for the SVT rifle.]]
 
 ATT.HasGas = true 
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -69,6 +70,13 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -7,
+    weight = 0.07,
+}))
+
 
 -- EFT ID: 64119d1f2c6d6f921a0929f8
 ARC9.LoadAttachment(ATT, "eft_svt_muzzle")
@@ -88,6 +96,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_fs"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.07,
+}))
+
+
 -- EFT ID: 64119d672c6d6f921a0929fb
 ARC9.LoadAttachment(ATT, "eft_svt_frontsight")
 
@@ -104,6 +117,11 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_rs"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.025,
+}))
+
 
 -- EFT ID: 64119d90dcf48d656f0aa275
 ARC9.LoadAttachment(ATT, "eft_svt_rearsight")
@@ -122,9 +140,14 @@ ATT.HasReciever = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 5
 
 ATT.Category = {"eft_svt_dc"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.088,
+}))
+
 
 -- EFT ID: 64119cdbdcf48d656f0aa272
 ARC9.LoadAttachment(ATT, "eft_svt_dust")
@@ -139,7 +162,6 @@ ATT.CompactName = "Tokarev"
 ATT.Icon = Material("entities/eft_svt_attachments/t.png", "mips smooth")
 ATT.Description = [[Designed specially for the SVT rifle, the Tokarev mount allows installation of the PU 3.5 scope on the rifle.]]
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -154,6 +176,12 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.02,
+}))
+
+
 -- EFT ID: 641dc35e19604f20c800be18
 ARC9.LoadAttachment(ATT, "eft_svt_tokarev")
 
@@ -171,11 +199,15 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HasGrip = true
 
-ATT.EFTErgoAdd = 6
-ATT.RecoilMult = 0.82
-ATT.VisualRecoilMult = 0.82
 
 ATT.Category = {"eft_svt_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 36,
+    recoilModifier = -18,
+    weight = 1.217,
+}))
+
 
 -- EFT ID: 6410745d5dd49d77bd078485
 ARC9.LoadAttachment(ATT, "eft_svt_stock_avt")
@@ -191,8 +223,6 @@ ATT.CompactName = "SVT 10"
 ATT.Icon = Material("entities/eft_svt_attachments/10.png", "mips smooth")
 ATT.Description = [[A standard 7.62x54R 10-round magazine designed for the SVT rifle.]]
 
-ATT.EFTErgoAdd = -5
-ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svt_10.mdl"
 ATT.DropMagazineAmount = 1
@@ -208,6 +238,13 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 10
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    weight = 0.28,
+    malfunctionChance = 0.07,
+}))
+
+
 -- EFT ID: 6422e1ea3c0f06190302161a
 ARC9.LoadAttachment(ATT, "eft_svt_mag_10")
 
@@ -220,8 +257,6 @@ ATT.CompactName = "AVT 15"
 ATT.Icon = Material("entities/eft_svt_attachments/15.png", "mips smooth")
 ATT.Description = [[A standard 7.62x54R 15-round magazine designed for the AVT rifle.]]
 
-ATT.EFTErgoAdd = -8
-ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svt_15.mdl"
 ATT.DropMagazineAmount = 1
@@ -236,6 +271,13 @@ ATT.SuppressEmptySuffix = false
 
 ATT.ClipSize = 15
 ATT.ChamberSize = 1
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -4,
+    weight = 0.35,
+    malfunctionChance = 0.07,
+}))
+
 
 -- EFT ID: 641074a07fd350b98c0b3f96
 ARC9.LoadAttachment(ATT, "eft_svt_mag_15")

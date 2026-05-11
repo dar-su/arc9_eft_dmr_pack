@@ -12,9 +12,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the SKS carbine. Manufactu
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -8
-ATT.RecoilMult = 0.92
-ATT.VisualRecoilMult = 0.92
 ATT.SpreadOverride = 1.72 * ARC9.MOAToAcc
 
 ATT.SortOrder = -1
@@ -45,7 +42,15 @@ ATT.Attachments = {
     },
 }
 
--- EFT ID: 634eff66517ccc8a960fc735
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -30,
+    recoilModifier = -9.4,
+    weight = 1.5,
+    velocity = 2,
+}))
+
+
+-- EFT ID: 634f02331f9f536910079b51
 ARC9.LoadAttachment(ATT, "eft_sks_barrel_520")
 
 ///////////////////////////////////////      eft_sks_barrel_520_op
@@ -59,9 +64,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the OP-SKS carbine. Manufa
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -8
-ATT.RecoilMult = 0.92
-ATT.VisualRecoilMult = 0.92
 ATT.SpreadOverride = 1.72 * ARC9.MOAToAcc
 
 ATT.SortOrder = 0
@@ -91,6 +93,14 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -30,
+    recoilModifier = -9.4,
+    weight = 1.5,
+    velocity = 2,
+}))
+
 
 -- EFT ID: 634eff66517ccc8a960fc735
 ARC9.LoadAttachment(ATT, "eft_sks_barrel_520_op")
@@ -106,7 +116,6 @@ ATT.Description = [[A standard upper band for SKS manufactured by TOZ, allows in
 
 ATT.HasBand = true 
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -128,6 +137,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.25,
+}))
+
+
 -- EFT ID: 634f04d82e5def262d0b30c6
 ARC9.LoadAttachment(ATT, "eft_sks_band")
 
@@ -142,7 +157,6 @@ ATT.Description = [[A standard upper band for the OP-SKS carbine manufactured by
 
 ATT.HasBand = true 
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -163,6 +177,12 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.25,
+}))
+
 
 -- EFT ID: 634f05a21f9f536910079b56
 ARC9.LoadAttachment(ATT, "eft_sks_band_op")
@@ -192,6 +212,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.12,
+}))
+
+
 -- EFT ID: 634f02d7517ccc8a960fc744
 ARC9.LoadAttachment(ATT, "eft_sks_gastube")
 
@@ -220,6 +245,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.12,
+}))
+
+
 -- EFT ID: 634f036a517ccc8a960fc746
 ARC9.LoadAttachment(ATT, "eft_sks_gastube_op")
 
@@ -236,6 +266,11 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_rs"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.025,
+}))
+
 
 -- EFT ID: 574db213245977459a2f3f5d
 ARC9.LoadAttachment(ATT, "eft_sks_rearsight")
@@ -279,6 +314,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.07,
+}))
+
+
 -- EFT ID: 593d1fa786f7746da62d61ac
 ARC9.LoadAttachment(ATT, "eft_sks_mount_socom")
 
@@ -306,6 +346,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.055,
+}))
+
+
 -- EFT ID: 5cf67cadd7f00c065a5abab7
 ARC9.LoadAttachment(ATT, "eft_sks_muzzle_wt")
 
@@ -320,11 +365,7 @@ ATT.Description = [[A sound moderator for SKS carbines, manufactured by Hexagon.
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -21
-ATT.RecoilMult = 0.94
-ATT.VisualRecoilMult = 0.94
--- ATT.SpreadMult = 1.03
-ATT.HeatCapacityMult = 1.14
+-- ATT.HeatCapacityMult = 1.14
 ATT.PhysBulletMuzzleVelocityMult = 1.0175
 
 ATT.Silencer = true
@@ -332,6 +373,14 @@ ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_muzzle_sks"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -12,
+    recoilModifier = -2,
+    weight = 0.462,
+    velocity = 0.7,
+}))
+
 
 -- EFT ID: 593d490386f7745ee97a1555
 ARC9.LoadAttachment(ATT, "eft_sks_muzzle_hexa")
@@ -347,12 +396,17 @@ ATT.Description = [[A standard-issue dust cover for the SKS carbine, manufacture
 
 ATT.HasReciever = true
 
-ATT.EFTErgoAdd = 2
 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_dc"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.09,
+}))
+
 
 -- EFT ID: 634f05ca517ccc8a960fc748
 ARC9.LoadAttachment(ATT, "eft_sks_dustcover")
@@ -368,12 +422,17 @@ ATT.Description = [[A standard-issue dust cover for the OP-SKS carbine, manufact
 
 ATT.HasReciever = true
 
-ATT.EFTErgoAdd = 2
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_dc"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.09,
+}))
+
 
 -- EFT ID: 634f06262e5def262d0b30ca
 ARC9.LoadAttachment(ATT, "eft_sks_dustcover_op")
@@ -389,7 +448,6 @@ ATT.Description = [[A Picatinny rail mount for the SKS carbine, installed on the
 
 ATT.HasReciever = true
 
-ATT.EFTErgoAdd = 7
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -407,6 +465,12 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 7,
+    weight = 0.215,
+}))
+
 
 -- EFT ID: 6415c694da439c6a97048b56
 ARC9.LoadAttachment(ATT, "eft_sks_dustcover_utg")
@@ -426,13 +490,17 @@ ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
-ATT.EFTErgoAdd = 6
-ATT.RecoilMult = 0.89
-ATT.VisualRecoilMult = 0.89
 
 ATT.ActivateElements = {"cansocom"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_sks_toz.mdl"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 17,
+    recoilModifier = -28,
+    weight = 0.703,
+}))
+
 
 -- EFT ID: 574dad8024597745964bf05c
 ARC9.LoadAttachment(ATT, "eft_sks_stock_std")
@@ -453,13 +521,17 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
 
-ATT.EFTErgoAdd = 6
-ATT.RecoilMult = 0.89
-ATT.VisualRecoilMult = 0.89
 
 ATT.ActivateElements = {"cansocom"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_sks_molot.mdl"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 17,
+    recoilModifier = -28,
+    weight = 0.703,
+}))
+
 
 -- EFT ID: 587e0531245977466077a0f7
 ARC9.LoadAttachment(ATT, "eft_sks_stock_op")
@@ -480,11 +552,15 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
 
-ATT.EFTErgoAdd = 18
-ATT.RecoilMult = 0.8
-ATT.VisualRecoilMult = 0.8
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_sks_ati_monte_carlo.mdl"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 22,
+    recoilModifier = -35,
+    weight = 1.1,
+}))
+
 
 -- EFT ID: 653ecef836fae5a82f02b869
 ARC9.LoadAttachment(ATT, "eft_sks_stock_mc")
@@ -503,9 +579,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
 
-ATT.EFTErgoAdd = 17
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_sks_tapco_intrafuse.mdl"
 ATT.LHIK = true
@@ -536,6 +609,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -15,
+    weight = 0.75,
+}))
+
+
 -- EFT ID: 5afd7ded5acfc40017541f5e
 ARC9.LoadAttachment(ATT, "eft_sks_stock_tapco")
 
@@ -553,9 +633,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_stock"}
 
-ATT.EFTErgoAdd = 12
-ATT.RecoilMult = 0.73
-ATT.VisualRecoilMult = 0.73
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_sks_fab_defence_uas.mdl"
 ATT.LHIK = true
@@ -601,6 +678,13 @@ ATT.Attachments = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 12,
+    recoilModifier = -17,
+    weight = 0.6,
+}))
+
+
 -- EFT ID: 5d0236dad7ad1a0940739d29
 ARC9.LoadAttachment(ATT, "eft_sks_stock_fab")
 
@@ -619,9 +703,13 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_fab_stock"}
 
-ATT.EFTErgoAdd = 15
-ATT.RecoilMult = 0.8
-ATT.VisualRecoilMult = 0.8
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 15,
+    recoilModifier = -20,
+    weight = 0.4,
+}))
+
 
 -- EFT ID: 653ed132896b99b40a0292e6
 ARC9.LoadAttachment(ATT, "eft_sks_stock_fab_stock")
@@ -642,7 +730,13 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_vz58_grip"}
 
-ATT.EFTErgoAdd = 12
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1,
+    weight = 0.113,
+}))
+
 
 -- EFT ID: 5d023784d7ad1a049d4aa7f2
 ARC9.LoadAttachment(ATT, "eft_sks_pgrip_fab")
@@ -663,7 +757,13 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_pg"}
 
-ATT.EFTErgoAdd = 10
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.09,
+}))
+
 
 -- EFT ID: 5afd7e445acfc4001637e35a
 ARC9.LoadAttachment(ATT, "eft_sks_pgrip_tapco")
@@ -682,8 +782,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_buffer"}
 
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.Attachments = {
     {
@@ -694,6 +792,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(-1, 0, 0.5),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -0.5,
+    weight = 0.19,
+}))
+
 
 -- EFT ID: 5afd7e095acfc40017541f61
 ARC9.LoadAttachment(ATT, "eft_sks_stock_tapco_buffer")
@@ -722,6 +827,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.1,
+}))
+
+
 -- EFT ID: 653ed19d22e1ef3d9002c328
 ARC9.LoadAttachment(ATT, "eft_sks_stock_tapco_mount")
 
@@ -739,9 +849,14 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_hg"}
 
-ATT.EFTErgoAdd = 4
 
--- EFT ID: 634f03d40384a3ba4f06f874
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    weight = 0.1,
+}))
+
+
+-- EFT ID: 634f08a21f9f536910079b5a
 ARC9.LoadAttachment(ATT, "eft_sks_hg_std")
 
 ///////////////////////////////////////      eft_sks_hg_op
@@ -758,7 +873,12 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_hg"}
 
-ATT.EFTErgoAdd = 4
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    weight = 0.1,
+}))
+
 
 -- EFT ID: 634f03d40384a3ba4f06f874
 ARC9.LoadAttachment(ATT, "eft_sks_hg_op")
@@ -777,7 +897,12 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_hg"}
 
-ATT.EFTErgoAdd = 6
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    weight = 0.1,
+}))
+
 
 -- EFT ID: 653ecc425a1690d9d90491e4
 ARC9.LoadAttachment(ATT, "eft_sks_hg_mc")
@@ -796,7 +921,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_hg"}
 
-ATT.EFTErgoAdd = 4
 
 ATT.Attachments = {
     {
@@ -809,6 +933,12 @@ ATT.Attachments = {
     },
 }
 ATT.ExcludeElements = {"eft_sks_mount_socom"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    weight = 0.22,
+}))
+
 
 -- EFT ID: 653ecd065a1690d9d90491e6
 ARC9.LoadAttachment(ATT, "eft_sks_hg_tapco")
@@ -827,7 +957,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_hg"}
 
-ATT.EFTErgoAdd = 5
 
 ATT.Attachments = {
     {
@@ -840,6 +969,12 @@ ATT.Attachments = {
     },
 }
 ATT.ExcludeElements = {"eft_sks_mount_socom"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.21,
+}))
+
 
 -- EFT ID: 653ece125a1690d9d90491e8
 ARC9.LoadAttachment(ATT, "eft_sks_hg_fab")
@@ -858,7 +993,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_dovetail"}
 
-ATT.EFTErgoAdd = -1
 
 ATT.Attachments = {
     {
@@ -871,6 +1005,12 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.02,
+}))
+
 
 -- EFT ID: 587e08ee245977446b4410cf
 ARC9.LoadAttachment(ATT, "eft_sks_dovetail_op")
@@ -889,7 +1029,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_dovetail"}
 
-ATT.EFTErgoAdd = -1
 
 ATT.ExcludeElements = {"railedcover", "nodovetail"}
 
@@ -903,6 +1042,12 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.175,
+}))
+
 
 -- EFT ID: 6415d33eda439c6a97048b5b
 ARC9.LoadAttachment(ATT, "eft_sks_dovetail_choate")
@@ -918,8 +1063,6 @@ ATT.CompactName = "SKS int."
 ATT.Icon = Material("entities/eft_sks_attachments/10.png", "mips smooth")
 ATT.Description = [[A standard 7.62x39 10-round magazine designed for the SKS carbine. The magazine is installed into the rifle internally and cannot be ejected on the spot, so it's not recommended to take multiple of them into a raid.]]
 
-ATT.EFTErgoAdd = -1
-ATT.MalfunctionMeanShotsToFailMult = 0.98
 
 ATT.ExcludeElements = {"eft_sks_stock_opfor"}
 
@@ -936,6 +1079,13 @@ ATT.ChamberSize = 1
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_10.mdl"
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.185,
+    malfunctionChance = 0.02,
+}))
+
+
 -- EFT ID: 587df3a12459772c28142567
 ARC9.LoadAttachment(ATT, "eft_sks_mag_10")
 
@@ -948,8 +1098,6 @@ ATT.CompactName = "6610 20"
 ATT.Icon = Material("entities/eft_sks_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round polymer detachable SKS magazine for 7.62x39 cartridges.]]
 
-ATT.EFTErgoAdd = -5
-ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_20.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_sks_20.mdl"
@@ -968,6 +1116,13 @@ ATT.ShotgunReload = false
 ATT.ClipSize = 20
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.112,
+    malfunctionChance = 0.07,
+}))
+
+
 -- EFT ID: 587df583245977373c4f1129
 ARC9.LoadAttachment(ATT, "eft_sks_mag_20")
 
@@ -980,8 +1135,6 @@ ATT.CompactName = "SKS AALVX 35"
 ATT.Icon = Material("entities/eft_sks_attachments/35.png", "mips smooth")
 ATT.Description = [[A 35-round polymer detachable SKS magazine for 7.62x39 cartridges.]]
 
-ATT.EFTErgoAdd = -7
-ATT.MalfunctionMeanShotsToFailMult = 0.89
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_35.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_sks_35.mdl"
@@ -1000,6 +1153,13 @@ ATT.ShotgunReload = false
 ATT.ClipSize = 35
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -5,
+    weight = 0.197,
+    malfunctionChance = 0.115,
+}))
+
+
 -- EFT ID: 5c5970672e221602b21d7855
 ARC9.LoadAttachment(ATT, "eft_sks_mag_35")
 
@@ -1012,8 +1172,6 @@ ATT.CompactName = "KCI SKS 75"
 ATT.Icon = Material("entities/eft_sks_attachments/75.png", "mips smooth")
 ATT.Description = [[The KCI 75-round blued steel magazine is designed for use with the SKS carbines that accept external magazines. Two exterior latches open the rear of the drum, allowing the user to reload without fighting spring tension and store the drum long-term with zero tension on the spring.]]
 
-ATT.EFTErgoAdd = -17
-ATT.MalfunctionMeanShotsToFailMult = 0.7
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_sks_drum.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_sks_drum.mdl"
@@ -1031,6 +1189,13 @@ ATT.ShotgunReload = false
 
 ATT.ClipSize = 75
 ATT.ChamberSize = 1
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -11,
+    weight = 1.043,
+    malfunctionChance = 0.299,
+}))
+
 
 -- EFT ID: 61695095d92c473c7702147a
 ARC9.LoadAttachment(ATT, "eft_sks_mag_75")
@@ -1051,5 +1216,5 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_sks_conv"}
 
--- EFT ID: 587e02ff24597743df3deaeb
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_sks_op")

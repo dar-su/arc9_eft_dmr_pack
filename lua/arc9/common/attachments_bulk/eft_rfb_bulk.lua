@@ -12,9 +12,6 @@ ATT.Description = [[A barrel for RFB 7.62x51 ammo, 18 inch long. ]]
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -11
-ATT.RecoilMult = 0.94
-ATT.VisualRecoilMult = 0.94
 -- ATT.PhysBulletMuzzleVelocityMult = 0.94
 -- ATT.HeatCapacityMult = 1.01
 ATT.Spread = 1.48 * ARC9.MOAToAcc
@@ -41,6 +38,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -8,
+    recoilModifier = -11.4,
+    weight = 0.91,
+}))
+
+
 -- EFT ID: 5f2aa46b878ef416f538b567
 ARC9.LoadAttachment(ATT, "eft_rfb_barrel_18")
 
@@ -53,9 +57,6 @@ ATT.CompactName = "RFB"
 ATT.Icon = Material("entities/eft_rfb_attachments/hg.png", "mips smooth")
 ATT.Description = [[A standard-issue handguard for the RFB rifle, manufactured by Kel-Tec. ]]
 
-ATT.EFTErgoAdd = 16
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 
 ATT.HasHG = true
 
@@ -72,6 +73,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 16,
+    weight = 0.221,
+}))
+
 
 -- EFT ID: 5f2aa47a200e2c0ee46efa71
 ARC9.LoadAttachment(ATT, "eft_rfb_hg_std")
@@ -98,6 +105,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.2,
+    weight = 0.075,
+}))
+
 
 -- EFT ID: 5f2aa493cd375f14e15eea72
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_bottom")
@@ -141,6 +154,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.09,
+}))
+
+
 -- EFT ID: 5f2aa49f9b44de6b1b4e68d4
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_upper")
 
@@ -153,7 +171,6 @@ ATT.CompactName = "RFB 3\""
 ATT.Icon = Material("entities/eft_rfb_attachments/q.png", "mips smooth")
 ATT.Description = [[A 3 inch quad rail mount for the RFB rifle, allowing the installation of additional tactical equipment. Manufactured by Kel-Tec. ]]
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -191,6 +208,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.11,
+}))
+
+
 -- EFT ID: 676177591f08ed5e8800b7a9
 ARC9.LoadAttachment(ATT, "eft_rfb_mount_quad")
 
@@ -205,11 +228,14 @@ ATT.Description = [[A threading protection cap for the Kel-Tec RFB 7.62x51 rifle
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
--- ATT.RecoilMult = 0.94
--- ATT.VisualRecoilMult = 0.94
-ATT.HeatCapacityMult = 1.01
-ATT.EFTErgoAdd = 1
+-- -- ATT.HeatCapacityMult = 1.01
 ATT.Category = {"eft_rfb_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    weight = 0.01,
+}))
+
 
 -- EFT ID: 5f2aa4464b50c14bcf07acdb
 ARC9.LoadAttachment(ATT, "eft_rfb_muzzle_thr")
@@ -237,6 +263,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.091,
+}))
+
+
 -- EFT ID: 5f2aa43ba9b91d26f20ae6d2
 ARC9.LoadAttachment(ATT, "eft_rfb_muzzle_spacer")
 
@@ -254,11 +285,16 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_rfb.mdl"
 ATT.BarrelLengthAdd = 0.5
 
-ATT.RecoilMult = 0.95
-ATT.VisualRecoilMult = 0.95
 -- ATT.HeatCapacityMult = 1.01
 
 ATT.Category = {"eft_rfb_muzzle2"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -6,
+    weight = 0.064,
+}))
+
 
 -- EFT ID: 5f2aa4559b44de6b1b4e68d1
 ARC9.LoadAttachment(ATT, "eft_muzzle_rfb_fh")

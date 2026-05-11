@@ -59,6 +59,7 @@ SWEP.CustomizeSnapshotPos = Vector(0, 30, 0)
 SWEP.Spread = 0.378 * ARC9.MOAToAcc
 SWEP.RPM = 450
 SWEP.EFTErgo = 40
+SWEP.EFTWeight = 0.82
 SWEP.BarrelLength = 42
 SWEP.Ammo = "ar2"
 SWEP.Firemodes = { { Mode = 1 }, { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_manualreload"), ShotgunReload = true, ShouldDropMagEmpty = false },  }

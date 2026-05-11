@@ -12,9 +12,6 @@ ATT.Description = [[A 22 inch barrel for SVDS sniper rifles chambered in 7.62x54
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -10
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
 ATT.PhysBulletMuzzleVelocityMult = 0.94
 
 ATT.SortOrder = 0
@@ -45,6 +42,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -22,
+    recoilModifier = -14.1,
+    weight = 1.12,
+}))
+
+
 -- EFT ID: 5c471cb32e221602b177afaa
 ARC9.LoadAttachment(ATT, "eft_svds_barrel_std")
 
@@ -60,13 +64,17 @@ ATT.Description = [[A standard gas tube for SVDS sniper rifles. Gas tubes channe
 
 ATT.HasGas = true 
 
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_gas"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    recoilModifier = -2,
+    weight = 0.12,
+}))
+
 
 -- EFT ID: 5c471c842e221615214259b5
 ARC9.LoadAttachment(ATT, "eft_svds_gas_std")
@@ -80,7 +88,6 @@ ATT.CompactName = "DRG L-1"
 ATT.Icon = Material("entities/eft_svds_attachments/drg.png", "mips smooth")
 ATT.Description = [[A Picatinny rail for the SVD sniper rifle for mounting on the barrel. Allows installation of additional tactical devices.]]
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -96,6 +103,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.075,
+}))
+
+
 -- EFT ID: 5e569a132642e66b0b68015c
 ARC9.LoadAttachment(ATT, "eft_svds_barrel_mount_drg")
 
@@ -110,9 +123,6 @@ ATT.Description = [[A standard Izhmash-produced muzzle brake and compensator for
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
 
 ATT.Category = {"eft_svds_muzzle"}
 ATT.Attachments = {
@@ -132,6 +142,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -10,
+    weight = 0.08,
+}))
+
+
 -- EFT ID: 5c471bfc2e221602b21d4e17
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_std")
 
@@ -146,7 +163,6 @@ ATT.Description = [[A special thread adapter manufactured by Rotor 43. Allows in
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
 
 ATT.Category = {"eft_svds_muzzle2"}
 ATT.Attachments = {
@@ -158,6 +174,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.18,
+}))
+
 
 -- EFT ID: 5e01e9e273d8eb11426f5bc3
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_adap")
@@ -174,11 +196,7 @@ ATT.Description = [[The Rotor 43 muzzle brake is designed for installation on SV
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.SpreadMult = 0.98
-ATT.VisualRecoilMult = 0.9
-ATT.RecoilMult = 0.9
 ATT.HeatCapacityMult = 0.85
-ATT.EFTErgoAdd = -22
 
 ATT.Silencer = true
 ATT.BarrelLengthAdd = 5
@@ -188,6 +206,14 @@ ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 
 ATT.Category = {"eft_svds_suppressor"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -22,
+    recoilModifier = -7,
+    weight = 0.81,
+    velocity = 0.8,
+}))
+
 
 -- EFT ID: 5e01ea19e9dc277128008c0b
 ARC9.LoadAttachment(ATT, "eft_muzzle_svds_suppressor")
@@ -205,6 +231,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_fs"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.08,
+}))
+
+
 -- EFT ID: 5c471ba12e221602b3137d76
 ARC9.LoadAttachment(ATT, "eft_svds_fs_std")
 
@@ -221,6 +252,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_rs"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.15,
+}))
+
+
 -- EFT ID: 5c471b7e2e2216152006e46c
 ARC9.LoadAttachment(ATT, "eft_svds_rs_std")
 
@@ -235,7 +271,6 @@ ATT.Description = [[A standard upper band for SVDS sniper rifles and compatibles
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
 
 ATT.Category = {"eft_svds_ub"}
 ATT.Attachments = {
@@ -254,6 +289,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.246,
+}))
+
 
 -- EFT ID: 5c471c2d2e22164bef5d077f
 ARC9.LoadAttachment(ATT, "eft_ub_svds_std")
@@ -275,9 +316,6 @@ ATT.LHIK = true
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(-0.05, 0, -1)
 
-ATT.EFTErgoAdd = 11
-ATT.VisualRecoilMult = 0.97
-ATT.RecoilMult = 0.97
 
 ATT.ActivateElements = {"nodovetail"}
 ATT.ExcludeElements = {"eft_svds_rec_std"}
@@ -328,6 +366,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 15,
+    recoilModifier = -2,
+    weight = 0.89,
+}))
+
+
 -- EFT ID: 5dfcd0e547101c39625f66f9
 ARC9.LoadAttachment(ATT, "eft_ub_svds_sag")
 
@@ -348,9 +393,6 @@ ATT.LHIK = true
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(0, -2, 0)
 
-ATT.EFTErgoAdd = 7
-ATT.VisualRecoilMult = 0.96
-ATT.RecoilMult = 0.96
 
 ATT.Category = {"eft_svds_hg"}
 ATT.Attachments = {
@@ -399,6 +441,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 22,
+    weight = 0.48,
+}))
+
+
 -- EFT ID: 5e56991336989c75ab4f03f6
 ARC9.LoadAttachment(ATT, "eft_hg_svds_mod")
 
@@ -413,9 +461,6 @@ ATT.Description = [[A prototype top rail designed for the modernized SVD sniper 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
-ATT.VisualRecoilMult = 0.98
-ATT.RecoilMult = 0.98
 
 ATT.ActivateElements = {"nodovetail"}
 ATT.ExcludeElements = {"eft_rs_svds_tt01"}
@@ -433,6 +478,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -2,
+    weight = 0.24,
+}))
+
+
 -- EFT ID: 5e569a0156edd02abe09f27d
 ARC9.LoadAttachment(ATT, "eft_hg_svds_mod2")
 
@@ -448,9 +500,14 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasHG = true
 
-ATT.EFTErgoAdd = 6
 
 ATT.Category = {"eft_svds_hg"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 12,
+    weight = 0.25,
+}))
+
 
 -- EFT ID: 5c471c6c2e221602b66cd9ae
 ARC9.LoadAttachment(ATT, "eft_hg_svds_std")
@@ -472,9 +529,6 @@ ATT.LHIK = true
 ATT.ModelAngleOffset = Angle(0, 90, 0)
 ATT.ModelOffset = Vector(0, -2, 0)
 
-ATT.EFTErgoAdd = 7
-ATT.VisualRecoilMult = 0.99
-ATT.RecoilMult = 0.99
 
 ATT.Category = {"eft_svds_hg"}
 
@@ -524,6 +578,12 @@ ATT.Attachments = {
     }, 
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    weight = 0.65,
+}))
+
+
 -- EFT ID: 5e5699df2161e06ac158df6f
 ARC9.LoadAttachment(ATT, "eft_hg_svds_xrs")
 
@@ -538,12 +598,17 @@ ATT.Description = [[An Izhmash pistol grip for SVDS and compatible weapon system
 
 ATT.HasGrip = true 
 
-ATT.EFTErgoAdd = 5
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_pgrip"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.07,
+}))
+
 
 -- EFT ID: 5c471be12e221602b66cd9ac
 ARC9.LoadAttachment(ATT, "eft_svds_pgrip_std")
@@ -559,7 +624,6 @@ ATT.Description = [[A standard-issue dust cover for SVDS sniper rifles, manufact
 
 ATT.HasBolt = true 
 
-ATT.EFTErgoAdd = 2
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -567,6 +631,12 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.ExcludeElements = {"eft_ub_svds_sag"}
 
 ATT.Category = {"eft_svds_rec"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.088,
+}))
+
 
 -- EFT ID: 5c471bd12e221602b4129c3a
 ARC9.LoadAttachment(ATT, "eft_svds_rec_std")
@@ -582,12 +652,17 @@ ATT.Description = [[A custom cut-off dust cover for SVDS sniper rifles, required
 
 ATT.HasBolt = true 
 
-ATT.EFTErgoAdd = 2
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_rec"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.05,
+}))
+
 
 -- EFT ID: 5dfce88fe9dc277128008b2e
 ARC9.LoadAttachment(ATT, "eft_svds_rec_cut")
@@ -601,9 +676,6 @@ ATT.CompactName = "SVDS adpt."
 ATT.Icon = Material("entities/eft_svds_attachments/adap.png", "mips smooth")
 ATT.Description = [[An adapter for installation of telescopic stock buffer tubes on the SVD sniper rifles and Rys carbines with folding stocks. Manufactured by Lynx Arms.]]
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -620,6 +692,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.5,
+    weight = 0.127,
+}))
+
+
 -- EFT ID: 6197b229af1f5202c57a9bea
 ARC9.LoadAttachment(ATT, "eft_svds_stock_adap")
 
@@ -632,14 +710,18 @@ ATT.CompactName = "SVDS"
 ATT.Icon = Material("entities/eft_svds_attachments/st.png", "mips smooth")
 ATT.Description = [[A polymer stock for SVDS sniper rifles, manufactured by Izhmash.]]
 
-ATT.EFTErgoAdd = 3
-ATT.RecoilMult = 0.69
-ATT.VisualRecoilMult = 0.69
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svds_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -22,
+    weight = 0.35,
+}))
+
 
 -- EFT ID: 5c471b5d2e221602b21d4e14
 ARC9.LoadAttachment(ATT, "eft_svds_stock_std")
@@ -653,8 +735,6 @@ ATT.CompactName = "SVD 10"
 ATT.Icon = Material("entities/eft_svds_attachments/10.png", "mips smooth")
 ATT.Description = [[A 10-round 7.62x54R steel Izhmash magazine for SVD-based rifles.]]
 
-ATT.EFTErgoAdd = -1
-ATT.MalfunctionMeanShotsToFailMult = 0.98
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -666,6 +746,13 @@ ATT.ChamberSize = 1
 ATT.SuppressEmptySuffix = false 
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svd_10_dropped.mdl"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    weight = 0.112,
+    malfunctionChance = 0.02,
+}))
+
 
 -- EFT ID: 5c471c442e221602b542a6f8
 ARC9.LoadAttachment(ATT, "eft_svds_mag_10")
@@ -679,8 +766,6 @@ ATT.CompactName = "SVD 20"
 ATT.Icon = Material("entities/eft_svds_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round 7.62x54R steel Izhmash magazine for SVD-based rifles.]]
 
-ATT.EFTErgoAdd = -2
-ATT.MalfunctionMeanShotsToFailMult = 0.91
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -692,6 +777,13 @@ ATT.ChamberSize = 1
 ATT.SuppressEmptySuffix = false 
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_svd_20_dropped.mdl"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -3,
+    weight = 0.112,
+    malfunctionChance = 0.09,
+}))
+
 
 -- EFT ID: 5c88f24b2e22160bc12c69a6
 ARC9.LoadAttachment(ATT, "eft_svds_mag_20")
@@ -714,7 +806,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ModelOffset = Vector(-0.07, -2, 0)
 
-ATT.EFTErgoAdd = -1
 ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
@@ -729,6 +820,12 @@ ATT.Attachments = {
 }
 
 ATT.ModelAngleOffset = Angle(0, 90, 0)
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    weight = 0.225,
+}))
+
 
 -- EFT ID: 5e569a2e56edd02abe09f280
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_caaxdrgl")
@@ -750,7 +847,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ModelOffset = Vector(0, 0, 0)
 
-ATT.EFTErgoAdd = -1
 ATT.ActivateElements = {"nolongrear"}
 
 ATT.Attachments = {
@@ -765,6 +861,12 @@ ATT.Attachments = {
 }
 
 ATT.ModelAngleOffset = Angle(0, 90, 0)
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.165,
+}))
+
 
 -- EFT ID: 5dff8db859400025ea5150d4
 ARC9.LoadAttachment(ATT, "eft_mount_dovetail_sagsvd")
@@ -782,7 +884,6 @@ ATT.Description = [[An adapter that allows installation of AK-series pistol grip
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
 
 -- ATT.HasGrip = true
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ak_cg101_adapter.mdl"
@@ -799,6 +900,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(-0.5, 0, -0.5),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.5,
+    weight = 0.033,
+}))
+
 
 -- EFT ID: 6516b129609aaf354b34b3a8
 ARC9.LoadAttachment(ATT, "eft_svds_pgrip_adap")
@@ -824,9 +931,6 @@ ATT.Description = "A receiver top cover for the TKPD assault carbine. Equipped w
 
 ATT.HasBolt = true 
 
-ATT.EFTErgoAdd = 5
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -855,6 +959,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1,
+    weight = 0.268,
+}))
+
+
 -- EFT ID: 68aee8f8130c00663d08aeb3
 ARC9.LoadAttachment(ATT, "eft_tkpd_rec_std")
 
@@ -871,9 +982,6 @@ ATT.Description = "A 457mm barrel for the TKPD 9.3x64mm assault carbine."
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -3
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 ATT.HeatCapacityMult = 0.85
 ATT.PhysBulletMuzzleVelocityMult = 0.9382
 
@@ -898,6 +1006,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -15,
+    recoilModifier = -8,
+    weight = 0.97,
+    velocity = -6.18,
+}))
+
+
 -- EFT ID: 68aee9b89df2c1144f0aaa46
 ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_std")
 ///////////////////////////////////////      eft_tkpd_barrel_570
@@ -912,9 +1028,6 @@ ATT.Description = "A 570mm barrel for the TKPD 9.3x64mm assault carbine."
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -13
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.92
 ATT.PhysBulletMuzzleVelocityMult = 0.98
 
@@ -939,6 +1052,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -28,
+    recoilModifier = -12,
+    weight = 1.12,
+    velocity = -2,
+}))
+
+
 -- EFT ID: 68be93d19bae3db9c5005b19
 ARC9.LoadAttachment(ATT, "eft_tkpd_barrel_570")
 ///////////////////////////////////////      eft_tkpd_gas_std
@@ -952,14 +1073,18 @@ ATT.Description = "A standard gas tube for the TKPD assault carbine."
 
 ATT.HasGas = true 
 
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 ATT.HeatCapacityMult = 0.995
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_tkpd_gas"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    recoilModifier = -2,
+    weight = 0.12,
+}))
+
 
 -- EFT ID: 68aee9e31ef0d507780a61cd
 ARC9.LoadAttachment(ATT, "eft_tkpd_gas_std")
@@ -973,13 +1098,17 @@ ATT.Description = "A muzzle brake for the TKPD assault carbine."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -3
-ATT.RecoilMult = 0.91
-ATT.VisualRecoilMult = 0.91
-ATT.SpreadMult = 0.98
 ATT.HeatCapacityMult = 0.99
 
 ATT.Category = {"eft_tkpd_muzzle"}
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -3,
+    recoilModifier = -9,
+    accuracyModifier = 2,
+    weight = 0.29,
+}))
+
+
 -- EFT ID: 68aeeb3e9df2c1144f0aaa4b
 ARC9.LoadAttachment(ATT, "eft_muzzle_tkpd_std")
 ///////////////////////////////////////      eft_ub_tkpd_std
@@ -993,7 +1122,6 @@ ATT.Description = "A handguard mounting trunnion for the TKPD assault carbine."
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
 
 ATT.Category = {"eft_tkpd_ub"}
 ATT.Attachments = {
@@ -1005,6 +1133,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.216,
+}))
+
 
 -- EFT ID: 68aee9731ef0d507780a61c9
 ARC9.LoadAttachment(ATT, "eft_ub_tkpd_std")
@@ -1025,9 +1159,6 @@ ATT.HasHG = true
 -- ATT.ModelAngleOffset = Angle(0, 90, 0)
 -- ATT.ModelOffset = Vector(0, -2, 0)
 
-ATT.EFTErgoAdd = 9
-ATT.RecoilMult = 0.975
-ATT.VisualRecoilMult = 0.975
 ATT.HeatCapacityMult = 0.913
 
 ATT.Category = {"eft_tkpd_hg"}
@@ -1085,6 +1216,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.41,
+}))
+
+
 -- EFT ID: 68aee9fe130c00663d08aeb6
 ARC9.LoadAttachment(ATT, "eft_hg_tkpd_std")
 ///////////////////////////////////////      eft_hg_tkpd_fde
@@ -1104,9 +1241,6 @@ ATT.HasHG = true
 -- ATT.ModelAngleOffset = Angle(0, 90, 0)
 -- ATT.ModelOffset = Vector(0, -2, 0)
 
-ATT.EFTErgoAdd = 9
-ATT.RecoilMult = 0.975
-ATT.VisualRecoilMult = 0.975
 ATT.HeatCapacityMult = 0.913
 
 ATT.Category = {"eft_tkpd_hg"}
@@ -1164,6 +1298,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.41,
+}))
+
+
 -- EFT ID: 68d5676f43adc7372a0c8ae0
 ARC9.LoadAttachment(ATT, "eft_hg_tkpd_fde")
 ///////////////////////////////////////      eft_tkpd_mag_10
@@ -1175,7 +1315,6 @@ ATT.CompactName = "TKPD 10"
 ATT.Icon = Material("entities/eft_tkpd_attachments/10.png", "mips smooth")
 ATT.Description = "A 10-round 9.3x64mm magazine for the TKPD assault carbine."
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1188,13 +1327,16 @@ ATT.SuppressEmptySuffix = false
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_tkpd_10_dropped.mdl"
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.112,
+    malfunctionChance = 0.02,
+}))
+
+
 -- EFT ID: 68aef9bf4efeccb5220d25c6
 ARC9.LoadAttachment(ATT, "eft_tkpd_mag_10")
 
-
-
-local dmgrange = (GetConVar("arc9_eft_mindmgrange"):GetInt() or 1000)/1000
-local mult54 = GetConVar("arc9_eft_mult_bigrifle"):GetFloat() or 0.5
 
 
 ///////////////////////////////////////      eft_ammo_93x64_fmj
@@ -1212,22 +1354,27 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 ATT.ActivateElements = {"93x64"}
 
-ATT.SpreadMult = 0.85
-
 ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_fmj.printname") or "9.3x64mm FMJ"
 
-ATT.DamageMax = 115 * mult54
-ATT.DamageMin = 115 * mult54 * 0.27
-ATT.PhysBulletMuzzleVelocity = 793 /0.0254
-ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254 * dmgrange
-
-ATT.Penetration =      44 *2.54/100/0.0254
-ATT.PenetrationDelta = 55/100
-ATT.ArmorPiercing =    55/100
-ATT.RicochetChance =   34/100
-
 ATT.Category = {"eft_ammo_93x64"}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.042,
+    damage = 115,
+    ballisticCoeficient = 0.27,
+    initialSpeed = 793,
+    accuracyModifier = 0.15,
+    penetrationPower = 44,
+    armorDamage = 55,
+    penetrationChance = 0.3,
+    ricochetChance = 0.4,
+    heatFactor = 2.934,
+    failureToFeedChance = 0.0891,
+    misfireChance = 0.21,
+    lightBleedModifier = 0.8,
+    heavyBleedModifier = 0.5,
+}), "bigrifle")
 
 
 -- EFT ID: 68bac6ca653ee6b1e406d978
@@ -1248,23 +1395,27 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 ATT.ActivateElements = {"93x64"}
 
-ATT.RecoilMult = 0.8
-ATT.VisualRecoilMult = 0.8
-
 ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_sp.printname") or "9.3x64mm SP"
 
-ATT.DamageMax = 129 * mult54
-ATT.DamageMin = 129 * mult54 * 0.414
-ATT.PhysBulletMuzzleVelocity = 697 /0.0254
-ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254 * dmgrange
-
-ATT.Penetration =      37 *2.54/100/0.0254
-ATT.PenetrationDelta = 55/100
-ATT.ArmorPiercing =    55/100
-ATT.RicochetChance =   34/100
-
 ATT.Category = {"eft_ammo_93x64"}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.039,
+    damage = 129,
+    ballisticCoeficient = 0.414,
+    initialSpeed = 697,
+    recoilModifier = -0.2,
+    penetrationPower = 37,
+    armorDamage = 55,
+    penetrationChance = 0.3,
+    ricochetChance = 0.4,
+    heatFactor = 2.934,
+    failureToFeedChance = 0.0891,
+    misfireChance = 0.21,
+    lightBleedModifier = 0.8,
+    heavyBleedModifier = 0.5,
+}), "bigrifle")
 
 
 -- EFT ID: 68aeed8a8906b00bc800fdd6
@@ -1285,24 +1436,28 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 ATT.ActivateElements = {"93x64"}
 
-ATT.RecoilMult = 1.2
-ATT.VisualRecoilMult = 1.2
-ATT.SpreadMult = 1.05
-
 ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_93x64_7n33.printname") or "9.3x64mm 7N33"
 
-ATT.DamageMax = 108 * mult54
-ATT.DamageMin = 108 * mult54 * 0.38
-ATT.PhysBulletMuzzleVelocity = 697 /0.0254
-ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254 * dmgrange
-
-ATT.Penetration =      56 *2.54/100/0.0254
-ATT.PenetrationDelta = 55/100
-ATT.ArmorPiercing =    55/100
-ATT.RicochetChance =   34/100
-
 ATT.Category = {"eft_ammo_93x64"}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.04,
+    damage = 108,
+    ballisticCoeficient = 0.38,
+    initialSpeed = 790,
+    accuracyModifier = -0.05,
+    recoilModifier = 0.2,
+    penetrationPower = 56,
+    armorDamage = 55,
+    penetrationChance = 0.3,
+    ricochetChance = 0.4,
+    heatFactor = 2.934,
+    failureToFeedChance = 0.0891,
+    misfireChance = 0.21,
+    lightBleedModifier = 0.8,
+    heavyBleedModifier = 0.5,
+}), "bigrifle")
 
 
 -- EFT ID: 68bad8376cb22acf1107a586

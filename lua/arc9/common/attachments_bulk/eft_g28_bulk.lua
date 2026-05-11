@@ -12,9 +12,6 @@ ATT.Description = [[A 16.5 inch (421mm) barrel for HK417-based weapons for 7.62x
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -13
-ATT.RecoilMult = 0.94
-ATT.VisualRecoilMult = 0.94
 -- ATT.PhysBulletMuzzleVelocityMult = 0.952
 ATT.HeatCapacityMult = 1.07
 ATT.Spread = 1.13 * ARC9.MOAToAcc
@@ -42,6 +39,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -23,
+    recoilModifier = -10.5,
+    weight = 0.572,
+    velocity = -1,
+}))
+
+
 -- EFT ID: 61702be9faa1272e431522c3
 ARC9.LoadAttachment(ATT, "eft_g28_barrel_std")
 
@@ -56,10 +61,7 @@ ATT.Description = [[An upper receiver for the G28 marksman rifle manufactured by
 
 ATT.HasReceiver = true 
 
-ATT.EFTErgoAdd = 5
--- ATT.RecoilMult = 0.98
--- ATT.VisualRecoilMult = 0.98
-
+-- -- 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -97,6 +99,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.27,
+}))
+
+
 -- EFT ID: 61713a8fd92c473c770214a4
 ARC9.LoadAttachment(ATT, "eft_g28_upper_std")
 
@@ -111,8 +119,6 @@ ATT.CompactName = "G28 10"
 ATT.Icon = Material("entities/eft_g28_attachments/10.png", "mips smooth")
 ATT.Description = [[A 10-round double-stack HK417/G28 magazine for 7.62x51 ammunition. The floor plate can easily be removed for disassembly and cleaning.]]
 
-ATT.EFTErgoAdd = 2
-ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -164,6 +170,13 @@ ATT.ReloadHideBoneTables = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.1,
+    malfunctionChance = 0.02,
+}))
+
+
 -- EFT ID: 617130016c780c1e710c9a24
 ARC9.LoadAttachment(ATT, "eft_g28_mag_10")
 
@@ -179,8 +192,6 @@ ATT.Description = [[A 10-round double-stack HK417/G28 magazine for 7.62x51 ammun
 
 original nontransparent version like in tarkov]]
 
-ATT.EFTErgoAdd = 2
-ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -197,6 +208,13 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_10.mdl"
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.1,
+    malfunctionChance = 0.02,
+}))
+
+
 -- EFT ID: 617130016c780c1e710c9a24
 ARC9.LoadAttachment(ATT, "eft_g28_mag_10old")
 
@@ -210,8 +228,6 @@ ATT.CompactName = "G28 20"
 ATT.Icon = Material("entities/eft_g28_attachments/20.png", "mips smooth")
 ATT.Description = [[A 20-round double-stack HK417/G28 magazine for 7.62x51 ammunition. The floor plate can easily be removed for disassembly and cleaning.]]
 
-ATT.EFTErgoAdd = -4
-ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -283,6 +299,13 @@ ATT.ReloadHideBoneTables = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.16,
+    malfunctionChance = 0.04,
+}))
+
+
 -- EFT ID: 617131a4568c120fdd29482d
 ARC9.LoadAttachment(ATT, "eft_g28_mag_20")
 
@@ -298,8 +321,6 @@ ATT.Description = [[A 20-round double-stack HK417/G28 magazine for 7.62x51 ammun
 
 original nontransparent version like in tarkov]]
 
-ATT.EFTErgoAdd = -4
-ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -315,6 +336,13 @@ ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_20.mdl"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_hk_417_20.mdl"
 
 ATT.DrawFunc = function(swep, model) model:SetSkin(swep:GetElements()["eft_g28_blk"] and 1 or 0) end
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.16,
+    malfunctionChance = 0.04,
+}))
+
 
 -- EFT ID: 617131a4568c120fdd29482d
 ARC9.LoadAttachment(ATT, "eft_g28_mag_20old")
@@ -332,15 +360,19 @@ ATT.Description = [[A standard gas block for HK417 assault rifles and compatible
 
 ATT.HasGas = true
 
-ATT.EFTErgoAdd = -1
 ATT.HeatCapacityMult = 0.995
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_g28_gas"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -2,
+    weight = 0.12,
+}))
+
 
 -- EFT ID: 61702f1b67085e45ef140b26
 ARC9.LoadAttachment(ATT, "eft_g28_gas_std")
@@ -356,12 +388,17 @@ ATT.Description = [[An extended charging handle for HK417 and compatible systems
 
 ATT.HasCharge = true 
 
-ATT.EFTErgoAdd = 1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_g28_charge"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    weight = 0.041,
+}))
+
 
 -- EFT ID: 61702d8a67085e45ef140b24
 ARC9.LoadAttachment(ATT, "eft_g28_charge_std")
@@ -378,8 +415,6 @@ ATT.Icon = Material("entities/eft_g28_attachments/b.png", "mips smooth")
 
 ATT.HasBufferTube = true
 
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_buffertube"
@@ -399,6 +434,13 @@ ATT.Attachments = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -1,
+    weight = 0.162,
+}))
+
+
 -- EFT ID: 617153016c780c1e710c9a2f
 ARC9.LoadAttachment(ATT, "eft_g28_buffer_std")
 
@@ -416,9 +458,6 @@ ATT.HasHG = true
 
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_416_hk_quad_rail_extended.mdl"
 -- ATT.LHIK = true 
-ATT.EFTErgoAdd = 5
-ATT.RecoilMult = 0.97
-ATT.VisualRecoilMult = 0.97
 ATT.HeatCapacityMult = 0.985
 ATT.Category = {"eft_g28_hg"}
 
@@ -472,6 +511,12 @@ ATT.Attachments = {
     }, 
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 19,
+    weight = 0.55,
+}))
+
+
 -- EFT ID: 61703001d92c473c77021497
 ARC9.LoadAttachment(ATT, "eft_g28_hg_ext")
 
@@ -489,10 +534,7 @@ ATT.HasHG = true
 
 -- ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_416_hk_quad_rail_extended.mdl"
 -- ATT.LHIK = true 
-ATT.EFTErgoAdd = 4
--- ATT.RecoilMult = 0.97
--- ATT.VisualRecoilMult = 0.97
--- ATT.HeatCapacityMult = 0.985
+-- -- -- ATT.HeatCapacityMult = 0.985
 ATT.Category = {"eft_g28_hg"}
 
 -- ATT.ExcludeElements = {"barrel_10i", "barrel_145i", "barrel_16i"}
@@ -538,6 +580,12 @@ ATT.Attachments = {
     -- }, 
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 16,
+    weight = 0.43,
+}))
+
+
 -- EFT ID: 61712eae6c780c1e710c9a1d
 ARC9.LoadAttachment(ATT, "eft_g28_hg_std")
 
@@ -553,14 +601,18 @@ ATT.Icon = Material("entities/eft_g28_attachments/e2.png", "mips smooth")
 
 ATT.HasStock = true
 
-ATT.RecoilMult = 0.77
-ATT.VisualRecoilMult = 0.77
 
-ATT.EFTErgoAdd = 4
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_stock"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    recoilModifier = -23,
+    weight = 0.39,
+}))
 
 
 -- EFT ID: 617154aa1cb55961fa0fdb3b
@@ -578,10 +630,7 @@ ATT.Icon = Material("entities/eft_g28_attachments/a.png", "mips smooth")
 
 ATT.HasStock = true
 
-ATT.RecoilMult = 0.77
-ATT.VisualRecoilMult = 0.77
 
-ATT.EFTErgoAdd = 6
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_stock"
@@ -597,6 +646,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -23,
+    weight = 0.907,
+}))
+
+
 -- EFT ID: 617155ee50224f204c1da3cd
 ARC9.LoadAttachment(ATT, "eft_g28_stock_adj")
 
@@ -610,11 +666,16 @@ ATT.CompactName = "HK cheek"
 ATT.Description = [[The HK adjustable stock cheek piece provides optimum versatility in use.]]
 ATT.Icon = Material("entities/eft_g28_attachments/ch.png", "mips smooth")
 
-ATT.EFTErgoAdd = 5
 
 ATT.SortOrder = 0
 ATT.Category = "eft_g28_cheek"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.057,
+}))
+
 
 -- EFT ID: 61715e7e67085e45ef140b33
 ARC9.LoadAttachment(ATT, "eft_g28_stock_cheek")
@@ -635,10 +696,6 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 -- ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
-ATT.SpreadMult = 0.97
 ATT.PhysBulletMuzzleVelocityMult = 1.02
 
 ATT.Attachments = {
@@ -652,6 +709,14 @@ ATT.Attachments = {
 }
 
 ATT.Category = {"eft_g28_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.5,
+    recoilModifier = -5,
+    accuracyModifier = 3,
+    weight = 0.122,
+}))
+
 
 -- EFT ID: 61713308d92c473c770214a0
 ARC9.LoadAttachment(ATT, "eft_g28_muzzle_std")
@@ -675,14 +740,18 @@ ATT.Silencer = true
 ATT.MuzzleEffectQCA = 5
 -- ATT.MuzzleDevice = true
 -- ATT.MuzzleDevice_Priority = 6
-ATT.EFTErgoAdd = -18
-ATT.RecoilMult = 0.9
-ATT.VisualRecoilMult = 0.9
-ATT.SpreadMult = 0.98
 ATT.HeatCapacityMult = 0.85
 ATT.PhysBulletMuzzleVelocityMult = 1.01
 
 ATT.Category = {"eft_g28_silencer"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -17,
+    recoilModifier = -4.5,
+    weight = 0.46,
+    velocity = 1.2,
+}))
+
 
 -- EFT ID: 6171367e1cb55961fa0fdb36
 ARC9.LoadAttachment(ATT, "eft_g28_silencer_std")
@@ -767,6 +836,11 @@ ATT.Attachments = {
 
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.25,
+}))
+
+
 -- EFT ID: 61713cc4d8e3106d9806c109
 ARC9.LoadAttachment(ATT, "eft_mount_34mm_rn")
 
@@ -812,6 +886,11 @@ ATT.Attachments = {
 
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.25,
+}))
+
+
 -- EFT ID: 6171407e50224f204c1da3c5
 ARC9.LoadAttachment(ATT, "eft_mount_30mm_rn")
 
@@ -831,7 +910,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/scope_sb_pm_ii_3_12x50.mdl"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = "eft_optic_34mm"
 
-ATT.EFTErgoAdd = -6
 
 ATT.FoldSights = true
 
@@ -908,6 +986,12 @@ ATT.RTScopeBlackBox = true
 ATT.RTScopeBlackBoxShadow = true 
 
 ATT.ScopeScreenRatio = 725/1080
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -6,
+    weight = 0.9,
+}))
 
 
 -- EFT ID: 61714eec290d254f5e6b2ffc

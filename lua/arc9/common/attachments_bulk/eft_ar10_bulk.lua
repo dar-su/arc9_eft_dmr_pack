@@ -15,15 +15,19 @@ ATT.Description = [[A low-profile gas block designed for use in SR-25 marksman r
 ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac.mdl"
 
-ATT.EFTErgoAdd = -1
 ATT.HeatCapacityMult = 0.995
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_gas", "eft_mk47_gas"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -2,
+    weight = 0.049,
+}))
+
 
 -- EFT ID: 5dfa3d45dfc58d14537c20b0
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_kac")
@@ -41,10 +45,7 @@ ATT.Description = [[Installed as a standard AR-10/AR-15-based weapons gas block,
 ATT.HasGas = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_jp_jpgs6.mdl"
 
-ATT.EFTErgoAdd = -2
 ATT.HeatCapacityMult = 0.99
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -61,6 +62,13 @@ ATT.Attachments = {
 }
 
 ATT.ExcludeElements = {"eft_ar10_hg_rml15", "eft_ar10_hg_lch7", "eft_ar10_hg_urx", "eft_ar10_hg_sws105", "eft_ar10_hg_rml9"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -4,
+    weight = 0.218,
+}))
+
 
 -- EFT ID: 5a34fbadc4a28200741e230a
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_jp")
@@ -86,10 +94,7 @@ ATT.ModelOffset = Vector(0, 0, -0.085)
 ATT.ExcludeElements = {"barrel_254mm"}
 
 
-ATT.EFTErgoAdd = 10
 ATT.HeatCapacityMult = 1.018
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.Category = {"eft_ar10_hg"}
 
@@ -119,6 +124,12 @@ ATT.Attachments = {
 
 ATT.AdvancedCamoSupport = true
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.36,
+}))
+
+
 -- EFT ID: 5f6336bbda967c74a42e9932
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_lch7")
 
@@ -139,10 +150,7 @@ ATT.HasHG = true
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar15_jp_rsass.mdl"
 ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
-ATT.EFTErgoAdd = 5
 ATT.HeatCapacityMult = 1.025
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 
 ATT.Category = {"eft_ar10_hg", "eft_ar15_hguard"}
 ATT.ExcludeElements = {"barrel_10i", "barrel_145i"}
@@ -215,6 +223,12 @@ ATT.Attachments = {
 
 ATT.AdvancedCamoSupport = true
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18.5,
+    weight = 0.31,
+}))
+
+
 -- EFT ID: 5a329052c4a28200741e22d3
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_rsass")
 
@@ -236,10 +250,7 @@ ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
-ATT.EFTErgoAdd = 8
 ATT.HeatCapacityMult = 1.045
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.Category = {"eft_ar10_hg"}
 ATT.ExcludeElements = {"barrel_254mm"}
@@ -298,6 +309,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 17,
+    weight = 0.502,
+}))
+
+
 -- EFT ID: 5d00ede1d7ad1a0940739a76
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_sws105")
 
@@ -318,10 +335,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_noveske_sws_n6_qu
 ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
-ATT.EFTErgoAdd = 8
 ATT.HeatCapacityMult = 1.06
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.Category = {"eft_ar10_hg"}
 ATT.ExcludeElements = {"barrel_254mm"}
@@ -380,6 +394,12 @@ ATT.Attachments = {
     }, 
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.502,
+}))
+
+
 -- EFT ID: 5d00ef6dd7ad1a0940739b16
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_swssplit")
 
@@ -401,11 +421,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_urx4_14_5_inc
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
 
-ATT.EFTErgoAdd = 7
 ATT.HeatCapacityMult = 1.035
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
-ATT.SpreadMult = 0.99
 
 ATT.Category = {"eft_ar10_hg"}
 ATT.ExcludeElements = {"barrel_254mm", "eft_ar10_gas_m110", "eft_ar10_gas_m110_fde"}
@@ -465,6 +481,13 @@ ATT.Attachments = {
 }
 
 ATT.AdvancedCamoSupport = true
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 19.5,
+    accuracyModifier = 1,
+    weight = 0.42,
+}))
+
+
 -- EFT ID: 5df916dfbb49d91fb446d6b9
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx")
 
@@ -495,6 +518,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.15,
+    weight = 0.05,
+}))
 
 
 -- EFT ID: 5c0102aa0db834001b734ba1
@@ -531,6 +560,12 @@ ATT.Attachments = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.2,
+    weight = 0.07,
+}))
+
+
 -- EFT ID: 5c0102b20db834001d23eebc
 ARC9.LoadAttachment(ATT, "eft_mount_rahg41")
 
@@ -546,12 +581,17 @@ ATT.Description = [[An ambidextrous charging handle for the SR-25 marksman rifle
 
 ATT.HasCharge = true 
 
-ATT.EFTErgoAdd = 1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_charge"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    weight = 0.046,
+}))
+
 
 -- EFT ID: 5df8e085bb49d91fb446d6a8
 ARC9.LoadAttachment(ATT, "eft_ar10_charge_ambi")
@@ -573,6 +613,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_ar10_charge"}
 ATT.AdvancedCamoSupport = true
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.041,
+}))
+
+
 -- EFT ID: 5df8e053bb49d91fb446d6a6
 ARC9.LoadAttachment(ATT, "eft_ar10_charge_kac")
 
@@ -589,8 +634,6 @@ ATT.Icon = Material("entities/eft_ar10_attachments/mag10.png", "mips smooth")
 ATT.Description = [[A 10-round double-stack steel magazine for 7.62x51 NATO cartridges. Manufactured by Knight's Armament Company.]]
 
 
-ATT.EFTErgoAdd = 2
-ATT.MalfunctionMeanShotsToFailMult = 0.95
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -603,6 +646,13 @@ ATT.SuppressEmptySuffix = false
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_ar10_kac_steel_762x51_10.mdl"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_ar10_kac_steel_762x51_10.mdl"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    weight = 0.41,
+    malfunctionChance = 0.05,
+}))
 
 
 -- EFT ID: 5df8f535bb49d91fb446d6b0
@@ -618,8 +668,6 @@ ATT.CompactName = "KAC 20"
 ATT.Icon = Material("entities/eft_ar10_attachments/mag20.png", "mips smooth")
 ATT.Description = [[A 20-round double-stack steel magazine for 7.62x51 NATO cartridges. Manufactured by Knight's Armament Company.]]
 
-ATT.EFTErgoAdd = -4
-ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -634,6 +682,13 @@ ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_ar10_kac_steel_7
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_ar10_kac_steel_762x51_20.mdl"
 
 ATT.AdvancedCamoSupport = true
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1.5,
+    weight = 0.52,
+    malfunctionChance = 0.08,
+}))
 
 
 -- EFT ID: 5df8f541c41b2312ea3335e3
@@ -652,9 +707,6 @@ ATT.Description = [[A 16 inch (406mm) barrel for AR-10 based weapons for 7.62x51
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -12
-ATT.RecoilMult = 0.95
-ATT.VisualRecoilMult = 0.95
 ATT.PhysBulletMuzzleVelocityMult = 0.952
 ATT.HeatCapacityMult = 1.07
 ATT.Spread = 1.55 * ARC9.MOAToAcc
@@ -683,6 +735,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -17,
+    recoilModifier = -10.2,
+    weight = 1.02,
+    velocity = -2,
+}))
+
+
 -- EFT ID: 5df917564a9f347bc92edca3
 ARC9.LoadAttachment(ATT, "eft_sr25_barrel_406")
 
@@ -698,9 +758,6 @@ ATT.Description = [[A 20 inch (508mm) barrel for AR-10 based weapons for 7.62x51
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -21
-ATT.RecoilMult = 0.91
-ATT.VisualRecoilMult = 0.91
 ATT.PhysBulletMuzzleVelocityMult = 0.89
 ATT.HeatCapacityMult = 1.11
 ATT.Spread = 1.13 * ARC9.MOAToAcc
@@ -728,6 +785,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -34,
+    recoilModifier = -12.7,
+    weight = 1.6,
+}))
+
+
 -- EFT ID: 5dfa397fb11454561e39246c
 ARC9.LoadAttachment(ATT, "eft_sr25_barrel_508")
 
@@ -742,10 +806,7 @@ ATT.Description = [[An upper receiver for the SR-25 rifle, manufactured by Knigh
 
 ATT.HasReceiver = true 
 
-ATT.EFTErgoAdd = 5
--- ATT.RecoilMult = 0.98
--- ATT.VisualRecoilMult = 0.98
-
+-- -- 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -784,6 +845,12 @@ ATT.Attachments = {
 }
 
 ATT.AdvancedCamoSupport = true
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.65,
+}))
+
+
 -- EFT ID: 5df8e4080b92095fd441e594
 ARC9.LoadAttachment(ATT, "eft_sr25_upper_std")
 
@@ -800,9 +867,6 @@ ATT.Description = [[An 18 inch (457mm) barrel for AR-10 based weapons for 7.62x5
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -13
-ATT.RecoilMult = 0.95
-ATT.VisualRecoilMult = 0.95
 ATT.PhysBulletMuzzleVelocityMult = 0.952
 ATT.HeatCapacityMult = 1.09
 ATT.Spread = 1.2 * ARC9.MOAToAcc
@@ -829,6 +893,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -23,
+    recoilModifier = -11.4,
+    weight = 1.12,
+    velocity = 1,
+}))
+
+
 -- EFT ID: 5a34f7f1c4a2826c6e06d75d
 ARC9.LoadAttachment(ATT, "eft_rsass_barrel_457")
 
@@ -844,9 +916,6 @@ ATT.Description = [[An 22 inch (558mm) barrel for AR-10 based weapons for 7.62x5
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -22
-ATT.RecoilMult = 0.91
-ATT.VisualRecoilMult = 0.91
 ATT.PhysBulletMuzzleVelocityMult = 0.952
 ATT.HeatCapacityMult = 1.13
 ATT.Spread = 0.79 * ARC9.MOAToAcc
@@ -872,6 +941,14 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -38,
+    recoilModifier = -14,
+    weight = 1.2,
+    velocity = 3,
+}))
+
 
 -- EFT ID: 5a34fae7c4a2826c6e06d760
 ARC9.LoadAttachment(ATT, "eft_rsass_barrel_558")
@@ -923,13 +1000,17 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_kac_m110_sass.mdl"
 
 ATT.HasStock = true
 
-ATT.EFTErgoAdd = 3
-ATT.RecoilMult = 0.77
-ATT.VisualRecoilMult = 0.77
 
 ATT.SortOrder = 0
 ATT.Category = "eft_ar_stock_a2"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -23,
+    weight = 0.58,
+}))
+
 
 -- EFT ID: 6932ac8fbccfa5c5a00b5a76
 ARC9.LoadAttachment(ATT, "eft_ar_stock_sass")
@@ -984,9 +1065,6 @@ ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.HeatCapacityMult = 1.06
-ATT.EFTErgoAdd = 7
-ATT.RecoilMult = 0.985
-ATT.VisualRecoilMult = 0.985
 
 ATT.Category = {"eft_ar10_hg"}
 ATT.ExcludeElements = {"barrel_254mm"}
@@ -1047,6 +1125,12 @@ ATT.Attachments = {
     }, 
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.431,
+}))
+
+
 -- EFT ID: 6932aec6cccd2b808a043856
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx2")
 
@@ -1068,9 +1152,6 @@ ATT.LHIK = true
 ATT.ModelOffset = Vector(0, 0, -0.085)
 
 ATT.HeatCapacityMult = 1.06
-ATT.EFTErgoAdd = 7
-ATT.RecoilMult = 0.985
-ATT.VisualRecoilMult = 0.985
 
 ATT.Category = {"eft_ar10_hg"}
 ATT.ExcludeElements = {"barrel_254mm"}
@@ -1133,6 +1214,12 @@ ATT.Attachments = {
 
 ATT.ActivateElements = {"eft_ar10_hg_urx2"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18,
+    weight = 0.431,
+}))
+
+
 -- EFT ID: 6936bd64b2b5b688e50cde36
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx2_fde")
 
@@ -1151,9 +1238,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/gas_block_ar10_kac_m110.mdl"
 ATT.ModelOffset = Vector(0.25, 0, -0.25)
 
 ATT.HeatCapacityMult = 0.995
-ATT.EFTErgoAdd = -2
-ATT.RecoilMult = 0.975
-ATT.VisualRecoilMult = 0.975
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1170,6 +1254,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -2.5,
+    weight = 0.116,
+}))
+
 
 -- EFT ID: 6932aeebbe542622170428ba
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110")
@@ -1189,9 +1280,6 @@ ATT.ModelOffset = Vector(0.25, 0, -0.25)
 ATT.ModelSkin = 1
 
 ATT.HeatCapacityMult = 0.995
-ATT.EFTErgoAdd = -2
-ATT.RecoilMult = 0.975
-ATT.VisualRecoilMult = 0.975
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -1209,6 +1297,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -2.5,
+    weight = 0.116,
+}))
+
 
 -- EFT ID: 6936bde84737190b66053bb1
 ARC9.LoadAttachment(ATT, "eft_ar10_gas_m110_fde")
@@ -1233,13 +1328,18 @@ ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
 
-ATT.EFTErgoAdd = -21
-ATT.RecoilMult = 0.82
-ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
 ATT.HeatCapacityMult = 0.86
 
 ATT.Category = {"eft_m110_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -18,
+    recoilModifier = -9,
+    weight = 0.848,
+    velocity = 0.8,
+}))
+
 
 -- EFT ID: 6932af22cccd2b808a04385e
 ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110")
@@ -1265,15 +1365,20 @@ ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
 
-ATT.EFTErgoAdd = -21
-ATT.RecoilMult = 0.82
-ATT.VisualRecoilMult = 0.82
 ATT.PhysBulletMuzzleVelocityMult = 1.008
 ATT.HeatCapacityMult = 0.86
 
 ATT.Category = {"eft_m110_muzzle"}
 
 ATT.ActivateElements = {"eft_silencer_ar10_m110"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -18,
+    recoilModifier = -9,
+    weight = 0.848,
+    velocity = 0.8,
+}))
+
 
 -- EFT ID: 6936be064737190b66053bb4
 ARC9.LoadAttachment(ATT, "eft_silencer_ar10_m110_fde")
@@ -1299,13 +1404,16 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.EFTErgoAdd = -0.5
-ATT.RecoilMult = 0.92
-ATT.VisualRecoilMult = 0.92
 ATT.HeatCapacityMult = 0.99
-ATT.SpreadMult = 0.97
 
 ATT.Category = {"eft_ar10_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.5,
+    recoilModifier = -8,
+    weight = 0.1,
+}))
+
 
 -- EFT ID: 6932af0bbe542622170428bd
 ARC9.LoadAttachment(ATT, "eft_muzzle_ar10_potomac")

@@ -13,10 +13,6 @@ ATT.Description = [[A 24 inch (610mm) barrel for Mk-18 .338 LM sniper rifle, man
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -12
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
-ATT.PhysBulletMuzzleVelocityMult = 0.979
 ATT.Spread = 0.58 * ARC9.MOAToAcc
 
 
@@ -41,6 +37,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -40,
+    recoilModifier = -15.3,
+    weight = 1.5,
+    velocity = -2,
+}))
+
+
 -- EFT ID: 5fc23678ab884124df0cd590
 ARC9.LoadAttachment(ATT, "eft_mk18_barrel_24")
 
@@ -61,6 +65,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_mk18_gas"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.12,
+}))
+
+
 -- EFT ID: 5fc2360f900b1d5091531e19
 ARC9.LoadAttachment(ATT, "eft_mk18_gas_std")
 
@@ -78,9 +87,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasHG = true
 
-ATT.EFTErgoAdd = 7
-ATT.HeatCapacityMult = 0.88
-ATT.SpreadMult = 0.99
 ATT.Category = {"eft_mk18_hg"}
 
 ATT.Attachments = {
@@ -137,6 +143,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 21,
+    accuracyModifier = 1,
+    weight = 0.42,
+}))
+
+
 -- EFT ID: 5fc235db2770a0045c59c683
 ARC9.LoadAttachment(ATT, "eft_mk18_hg_std")
 
@@ -151,7 +164,6 @@ ATT.CompactName = "Mk-18"
 ATT.Icon = Material("entities/eft_mk18_attachments/mag.png", "mips smooth")
 ATT.Description = [[A 10-round Mk-18 magazine for .338 LM ammunition, manufactured by SWORD International.]]
 
-ATT.EFTErgoAdd = -6
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -162,6 +174,13 @@ ATT.ClipSize = 10
 ATT.ChamberSize = 1
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_mk18.mdl"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.6,
+    malfunctionChance = 0.04,
+}))
 
 
 -- EFT ID: 5fc23426900b1d5091531e15
@@ -178,10 +197,6 @@ ATT.Icon = Material("entities/eft_mk18_attachments/rec.png", "mips smooth")
 ATT.Description = [[A regular upper receiver for Mk-18 Mod 1 Mjölnir by SWORD International. Fitted with a mount for attaching additional equipment.]]
 
 ATT.HasReceiver = true 
-
-ATT.EFTErgoAdd = 6
-ATT.RecoilMult = 0.99
-ATT.VisualRecoilMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -219,6 +234,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -1,
+    weight = 0.45,
+}))
+
 
 -- EFT ID: 5fc278107283c4046c581489
 ARC9.LoadAttachment(ATT, "eft_mk18_upper_std")

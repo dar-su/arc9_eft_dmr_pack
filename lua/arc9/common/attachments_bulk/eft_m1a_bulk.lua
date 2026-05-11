@@ -10,9 +10,6 @@ ATT.CompactName = "M1A 22\""
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_22_inch_barrel.png", "mips smooth")
 ATT.Description = "A 22 inch match barrel for M1A based weapons chambered in 7.62x51 NATO ammo."
 
-ATT.EFTErgoAdd = -17
-ATT.RecoilMult = 0.91
-ATT.VisualRecoilMult = 0.91
 ATT.HeatCapacityMult = 0.87
 ATT.PhysBulletMuzzleVelocityMult = 0.9382
 
@@ -35,6 +32,14 @@ ATT.Attachments = {
 
 ATT.MuzzleEffectQCA = 5
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -38,
+    recoilModifier = -14,
+    weight = 1.11,
+    velocity = 2,
+}))
+
+
 -- EFT ID: 5addbac75acfc400194dbc56
 ARC9.LoadAttachment(ATT, "eft_m1a_barrel_22")
 
@@ -47,9 +52,6 @@ ATT.CompactName = "M1A 16\""
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_16_inch_barrel.png", "mips smooth")
 ATT.Description = "A 16 inch (410mm) barrel for M1A based weapons chambered in 7.62x51 NATO ammo."
 
-ATT.EFTErgoAdd = -12
-ATT.RecoilMult = 0.95
-ATT.VisualRecoilMult = 0.95
 ATT.HeatCapacityMult = 0.93
 ATT.PhysBulletMuzzleVelocityMult = 0.9352
 
@@ -70,6 +72,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -17,
+    recoilModifier = -10.3,
+    weight = 1.04,
+    velocity = -1,
+}))
+
+
 -- EFT ID: 5aaf9d53e5b5b00015042a52
 ARC9.LoadAttachment(ATT, "eft_m1a_barrel_16")
 
@@ -83,9 +93,6 @@ ATT.CompactName = "SOCOM 16"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_stock.png", "mips smooth")
 ATT.Description = "The SOCOM 16 polymer stock for M1A rifles, manufactured by Springfield Armory."
 
-ATT.EFTErgoAdd = 20
-ATT.RecoilMult = 0.75
-ATT.VisualRecoilMult = 0.75
 ATT.HeatCapacityMult = 0.97
 
 ATT.HasGrip = true
@@ -107,6 +114,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 28,
+    recoilModifier = -26,
+    weight = 1.004,
+}))
+
+
 -- EFT ID: 5aaf8e43e5b5b00015693246
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_std")
 
@@ -120,9 +134,6 @@ ATT.CompactName = "Archangel"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_promag_archangel_chassis.png", "mips smooth")
 ATT.Description = "The Archangel polymer chassis for M1A rifles, manufactured by ProMag."
 
-ATT.EFTErgoAdd = 32
-ATT.RecoilMult = 0.73
-ATT.VisualRecoilMult = 0.73
 ATT.HeatCapacityMult = 0.95
 
 ATT.HasGrip = true
@@ -155,6 +166,13 @@ ATT.Attachments = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 40,
+    recoilModifier = -30,
+    weight = 1.9,
+}))
+
+
 -- EFT ID: 5addbf175acfc408fb13965b
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_arch")
 
@@ -167,9 +185,6 @@ ATT.CompactName = "S.A.S.S."
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_troy_sass_chassis_stock.png", "mips smooth")
 ATT.Description = "The TROY Semi-Automatic Sniper System chassis is designed to match the ergonomics of M16/M4 weapon systems. This modular quad-rail system allows unlimited mounting options and keeps all optics and sights mounted and undisturbed while field stripping."
 
-ATT.EFTErgoAdd = 28
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.89
 
 ATT.SortOrder = 0
@@ -262,6 +277,13 @@ ATT.Attachments = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 30,
+    recoilModifier = -13,
+    weight = 2.1,
+}))
+
+
 -- EFT ID: 5ab372a310e891001717f0d8
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sass")
 
@@ -274,9 +296,6 @@ ATT.CompactName = "SAGE M14ALCS"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs_chassis.png", "mips smooth")
 ATT.Description = "The M14ALCS chassis for M14 rifles from the Enhanced Battle Rifle (EBR) kit. Manufactured by SAGE International."
 
-ATT.EFTErgoAdd = 18
-ATT.RecoilMult = 0.94
-ATT.VisualRecoilMult = 0.94
 ATT.HeatCapacityMult = 0.91
 
 ATT.SortOrder = 0
@@ -336,6 +355,13 @@ ATT.Attachments = {
 
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 26,
+    recoilModifier = -18,
+    weight = 1.9,
+}))
+
+
 -- EFT ID: 5addc7005acfc4001669f275
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sage")
 
@@ -349,7 +375,6 @@ ATT.CompactName = "SOCOM 16"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_upper_part.png", "mips smooth")
 ATT.Description = "The upper part of the SOCOM 16 stock for M1A rifles. It has a Weaver rail for attaching various scopes and reflex sights."
 
-ATT.EFTErgoAdd = -1
 
 ATT.HasBand = true
 
@@ -369,6 +394,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.096,
+}))
+
+
 -- EFT ID: 5ab24ef9e5b5b00fe93c9209
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_std")
 
@@ -381,7 +412,6 @@ ATT.CompactName = "UltiMAK M8"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_ultimak_m8_forward_optic_mount.png", "mips smooth")
 ATT.Description = "The M8 optic mount manufactured by UltiMAK. Lightweight, fully machined 1913 Picatinny-style rail accepts intermediate eye relief scopes, red dot, holographic, and reflex optics. Installs in place of the factory handguard."
 
-ATT.EFTErgoAdd = -1
 
 ATT.HasBand = true
 
@@ -408,6 +438,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.19,
+}))
+
+
 -- EFT ID: 5addbfbb5acfc400194dbcf7
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_m8")
 
@@ -420,7 +456,6 @@ ATT.CompactName = "M14 MSM"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_amega_mini_scout_mount_system.png", "mips smooth")
 ATT.Description = "The Mini Scout Mount base for M14 rifles, manufactured by Amega Mounts. Features a top Picatinny rail for mounting various scopes and reflex sights."
 
-ATT.EFTErgoAdd = -1
 
 ATT.HasBand = true
 
@@ -446,6 +481,12 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 1),
     },
 }
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.18,
+}))
 
 
 -- EFT ID: 5addbfd15acfc40015621bde
@@ -507,6 +548,11 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.096,
+}))
+
+
 -- EFT ID: 5addc00b5acfc4001669f144
 ARC9.LoadAttachment(ATT, "eft_m1a_upper_vltor")
 
@@ -519,7 +565,6 @@ ATT.CompactName = "A.R.M.S."
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_arms_#18_scope_mount.png", "mips smooth")
 ATT.Description = "The A.R.M.S. Inc. scope mount for M14 rifles. Made of 8620 case hardened steel. Equipped with a Weaver rail for installation of various scopes."
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -539,6 +584,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.22,
+}))
+
+
 -- EFT ID: 5addbfe15acfc4001a5fc58b
 ARC9.LoadAttachment(ATT, "eft_m1a_side_arms")
 
@@ -551,7 +602,6 @@ ATT.CompactName = "UTG 4-Point"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_leapers_utg_4point_locking_deluxe_mount.png", "mips smooth")
 ATT.Description = "The 4-Point Locking Deluxe mount for M14 rifles, manufactured by Leapers Inc. It has Weaver/Picatinny type rails for mounting various scopes and reflex sights."
 
-ATT.EFTErgoAdd = -2
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -571,6 +621,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    weight = 0.25,
+}))
+
+
 -- EFT ID: 5addbfef5acfc400185c2857
 ARC9.LoadAttachment(ATT, "eft_m1a_side_deluxe")
 
@@ -583,7 +639,6 @@ ATT.CompactName = "DCSB"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_dcsb_mount.png", "mips smooth")
 ATT.Description = "The M14 DCSB (Detachable Cantilevered Sight Base) mount for M14 rifles, manufactured by SAGE International. It has a Weaver-type rail for mounting various different sights. Can only be installed on the EBR chassis."
 
-ATT.EFTErgoAdd = -1
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -601,6 +656,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.22,
+}))
+
+
 -- EFT ID: 5addbffe5acfc4001714dfac
 ARC9.LoadAttachment(ATT, "eft_m1a_side_dcsb")
 
@@ -617,6 +678,11 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_rs"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.03,
+}))
+
 
 -- EFT ID: 5abcbb20d8ce87001773e258
 ARC9.LoadAttachment(ATT, "eft_m1a_rearsight")
@@ -637,6 +703,11 @@ ATT.Category = {"eft_m1a_fs"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_front_m1a_blade.mdl"
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.038,
+}))
+
+
 -- EFT ID: 5addba3e5acfc4001669f0ab
 ARC9.LoadAttachment(ATT, "eft_m1a_fs_062")
 
@@ -656,6 +727,11 @@ ATT.Category = {"eft_m1a_fs"}
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/sight_front_m1a_xs.mdl"
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.038,
+}))
+
+
 -- EFT ID: 5aafa49ae5b5b00015042a58
 ARC9.LoadAttachment(ATT, "eft_m1a_fs_xs")
 
@@ -668,9 +744,6 @@ ATT.CompactName = "M14ALCS stock"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs_mod0_stock.png", "mips smooth")
 ATT.Description = "The M14ALCS (MOD-0) stock for M14 rifles from the Enhanced Battle Rifle (EBR) kit, manufactured by SAGE International."
 
-ATT.EFTErgoAdd = 17
-ATT.RecoilMult = 0.79
-ATT.VisualRecoilMult = 0.79
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -687,6 +760,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    recoilModifier = -19,
+    weight = 1.004,
+}))
+
+
 -- EFT ID: 5addc7ac5acfc400194dbd90
 ARC9.LoadAttachment(ATT, "eft_m1a_stock_sage_stock")
 
@@ -699,7 +779,6 @@ ATT.CompactName = "M14ALCS grip"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_sage_international_m14alcs_mod0_pistol_grip.png", "mips smooth")
 ATT.Description = "The M14ALCS (MOD-0) pistol grip for M14 rifles from the Enhanced Battle Rifle (EBR) kit, manufactured by SAGE International."
 
-ATT.EFTErgoAdd = 6
 
 ATT.HasGrip = true
 
@@ -707,6 +786,13 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_sage_grip"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1,
+    weight = 0.08,
+}))
+
 
 -- EFT ID: 5addc7db5acfc4001669f279
 ARC9.LoadAttachment(ATT, "eft_m1a_pgrip_sage")
@@ -721,8 +807,6 @@ ATT.CompactName = "M1A 10"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_10round_magazine.png", "mips smooth")
 ATT.Description = "A 10-round double-stack 7.62x51 NATO magazine for the M1A rifle, produced by Springfield Armory."
 
-ATT.EFTErgoAdd = 4
-ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_10.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_m14_10.mdl"
@@ -739,6 +823,13 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 10
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    weight = 0.159,
+    malfunctionChance = 0.03,
+}))
+
+
 -- EFT ID: 64b9e2037fdfb81df81e3c25
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_10")
 
@@ -751,8 +842,6 @@ ATT.CompactName = "M1A 20"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_762x51_20round_magazine.png", "mips smooth")
 ATT.Description = "A 20-round double-stack 7.62x51 NATO magazine for the M1A rifle, produced by Springfield Armory."
 
-ATT.EFTErgoAdd = -3
-ATT.MalfunctionMeanShotsToFailMult = 0.97
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_20.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_m14_20.mdl"
@@ -769,6 +858,13 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 20
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1.5,
+    weight = 0.226,
+    malfunctionChance = 0.05,
+}))
+
+
 -- EFT ID: 5aaf8a0be5b5b00015693243
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_20")
 
@@ -781,8 +877,6 @@ ATT.CompactName = "M1A 30"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_762x51_30round_magazine.png", "mips smooth")
 ATT.Description = "A 30-round double-stack 7.62x51 NATO magazine for the M1 rifle. Manufactured by Triple K."
 
-ATT.EFTErgoAdd = -6
-ATT.MalfunctionMeanShotsToFailMult = 0.93
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_30.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_m14_30.mdl"
@@ -799,6 +893,13 @@ ATT.SuppressEmptySuffix = false
 ATT.ClipSize = 30
 ATT.ChamberSize = 1
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -5,
+    weight = 0.34,
+    malfunctionChance = 0.08,
+}))
+
+
 -- EFT ID: 5addcce35acfc4001a5fc635
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_30")
 
@@ -811,8 +912,6 @@ ATT.CompactName = "M14 X-14 50"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_762x51_x_products_x14_50round_drum_magazine.png", "mips smooth")
 ATT.Description = "A 50 round 7.62x51 drum NATO magazine for the M14 rifle. Manufactured by X Products."
 
-ATT.EFTErgoAdd = -17
-ATT.MalfunctionMeanShotsToFailMult = 0.85
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/mag_m14_50.mdl"
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_m14_50.mdl"
@@ -896,6 +995,13 @@ ATT.ReloadHideBoneTables = {
 }
 
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -8,
+    weight = 0.7,
+    malfunctionChance = 0.256,
+}))
+
+
 -- EFT ID: 5addccf45acfc400185c2989
 ARC9.LoadAttachment(ATT, "eft_m1a_mag_50")
 
@@ -909,10 +1015,6 @@ ATT.CompactName = "M1A flash"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_national_match_762x51_flash_suppressor.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator for M1A rifles, manufactured by Springfield Armory."
 
-ATT.EFTErgoAdd = -2
-ATT.RecoilMult = 0.95
-ATT.VisualRecoilMult = 0.95
-ATT.SpreadMult = 0.98
 ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
@@ -935,6 +1037,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -9,
+    accuracyModifier = 2,
+    weight = 0.14,
+}))
+
+
 -- EFT ID: 5addbb6e5acfc408fb1393fd
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_fsup")
 
@@ -947,9 +1057,6 @@ ATT.CompactName = "SOCOM 16"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_socom_16_762x51_muzzle_brakecompensator.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator for M1A rifles, manufactured by Springfield Armory."
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
 ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
@@ -972,6 +1079,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -7,
+    weight = 0.13,
+}))
+
+
 -- EFT ID: 5aafa1c2e5b5b00015042a56
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_brakecomp")
 
@@ -984,10 +1098,6 @@ ATT.CompactName = "M14 Vortex"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_smith_enterprise_vortex_762x51_muzzle_brake.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by Smith Enterprise."
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
-ATT.SpreadMult = 0.98
 ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
@@ -999,6 +1109,14 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.Category = {"eft_muzzle_m1a_22", "eft_muzzle_m1a_brake"}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -6,
+    accuracyModifier = 2,
+    weight = 0.06,
+}))
 
 
 -- EFT ID: 5addbba15acfc400185c2854
@@ -1013,9 +1131,6 @@ ATT.CompactName = "M14 Phantom"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_yankee_hill_phantom_762x51_flash_hider.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator manufactured by Yankee Hill to fit M14 rifles."
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.94
-ATT.VisualRecoilMult = 0.94
 ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
@@ -1038,6 +1153,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -0.5,
+    recoilModifier = -8,
+    weight = 0.07,
+}))
+
+
 -- EFT ID: 5addbbb25acfc40015621bd9
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_yan")
 
@@ -1050,9 +1172,6 @@ ATT.CompactName = "M14 comp."
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_jp_enterprises_762x51_tactical_compensator.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by JP Enterprises."
 
-ATT.EFTErgoAdd = -2
-ATT.RecoilMult = 0.89
-ATT.VisualRecoilMult = 0.89
 ATT.HeatCapacityMult = 0.987
 
 ATT.SortOrder = -2
@@ -1076,6 +1195,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -5,
+    recoilModifier = -13,
+    weight = 0.13,
+}))
+
+
 -- EFT ID: 5addbb825acfc408fb139400
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_jp")
 
@@ -1088,10 +1214,6 @@ ATT.CompactName = "M14 brake"
 ATT.Icon = Material("entities/eft_m1a_attachments/m14_smith_enterprise_good_iron_762x51_muzzle_brake.png", "mips smooth")
 ATT.Description = "A muzzle brake-compensator for M14 rifles, manufactured by Smith Enterprise."
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.93
-ATT.VisualRecoilMult = 0.93
-ATT.SpreadMult = 0.99
 ATT.HeatCapacityMult = 0.991
 
 ATT.SortOrder = -2
@@ -1114,6 +1236,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -3,
+    recoilModifier = -11,
+    accuracyModifier = 1,
+    weight = 0.14,
+}))
+
+
 -- EFT ID: 5addbb945acfc4001a5fc44e
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_good")
 
@@ -1126,9 +1256,6 @@ ATT.CompactName = "M1A brake&gas"
 ATT.Icon = Material("entities/eft_m1a_attachments/m1a_smith_enterprise_socom_16_762x51_threaded_muzzle_brake_&_gas_block.png", "mips smooth")
 ATT.Description = "A muzzle brake/gas block for M1A rifles, manufactured by Smith Enterprise."
 
-ATT.EFTErgoAdd = -1
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
@@ -1157,6 +1284,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    recoilModifier = -4,
+    weight = 0.11,
+}))
+
 
 -- EFT ID: 5ab3afb2d8ce87001660304d
 ARC9.LoadAttachment(ATT, "eft_m1a_muzzle_gas")

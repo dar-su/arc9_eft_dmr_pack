@@ -55,6 +55,7 @@ SWEP.CustomizeSnapshotPos = Vector(0, 30, 0)
 SWEP.Spread = 2.39 * ARC9.MOAToAcc
 SWEP.RPM = 450
 SWEP.EFTErgo = 29
+SWEP.EFTWeight = 2.092
 SWEP.BarrelLength = 45
 SWEP.Ammo = "ar2"
 SWEP.Firemodes = {

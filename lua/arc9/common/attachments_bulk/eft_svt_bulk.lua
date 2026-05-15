@@ -281,3 +281,100 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: 641074a07fd350b98c0b3f96
 ARC9.LoadAttachment(ATT, "eft_svt_mag_15")
+
+
+
+
+///////////////////////////////////////      eft_svt_addley1
+
+ATT = {}
+
+ATT.PrintName = "SVT-40 Addley Precision Smith-less Scope Mount"
+ATT.CompactName = "SVT SL"
+ATT.Icon = Material("entities/eft_attachments/6888954ba66a069e0405a9aa.png", "mips smooth")
+ATT.Description = "A scope mount designed for the SVT-40. Manufactured by Addley Precision."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_mount_svt"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_large", "eft_optic_medium", "eft_optic_small"},
+        Pos = Vector(-4, 0, -1.29),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1),
+        -- ExtraSightDistance = 8
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    weight = 0.31,
+}))
+-- EFT ID: 6888954ba66a069e0405a9aa
+ARC9.LoadAttachment(ATT, "eft_svt_addley1")
+
+///////////////////////////////////////      eft_svt_addley2
+
+ATT = {}
+
+ATT.PrintName = "SVT-40 Addley Precision Steel Scope Mount"
+ATT.CompactName = "SVT S"
+ATT.Icon = Material("entities/eft_attachments/68889c930b29b8032504f369.png", "mips smooth")
+ATT.Description = "A scope mount designed for the SVT-40. Manufactured by Addley Precision."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_mount_svt"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_large", "eft_optic_medium", "eft_optic_small"},
+        Pos = Vector(-4, 0, -1.07),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1),
+        -- ExtraSightDistance = 8
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1.5,
+    weight = 0.3,
+}))
+-- EFT ID: 68889c930b29b8032504f369
+ARC9.LoadAttachment(ATT, "eft_svt_addley2")
+
+
+///////////////////////////////////////      eft_svt_stock_svd
+
+ATT = {}
+
+ATT.PrintName = "SVT-40 SVD style stock"
+ATT.CompactName = "SVT-40 SVD"
+ATT.Icon = Material("entities/eft_attachments/6888ac0f5978b35e90010b49.png", "mips smooth")
+ATT.Description = "A wood stock for the SVT-40/AVT-40 rifles styled after the SVD sniper rifle."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasGrip = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/svt40_svd_rhik.mdl"
+-- ATT.LHIK = true
+ATT.RHIK = true
+ATT.ModelAngleOffset = Angle(0, 90, 0)
+
+ATT.Category = {"eft_svt_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 40,
+    recoilModifier = -20,
+    weight = 1.217,
+}))
+-- EFT ID: 6888ac0f5978b35e90010b49
+ARC9.LoadAttachment(ATT, "eft_svt_stock_svd")

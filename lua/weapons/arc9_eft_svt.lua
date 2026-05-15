@@ -322,6 +322,9 @@ local rst_look = {
 SWEP.Animations = {
     ["idle"] = { 
         Source = "idle",
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+        },
     },
 
     ["ready"] = {
@@ -331,6 +334,13 @@ SWEP.Animations = {
             { s = pathsks .. "sks_slider_up.ogg", t = 0.57 },
             { s = pathsks .. "sks_slider_down.ogg", t = 0.83 },
             { s = path .. "m203_flip_2.ogg", t = 1.14 },
+        },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.01, rhik = 0 },
+            { t = 0.58, rhik = 0 },
+            { t = 0.73, rhik = 1 },
+            { t = 1, rhik = 1 },
         },
     },
 
@@ -415,6 +425,14 @@ SWEP.Animations = {
             {hide = 1, t = 0.9},
             {hide = 0, t = 1.5}
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.7, rhik = 1 },
+            { t = 0.77, rhik = 0 },
+            { t = 0.84, rhik = 0 },
+            { t = 0.89, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
     ["reload_1"] = {
         Source = "reload1",
@@ -489,6 +507,14 @@ SWEP.Animations = {
             {hide = 1, t = 0.9},
             {hide = 0, t = 1.5}
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.7, rhik = 1 },
+            { t = 0.77, rhik = 0 },
+            { t = 0.84, rhik = 0 },
+            { t = 0.89, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
 
 
@@ -511,6 +537,13 @@ SWEP.Animations = {
             { s = pathsks .. "sks_slider_down.ogg", t = 3.57 },
             { s = path .. "m203_flip_1.ogg", t = 3.97 },
             { s = randspin, t = 4.1 },   
+        },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.06, rhik = 0 },
+            { t = 0.82, rhik = 0 },
+            { t = 0.9, rhik = 1 },
+            { t = 1, rhik = 1 },
         },
     },
 
@@ -572,6 +605,15 @@ SWEP.Animations = {
             { s = randspin, t = 2.17 },
             { s = path .. "m203_flip_2.ogg", t = 2.18 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.05, rhik = 1 },
+            { t = 0.19, rhik = 0 },
+            { t = 0.76, rhik = 0 },
+            { t = 0.76, rhik = 0 },
+            { t = 0.9, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
     ["inspect_empty0"] = {
         Source = "check_chamber_empty",
@@ -603,6 +645,14 @@ SWEP.Animations = {
             { s = randspin, t = 3 },
             { s = ARC9EFT.ShellsHeavy, t = 3.25 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.34, rhik = 1 },
+            { t = 0.5, rhik = 0 },
+            { t = 0.88, rhik = 0 },
+            { t = 0.98, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
     ["jam2"] = {
         Source = "jam_feed", -- jam feed
@@ -622,6 +672,14 @@ SWEP.Animations = {
             { s = path .. "sr2m_hand_02.ogg", t = 4.37 },
             { s = randspin, t = 4.57 },
             { s = ARC9EFT.ShellsHeavy, t = 4.2 },
+        },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.23, rhik = 1 },
+            { t = 0.34, rhik = 0 },
+            { t = 0.82, rhik = 0 },
+            { t = 0.93, rhik = 1 },
+            { t = 1, rhik = 1 },
         },
         -- EjectAt = 6.5,
     },
@@ -643,6 +701,14 @@ SWEP.Animations = {
             { s = pathsks .. "sks_slider_down.ogg", t = 4.81 },
             { s = randspin, t = 5.25 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.22, rhik = 1 },
+            { t = 0.31, rhik = 0 },
+            { t = 0.85, rhik = 0 },
+            { t = 0.95, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
         EjectAt = 4.65
     },
     ["jam4"] = {
@@ -659,6 +725,14 @@ SWEP.Animations = {
             { s = pathsks .. "sks_slider_down.ogg", t = 2.72 },
             { s = randspin, t = 3.07 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.33, rhik = 1 },
+            { t = 0.47, rhik = 0 },
+            { t = 0.8   , rhik = 0 },
+            { t = 0.93, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
         EjectAt = 2.58
     },    
     
@@ -672,6 +746,13 @@ SWEP.Animations = {
             { s = randspin, t = 0.8 },
             { s = path .. "m203_flip_2.ogg", t = 1.01 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.25, rhik = 0 },
+            { t = 0.7, rhik = 0 },
+            { t = 0.95, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
     ["firemode_2"] = {
         Source = "firemode0",
@@ -680,6 +761,13 @@ SWEP.Animations = {
             { s = path .. "avt_magrelease_button_down.ogg", t = 0.39 },
             { s = randspin, t = 0.76 },
             { s = path .. "m203_flip_2.ogg", t = 0.83 },
+        },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.25, rhik = 0 },
+            { t = 0.7, rhik = 0 },
+            { t = 0.95, rhik = 1 },
+            { t = 1, rhik = 1 },
         },
     },
     ["firemode_1_empty"] = {
@@ -690,6 +778,13 @@ SWEP.Animations = {
             { s = randspin, t = 0.8 },
             { s = path .. "m203_flip_2.ogg", t = 1.01 },
         },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.25, rhik = 0 },
+            { t = 0.7, rhik = 0 },
+            { t = 0.95, rhik = 1 },
+            { t = 1, rhik = 1 },
+        },
     },
     ["firemode_2_empty"] = {
         Source = "firemode0_empty",
@@ -698,6 +793,13 @@ SWEP.Animations = {
             { s = path .. "avt_magrelease_button_down.ogg", t = 0.39 },
             { s = randspin, t = 0.76 },
             { s = path .. "m203_flip_2.ogg", t = 0.83 },
+        },
+        IKTimeLine = {
+            { t = 0, rhik = 1 },
+            { t = 0.25, rhik = 0 },
+            { t = 0.7, rhik = 0 },
+            { t = 0.95, rhik = 1 },
+            { t = 1, rhik = 1 },
         },
     },
 }
@@ -719,6 +821,11 @@ SWEP.AttachmentElements = {
     ["eft_svt_mag_15"] = { Bodygroups = { {3, 2} } },
 
     ["eft_avt"] = { Bodygroups = { {1, 1} } },
+
+
+    ["eft_svt_stock_svd"] = { Bodygroups = { {6, 2} } },
+    ["eft_svt_addley1"] = { Bodygroups = { {5, 2} } },
+    ["eft_svt_addley2"] = { Bodygroups = { {5, 3} } },
 }
 
 SWEP.Attachments = {

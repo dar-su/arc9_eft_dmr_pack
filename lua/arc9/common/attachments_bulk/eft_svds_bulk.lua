@@ -685,7 +685,7 @@ ATT.Category = {"eft_svds_stock"}
 ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_buffertube"),
-        Category = "eft_ar15_buffertube",
+        Category = {"eft_ar15_buffertube", "eft_ar15_buffertube_notbuffer"},
         Pos = Vector(1.6, -0.8, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),

@@ -61,7 +61,7 @@ ATT.Attachments = {
     },
 }
 
-ATT.ExcludeElements = {"eft_ar10_hg_rml15", "eft_ar10_hg_lch7", "eft_ar10_hg_urx", "eft_ar10_hg_sws105", "eft_ar10_hg_rml9"}
+ATT.ExcludeElements = {"eft_ar10_hg_rml15", "eft_ar10_hg_lch7", "eft_ar10_hg_urx", "eft_ar10_hg_sws105", "eft_ar10_hg_rml9", "eft_ar10_hg_urx31", "eft_ar10_hg_urx31fde"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -2,
@@ -1417,3 +1417,203 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: 6932af0bbe542622170428bd
 ARC9.LoadAttachment(ATT, "eft_muzzle_ar10_potomac")
+
+
+
+
+
+
+///////////////////////////////////////      eft_ar10_hg_urx31
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC URX 3.1 13.5 inch handguard"
+ATT.CompactName = "URX3.1 13.5\""
+ATT.Icon = Material("entities/eft_attachments/6932aed9be542622170428b0.png", "mips smooth")
+ATT.Description = "The URX 3.1 handguard for AR-10 equipped with a unique interface for installation of additional devices and accessories. Manufactured by Knight's Armament Company."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_sr25_urx_31_135_inch.mdl"
+ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
+
+ATT.HeatCapacityMult = 1.06
+
+ATT.Category = {"eft_ar10_hg"}
+ATT.ExcludeElements = {"barrel_254mm"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_backup"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0, 1, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0, 7.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(0, 13.25, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(1.12, 11.5, 0.1 + 0.085),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(-1.12, 11.5, 0.1 + 0.085),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },    
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
+        Pos = Vector(0, 11.5, 1.25 + 0.085),
+        Ang = Angle(0, -90, 180),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_r"),
+        Category = {"eft_urx_panel_long", "eft_urx_panel_short"},
+        Pos = Vector(1, 5.3, 0.18),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_l"),
+        Category = {"eft_urx_panel_long", "eft_urx_panel_short"},
+        Pos = Vector(-1, 5.3, 0.18),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
+        Category = "eft_urx_panel_lower",
+        Pos = Vector(0, 5.5, 1.25),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 14,
+    weight = 0.4,
+}))
+-- EFT ID: 6932aed9be542622170428b0
+ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx31")
+
+///////////////////////////////////////      eft_ar10_hg_urx31fde
+
+ATT = {}
+
+ATT.PrintName = "AR-10 KAC URX 3.1 13.5 inch handguard (Taupe)"
+ATT.CompactName = "URX3.1 13.5\""
+ATT.Icon = Material("entities/eft_attachments/6936bd6f4737190b66053ba6.png", "mips smooth")
+ATT.Description = "The URX 3.1 handguard for AR-10 equipped with a unique interface for installation of additional devices and accessories. Manufactured by Knight's Armament Company. Coated in cerakote Taupe color."
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.HasHG = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_ar10_kac_sr25_urx_31_135_inch.mdl"
+ATT.ModelSkin = 1
+ATT.LHIK = true
+ATT.ModelOffset = Vector(0, 0, -0.085)
+
+ATT.HeatCapacityMult = 1.06
+
+ATT.Category = {"eft_ar10_hg"}
+ATT.ExcludeElements = {"barrel_254mm"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_backup"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0, 1, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0, 7.7, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(0, 13.25, -1.22 + 0.085),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(1.12, 11.5, 0.1 + 0.085),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(-1.12, 11.5, 0.1 + 0.085),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },    
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_b"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
+        Pos = Vector(0, 11.5, 1.25 + 0.085),
+        Ang = Angle(0, -90, 180),
+        Icon_Offset = Vector(0, 0, 0.5),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_r"),
+        Category = {"eft_urx_panel_long", "eft_urx_panel_short"},
+        Pos = Vector(1, 5.3, 0.18),
+        Ang = Angle(0, -90, 90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_l"),
+        Category = {"eft_urx_panel_long", "eft_urx_panel_short"},
+        Pos = Vector(-1, 5.3, 0.18),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
+        Category = "eft_urx_panel_lower",
+        Pos = Vector(0, 5.5, 1.25),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 14,
+    weight = 0.4,
+}))
+-- EFT ID: 6936bd6f4737190b66053ba6
+ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx31fde")

@@ -640,6 +640,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_mag"}
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
 ATT.ClipSize = 10
 ATT.ChamberSize = 1
 ATT.SuppressEmptySuffix = false 
@@ -673,6 +675,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_ar10_mag"}
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
 
 ATT.ClipSize = 20
 ATT.ChamberSize = 1

@@ -1150,6 +1150,8 @@ ATT.SuppressEmptySuffix = false
 
 ATT.ShotgunReload = false 
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
 ATT.ClipSize = 35
 ATT.ChamberSize = 1
 
@@ -1186,6 +1188,8 @@ ATT.HasMag = true
 ATT.SuppressEmptySuffix = false 
 
 ATT.ShotgunReload = false 
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropDrumEmpty
 
 ATT.ClipSize = 75
 ATT.ChamberSize = 1

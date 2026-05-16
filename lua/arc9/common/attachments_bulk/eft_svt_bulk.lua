@@ -232,6 +232,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_mag"}
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
 ATT.HasMag = true
 ATT.SuppressEmptySuffix = false 
 
@@ -265,6 +267,8 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_svt_mag"}
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
 
 ATT.HasMag = true
 ATT.SuppressEmptySuffix = false 

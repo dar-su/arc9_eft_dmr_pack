@@ -817,6 +817,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_mag"}
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
 ATT.HasMag = true 
 ATT.SuppressEmptySuffix = false 
 
@@ -851,6 +853,8 @@ ATT.SortOrder = 20
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_mag"}
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
 
 ATT.HasMag = true 
 ATT.SuppressEmptySuffix = false 
@@ -887,6 +891,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_m1a_mag"}
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
 ATT.HasMag = true 
 ATT.SuppressEmptySuffix = false 
 
@@ -922,6 +928,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ExcludeElements = {"eft_m1a_stock_arch"}   
 ATT.Category = {"eft_m1a_mag"}
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropDrumEmpty
 
 ATT.HasMag = true 
 ATT.SuppressEmptySuffix = false 

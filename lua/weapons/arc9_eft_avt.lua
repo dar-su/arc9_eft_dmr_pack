@@ -21,4 +21,7 @@ SWEP.Description = ARC9:GetPhrase("eft_weapon_avt40_desc")
 
 SWEP.DefaultElements = {"eft_avt"} -- owo
 
-SWEP.Attachments = {_, _, _, { Installed = "eft_svt_mag_15" } } -- hack
+SWEP.Attachments = {_, _, _, { Installed = "eft_svt_mag_15" },
+_,
+_,
+{Category = {"eft_custom_slot", "eft_custom_svt", "eft_custom_avt"},} } -- hack

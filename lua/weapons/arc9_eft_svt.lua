@@ -822,11 +822,16 @@ SWEP.AttachmentElements = {
 
     ["eft_avt"] = { Bodygroups = { {1, 1} } },
 
-
     ["eft_svt_stock_svd"] = { Bodygroups = { {6, 2} } },
     ["eft_svt_addley1"] = { Bodygroups = { {5, 2} } },
     ["eft_svt_addley2"] = { Bodygroups = { {5, 3} } },
 }
+
+-- SWEP.Hook_ModifyBodygroups = function(wep, data)
+--     if data.elements["eft_allowmount"] then data.model:SetBodygroup(1, 0) end
+-- end
+
+SWEP.DefaultElements = {"eft_allowmount"} 
 
 SWEP.Attachments = {
     {
@@ -885,7 +890,7 @@ SWEP.Attachments = {
         Pos = Vector(0, -3, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
-        ExcludeElements = {"eft_avt"},
+        RequireElements = {"eft_allowmount"},
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_ammo"),

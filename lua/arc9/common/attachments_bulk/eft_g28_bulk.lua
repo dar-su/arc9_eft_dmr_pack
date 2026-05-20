@@ -945,8 +945,8 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
-local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/SB_PM_II_3-12x50_mark_f.png", "mips")
-local Reticle_quarter = Material("vgui/arc9_eft_shared/reticles/adjustable/SB_PM_II_3-12x50_mark_q.png", "mips")
+local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/SB_PM_II_3-12x50_mark_f.png", "")
+local Reticle_quarter = Material("vgui/arc9_eft_shared/reticles/adjustable/SB_PM_II_3-12x50_mark_q.png", "")
 
 local scale = 0.85
 local finalsize = 6.3 * scale
@@ -978,7 +978,7 @@ ATT.RTScopeMagnificationMax = 20
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/empty.png", "mips smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/empty.png", "smooth")
 ATT.RTScopeReticleScale = 1.27
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10

@@ -318,6 +318,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -2,
     weight = 0.31,
 }))
+
+
 -- EFT ID: 6888954ba66a069e0405a9aa
 ARC9.LoadAttachment(ATT, "eft_svt_addley1")
 
@@ -350,6 +352,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -1.5,
     weight = 0.3,
 }))
+
+
 -- EFT ID: 68889c930b29b8032504f369
 ARC9.LoadAttachment(ATT, "eft_svt_addley2")
 
@@ -380,5 +384,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     recoilModifier = -20,
     weight = 1.217,
 }))
+
+
 -- EFT ID: 6888ac0f5978b35e90010b49
 ARC9.LoadAttachment(ATT, "eft_svt_stock_svd")

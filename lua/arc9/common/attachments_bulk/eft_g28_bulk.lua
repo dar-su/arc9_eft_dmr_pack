@@ -42,8 +42,8 @@ ATT.Attachments = {
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -23,
     recoilModifier = -10.5,
-    weight = 0.572,
-    velocity = -1,
+    weight = 1.2,
+    velocity = -1.2,
 }))
 
 

@@ -1010,7 +1010,7 @@ ATT.Category = "eft_ar_stock_a2"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
-    ergonomicsModifier = 3,
+    ergonomicsModifier = 2,
     recoilModifier = -23,
     weight = 0.58,
 }))
@@ -1521,6 +1521,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = 14,
     weight = 0.4,
 }))
+
+
 -- EFT ID: 6932aed9be542622170428b0
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx31")
 
@@ -1619,5 +1621,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = 14,
     weight = 0.4,
 }))
+
+
 -- EFT ID: 6936bd6f4737190b66053ba6
 ARC9.LoadAttachment(ATT, "eft_ar10_hg_urx31fde")

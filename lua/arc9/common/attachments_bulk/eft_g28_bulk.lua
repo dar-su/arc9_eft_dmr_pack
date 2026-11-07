@@ -1053,6 +1053,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -15,
+    recoilModifier = -8.3,
+    weight = 1.02,
+    velocity = -6.3,
+}))
+
 
 -- EFT ID: 6a28137cc55ac6942e06ba16
 ARC9.LoadAttachment(ATT, "eft_g28_barrel_short")
@@ -1129,6 +1136,11 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 18.5,
+    weight = 0.402,
+}))
+
 
 -- EFT ID: 6a158e90bf497aade10030e4
 ARC9.LoadAttachment(ATT, "eft_g28_hg_m110")

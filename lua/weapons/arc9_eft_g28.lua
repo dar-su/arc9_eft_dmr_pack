@@ -852,6 +852,8 @@ SWEP.AttachmentElements = {
     ["eft_g28_mag_20"] = { Bodygroups = { {13, 2} } },
 
     ["eft_g28_blk"] = { Skin = 1 },
+    
+    ["eft_g28_barrel_short"] = { Bodygroups = { {3, 2} } },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)

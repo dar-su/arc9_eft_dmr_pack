@@ -476,7 +476,7 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_backup"),
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 1.9, -1.52),
+        Pos = Vector(0, 1.9, -1.42),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -552,7 +552,7 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_backup"),
         Category = {"eft_backupmount"},
-        Pos = Vector(0, 1.9, -1.52),
+        Pos = Vector(0, 1.9, -1.42),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         ExtraSightDistance = 8
@@ -560,14 +560,14 @@ ATT.Attachments = {
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(1.15, 12-3.1, 0.1),
+        Pos = Vector(1.15, 12-3.6, 0.1),
         Ang = Angle(0, -90, 90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical_l"),
         Category = {"eft_tactical", "eft_tactical_top"},
-        Pos = Vector(-1.15, 12-3.1, 0.1),
+        Pos = Vector(-1.15, 12-3.6, 0.1),
         Ang = Angle(0, -90, -90),
         Icon_Offset = Vector(0, 0, 0.5),
     },
@@ -691,9 +691,10 @@ ATT.Description = [[The Heckler & Koch "Prolonged" 7.62x51 flash hider. Effectiv
 ATT.SortOrder = -2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
--- ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_g28_kac_qdc_muzzle_brake_kit_762x51.mdl"
--- ATT.MuzzleDevice = true
--- ATT.MuzzleDevice_Priority = 4
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_hk_prolonged_flash_hider.mdl"
+ATT.ModelOffset = Vector(0.75, 0, 0)
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.PhysBulletMuzzleVelocityMult = 1.02
@@ -732,14 +733,16 @@ ATT.Description = [[A quick-detach 7.62x51 silencer manufactured by Brugger & Th
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_bt_g28.mdl"
+ATT.ModelOffset = Vector(-0.25, 0, 0)
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
 
 ATT.MuzzleEffectQCA = 5
--- ATT.MuzzleDevice = true
--- ATT.MuzzleDevice_Priority = 6
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 6
 ATT.HeatCapacityMult = 0.85
 ATT.PhysBulletMuzzleVelocityMult = 1.01
 
@@ -963,8 +966,6 @@ ATT.RTScopeDrawFunc = function(swep, rtsize, sight)
     surface.SetMaterial(mat)
     surface.SetDrawColor(255, 255, 255)
     surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
-    -- local counterrotation = ARC9.NewRTScopesEnabled and 0 or (swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2))
-    -- surface.DrawTexturedRectRotated(rtsize / 2, rtsize / 2, size, size, -counterrotation)
 end
 
 ATT.ZoomSound = false
@@ -978,7 +979,7 @@ ATT.RTScopeMagnificationMax = 20
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/empty.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/empty.png", "")
 ATT.RTScopeReticleScale = 1.27
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -996,3 +997,138 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: 61714eec290d254f5e6b2ffc
 ARC9.LoadAttachment(ATT, "eft_scope_34mm_sb_pmii3")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- post 1.0
+
+
+///////////////////////////////////////      eft_g28_barrel_short
+
+ATT = {}
+
+ATT.PrintName = "HK417 7.62x51 13 inch barrel"
+ATT.CompactName = "417 13\""
+ATT.Icon = Material("entities/eft_attachments/6a28137cc55ac6942e06ba16.png", "mips smooth")
+ATT.Description = "A 13 inch (330mm) barrel for HK417-based weapons for 7.62x51 ammo."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Category = {"eft_g28_barrel"}
+
+ATT.HasBarrel = true 
+
+ATT.HeatCapacityMult = 1.07
+ATT.Spread = 2.06 * ARC9.MOAToAcc
+
+ATT.ExcludeElements = {"eft_g28_hg_ext", "eft_g28_hg_m110"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_gasblock"),
+        Category = "eft_g28_gas",
+        -- Pos = Vector(-9.705, 0, 0.12),
+        Pos = Vector(-9.25, 0, 0.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = {"eft_g28_muzzle", "eft_ar10_muzzle"},
+        Pos = Vector(-16.21+3.5, 0, 0.15),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+-- EFT ID: 6a28137cc55ac6942e06ba16
+ARC9.LoadAttachment(ATT, "eft_g28_barrel_short")
+
+
+///////////////////////////////////////      eft_g28_hg_m110
+
+ATT = {}
+
+ATT.PrintName = "HK417/G28 Geissele M110A1 14.5 inch handguard"
+ATT.CompactName = "M110A1 14.5\""
+ATT.Icon = Material("entities/eft_attachments/6a158e90bf497aade10030e4.png", "mips smooth")
+ATT.Description = "A precision CNC machined 14.5 inch handguard, equipped with an M-LOK interface for installation of additional equipment. Manufactured by Geissele."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Category = {"eft_g28_hg"}
+ATT.HasHG = true
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/handguard_417_geissele_m110a1_m_lok_145_inch.mdl"
+ATT.ModelOffset = Vector(0, 0.39, -0.119)
+ATT.LHIK = true
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_backup"),
+        Category = {"eft_backupmount"},
+        Pos = Vector(0, 1.9, -1.42),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_frontsight"),
+        Category = {"eft_frontsight"},
+        Pos = Vector(0, 14.5, -1.38),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_u"),
+        Category = {"eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(0, 10.2, -1.52),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_r"),
+        Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
+        Pos = Vector(0.99, 13.6, 0.15),
+        Ang = Angle(180, 90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_l"),
+        Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset"},
+        Pos = Vector(-0.99, 13.6, 0.15),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_b"),
+        Category = {"eft_mount_mlok41", "eft_foregrip_mlok"},
+        Pos = Vector(0, 5.5, 1.3),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mlok_b"),
+        Category = {"eft_mount_mlok", "eft_mount_mlokcanti", "eft_mount_mlokoffset", "eft_mount_mlok_bipod"},
+        Pos = Vector(0, 14, 1.3),
+        Ang = Angle(0, -90, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+-- EFT ID: 6a158e90bf497aade10030e4
+ARC9.LoadAttachment(ATT, "eft_g28_hg_m110")
